@@ -1,0 +1,10 @@
+{
+  "name": "@systra-tools/taste-skills",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Original Systra Taste design, review and repair skills for coding agents",
+  "scripts": {
+    "test": "node --test scripts/validate.test.mjs"
+  },
+  "license": "MIT"
+}

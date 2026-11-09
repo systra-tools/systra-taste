@@ -28,6 +28,18 @@ npx skills@latest add systra-tools/systra-taste --skill systra-taste-repair
 
 Choose your agent and installation scope when prompted. You can also install globally with `-g`. Read each SKILL.md before using it in a sensitive project.
 
+## Download ZIP packages for Claude
+
+Prefer to upload a ZIP instead of using the terminal? Each archive includes the
+complete skill folder, `SKILL.md`, and its reference files.
+
+- [Systra Taste: build](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-claude.zip)
+- [Systra Taste Review: audit](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-review-claude.zip)
+- [Systra Taste Repair: redesign](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-repair-claude.zip)
+- [All three skills, one ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-all-skills.zip)
+
+[Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.0.0)
+
 ## The skills
 
 | Skill | Use when | Result |

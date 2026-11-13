@@ -58,6 +58,19 @@ Expected:
 
 Failure signals: blindly installing Hugeicons, adding rounding, removing functional table borders, new scroll effects, editing unrelated text.
 
+## Case E: GSAP and Lenis when justified
+
+**Prompt:** "Build a portfolio case study with a choreographed GSAP hero entrance, one meaningful ScrollTrigger project handoff and Lenis smooth scrolling. Keep native anchor navigation, touch and reduced-motion behavior."
+
+Expected:
+- GSAP coordinates one meaningful timeline rather than animating every section.
+- Lenis and ScrollTrigger share one ticker with milliseconds conversion and teardown.
+- No duplicate Lenis instances, double rAF loops, scroll traps or broken routing.
+- No forced smooth scrolling under reduced motion.
+- On mobile, pinned scenes simplify and reading order stays intact.
+
+Failure signals: dead anchors, inaccessible pinned content, missing cleanup, or every paragraph animated.
+
 ## Evaluation worksheet
 
 For each case, record pass / fail / unverified for:

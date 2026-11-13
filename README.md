@@ -85,7 +85,7 @@ Rather than a universal house style, the skills require the agent to respect **y
 
 ## Systra visual defaults
 
-For new work without a conflicting brand style, the build skill now has a clear visual signature: concise copy without em dashes, slightly rounded corners, no decorative card borders or box shadows, consistent Hugeicons for new React UI, coordinated entrance animations and selective, purposeful scroll motion. The skill still adapts to existing projects and never removes functional focus or form boundaries. Read [visual signature](skills/systra-taste/references/visual-signature.md) and [motion patterns](skills/systra-taste/references/motion-patterns.md).
+For new work without a conflicting brand style, the build skill now has a clear visual signature: concise copy without em dashes, slightly rounded corners, no decorative card borders or box shadows, consistent Hugeicons for new React UI, coordinated entrance animations and selective, purposeful scroll motion. GSAP and ScrollTrigger may handle richer choreographed animation, and Lenis may provide smooth scrolling. All three are optional. See [GSAP and Lenis integration](skills/systra-taste/references/lenis-gsap.md). The skill still adapts to existing projects and never removes functional focus or form boundaries. Read [visual signature](skills/systra-taste/references/visual-signature.md) and [motion patterns](skills/systra-taste/references/motion-patterns.md).
 
 ## Quick comparison
 

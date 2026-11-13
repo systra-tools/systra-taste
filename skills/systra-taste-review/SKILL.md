@@ -44,7 +44,7 @@ Check whether the view has a specific focal idea or relies on borrowed clichés:
 
 When the page is meant to follow Systra defaults rather than an existing conflicting brand, inspect newly written UI copy for em dashes, excessive corner rounding, decorative borders around cards, shadow-based elevation, mixed icon families and unnecessary icon labels. For new React implementations, verify Hugeicons use against actual project dependencies. Check hero entrance pacing, scroll-transition purpose, reduced-motion behavior and whether text stays reachable without animation.
 
-Treat these as style observations, not objective usability defects. **Do not recommend removing functional focus outlines, input boundaries or required contrast to achieve the borderless aesthetic.** A static screenshot cannot establish whether an animation works; mark motion as unverified until inspected in a browser.
+Treat these as style observations, not objective usability defects. **Do not recommend removing functional focus outlines, input boundaries or required contrast to achieve the borderless aesthetic.** A static screenshot cannot establish whether an animation works; mark motion as unverified until inspected in a browser. When auditing Lenis, GSAP or ScrollTrigger, verify shared ticker synchronization, cleanup, native scroll navigation, keyboard behavior and reduced-motion fallbacks.
 
 ## Boundaries
 

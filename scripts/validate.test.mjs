@@ -119,3 +119,23 @@ test("Systra visual defaults, motion guidance and evaluation prompts remain link
   assert.match(cases, /Case D: override and restraint/);
   assert.match(read("README.md"), /examples\/evaluation-cases.md/);
 });
+
+
+test("Lenis and GSAP integration is optional, linked and synchronized", () => {
+  const build = read("skills/systra-taste/SKILL.md");
+  const motion = read("skills/systra-taste/references/motion-patterns.md");
+  const guide = read("skills/systra-taste/references/lenis-gsap.md");
+  const readme = read("README.md");
+  const repair = read("skills/systra-taste-repair/SKILL.md");
+  const review = read("skills/systra-taste-review/SKILL.md");
+  for (const value of ["GSAP", "ScrollTrigger", "Lenis", "lenis-gsap.md"]) {
+    assert.ok(build.includes(value), "build skill: " + value);
+  }
+  assert.ok(motion.includes("[lenis-gsap.md](lenis-gsap.md)"));
+  for (const value of ["autoRaf: false", "time * 1000", "gsap.ticker.add(tick)", "gsap.ticker.remove(tick)", "lenis.destroy()", "prefers-reduced-motion", "native", "optional"]) {
+    assert.ok(guide.toLowerCase().includes(value.toLowerCase()), "guide: " + value);
+  }
+  assert.ok(readme.includes("lenis-gsap.md"));
+  assert.ok(repair.includes("Lenis") && review.includes("ScrollTrigger"));
+  assert.ok(read("examples/evaluation-cases.md").includes("Case E: GSAP and Lenis"));
+});

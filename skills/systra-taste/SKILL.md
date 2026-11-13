@@ -65,6 +65,7 @@ When the project has no stronger visual conventions or conflicting brief:
 - **Icons:** Prefer real **Hugeicons** in new React UI, with consistent stroke/scale and semantic use. Verify actual imports from @hugeicons/react and @hugeicons/core-free-icons. Do not add a dependency or swap an existing icon system without checking project constraints.
 - **Entrance motion:** Build a coordinated, refined hero arrival. Reveal meaningful text and media with restrained masking, small vertical movement or deliberate crop; avoid a large simultaneous fade for everything.
 - **Scroll motion:** Include purposeful, selective scroll reveals or one meaningful scene transition when appropriate. A motion-heavy page must have quiet reading sections. Never hijack scroll or hide content under reduced motion.
+- **Advanced motion:** Use GSAP, ScrollTrigger and Lenis when their capabilities improve the result. GSAP timelines may choreograph entrances, ScrollTrigger may control narrative scroll scenes, and Lenis may smooth scrolling. They are optional, not required. Read [lenis-gsap.md](references/lenis-gsap.md) before combining them and use a shared ticker, proper cleanup and native-motion fallbacks.
 - **Quality:** Check mobile, keyboard focus, motion reduction, performance and actual rendered states. Do not claim that an animation is smooth or an interface is polished without verification.
 
 These are explicit **defaults**, not permission to recolor other brands, remove accessibility cues or add unrequested animation to an established UI.

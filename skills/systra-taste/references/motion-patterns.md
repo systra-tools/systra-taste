@@ -43,7 +43,9 @@ Prefer a controlled ease-out such as cubic-bezier(0.22, 1, 0.36, 1). Tune to the
 | Show a portfolio | One large work image at a time with stable title/action | Five overlapping animated cards on mobile |
 | Present numbers or evidence | One optional count or focused comparison transition | Fabricated rolling KPIs or perpetual counters |
 
-Use IntersectionObserver for simple one-time in-view reveals. Use existing GSAP/ScrollTrigger, Motion or native scroll-driven CSS only when the project already has the dependency or the interaction genuinely needs its capabilities. Do not add a heavy animation library for a few fades.
+Use IntersectionObserver for simple one-time in-view reveals. GSAP timelines and ScrollTrigger are explicitly welcome for intentional motion choreography, real product transitions, pinned scenes, and scrubbed scroll narratives. Lenis is welcome for smooth scrolling when it improves the experience. A project may use GSAP without Lenis, or combine both deliberately. Do not add a heavy library for a few fades.
+
+Read [lenis-gsap.md](lenis-gsap.md) before combining them. Use a single animation clock, correct GSAP-to-Lenis time units, cleanup, native touch, and reduced-motion fallbacks. Native scrolling remains a valid and often preferable choice.
 
 For pinned or scrubbed scenes:
 - Give the user sufficient still time to read each state. Keep scroll behavior reversible.

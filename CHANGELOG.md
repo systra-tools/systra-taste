@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased · 2026-11-13
+## 1.1.0 · 2026-11-13
 - Expanded the public build skill with concrete architecture, hierarchy, imagery, motion and QA decision recipes.
 - Explicit photo-free distribution policy: project photography remains supported, bundled reference imagery is not required.
 - Added a validation test that rejects image assets and embedded images in skill folders.

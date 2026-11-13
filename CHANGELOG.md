@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.0 · 2026-11-13
+- Consolidated design, critique and refinement into a single installable skill.
+- Preserved the full review and repair workflows as internal references.
+- Reworked public documentation around art direction and interface craft.
+- Simplified the release to one skill and one ZIP download.
+
 ## 1.2.0 · 2026-11-13
 - Added optional GSAP, ScrollTrigger and Lenis integration guidance with ticker synchronization, teardown and accessibility fallbacks.
 - Added explicit copy, subtle-radius, borderless, shadow-free and Hugeicons defaults for new Systra-style work.

@@ -3,15 +3,15 @@
 The goal is authentic **installations and useful references** to Systra Tools, not raw GitHub stars or mass-published directory spam.
 
 ## Primary audience
-- AI-assisted React and Tailwind builders using Claude Code, Cursor or Codex.
+- Design engineers and React/Tailwind teams using Claude Code, Cursor or Codex.
 - Freelance web designers frustrated by generic AI-generated landing pages.
 - Design engineers who need a repeatable critique-and-repair workflow.
 
 ## Search intent and positioning
 
-Primary: "AI website design skill", "Claude Code design skill", "Cursor UI design skill", "make AI websites look better".
+Primary: "interface design skill", "Claude Code design craft", "Cursor design skill", "art direction for websites".
 
-Secondary: "React Tailwind design review skill", "AI landing page redesign", "design taste skill", "Claude Code website redesign", "UI design critique skill".
+Secondary: "React Tailwind visual refinement", "design taste skill", "website art direction", "UI design critique".
 
 Use these naturally in descriptive headlines and examples. Do not stuff them into tags or repeat them unnaturally.
 
@@ -26,14 +26,14 @@ Use these naturally in descriptive headlines and examples. Do not stuff them int
 
 ### Phase 2: Search-accessible explanation
 - Ship a dedicated **English-first** landing page at `systra.tools/taste` with a German locale sibling.
-- Explain differences among Build, Review, Repair, include install command, code-level sample, FAQ and a GitHub link.
+- Explain one Systra Taste skill. Show design, critique and refinement as capabilities, not separate products. Include one install command, sample, FAQ and GitHub link.
 - Give the website page self-referencing canonical/hreflang and an internal link from the MCP and Guides hubs.
 - Verify current production sitemap generator before adding any static sitemap file. Do not overwrite a newer live sitemap.
 - Add SoftwareApplication structured data only with **truthful** price and functionality claims. No fabricated review/rating schema.
 
 ### Phase 3: Three genuinely useful demonstrations
 1. "Your AI can code. Why does every landing page look the same?" One real input, three structural variations, code diffs and full-size mobile screenshots.
-2. "I asked Claude Code to repair a generic hero, not just recolor it." Show the prompt, tools used, before/after, effort, limitations and source.
+2. "Refining a hero is more than recoloring it." Show the prompt, tools used, before/after, effort, limitations and source.
 3. "The anatomy of a useful design review." Show a downloadable example report with cited implementation details.
 
 Publish first where the user already writes, such as the existing DEV.to article, then selectively to communities where the content answers an existing question. Follow community rules; disclose affiliation. Do not post the same promotional copy in multiple places.

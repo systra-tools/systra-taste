@@ -1,0 +1,46 @@
+name: Prevent internal files in public releases
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  block-internal-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out public source
+        uses: actions/checkout@v4
+      - name: Fail if internal or credential files are tracked
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          import re
+          import subprocess
+          import sys
+
+          paths = subprocess.check_output(["git", "ls-files", "-z"]).decode().split("\0")
+          forbidden = []
+          for filename in filter(None, paths):
+              path = pathlib.PurePosixPath(filename)
+              if (
+                  filename in {"VERTEILUNG.md", "docs/distribution.md", "mcp-registry-auth"}
+                  or any(part in {"internal", "private", "secrets"} for part in path.parts[:-1])
+                  or path.name == ".env"
+                  or (path.name.startswith(".env.") and path.name != ".env.example")
+                  or path.suffix.lower() in {".pem", ".p12", ".pfx", ".key"}
+              ):
+                  forbidden.append(filename)
+
+          if forbidden:
+              print("Blocked internal or credential-file paths:")
+              for filename in sorted(forbidden):
+                  print("  -", filename)
+              sys.exit(1)
+
+          print("Privacy check passed: no forbidden files are tracked.")
+          PY

@@ -90,4 +90,3 @@ Systra Taste is free. The optional [Systra Tools MCP](https://systra.tools/mcp) 
 
 A project by [Systra Studios](https://systrastudios.de/) for [Systra Tools](https://systra.tools/). The instructions are released under the [MIT License](LICENSE). Components retrieved through Systra Tools have separate terms.
 
-See the [distribution notes](docs/distribution.md).

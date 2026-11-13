@@ -80,10 +80,15 @@ test("public skill folders contain no photo boards or image embeddings", () => {
         assert.doesNotMatch(entry, photoExt, "image bundled in skill: " + path);
         if (entry.endsWith(".md")) {
           const md = readFileSync(path, "utf8");
-          assert.doesNotMatch(md, /!\\[[^\\]]*\\]\\([^)]*\\)/, "embedded image in " + path);
+          assert.doesNotMatch(md, /!\[[^\]]*\]\([^)]+\)/, "embedded image in " + path);
         }
       }
     }
   };
   scan(skillRoot);
+});
+
+
+test("image embedding rule detects ordinary markdown images", () => {
+  assert.match("![Alt text](assets/photo.jpg)", /!\[[^\]]*\]\([^)]+\)/);
 });

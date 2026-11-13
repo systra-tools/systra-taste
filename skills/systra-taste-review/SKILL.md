@@ -40,6 +40,12 @@ Check whether the view has a specific focal idea or relies on borrowed clichés:
 
 **Do not flag a pattern because it is popular.** Flag it when it obscures this product's story or duplicates its neighbors.
 
+## Systra signature checks when applicable
+
+When the page is meant to follow Systra defaults rather than an existing conflicting brand, inspect newly written UI copy for em dashes, excessive corner rounding, decorative borders around cards, shadow-based elevation, mixed icon families and unnecessary icon labels. For new React implementations, verify Hugeicons use against actual project dependencies. Check hero entrance pacing, scroll-transition purpose, reduced-motion behavior and whether text stays reachable without animation.
+
+Treat these as style observations, not objective usability defects. **Do not recommend removing functional focus outlines, input boundaries or required contrast to achieve the borderless aesthetic.** A static screenshot cannot establish whether an animation works; mark motion as unverified until inspected in a browser.
+
 ## Boundaries
 
 - Read-only; no code changes, no new dependencies, no automatic PR.

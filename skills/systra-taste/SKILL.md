@@ -26,6 +26,8 @@ Read [craft-rules.md](references/craft-rules.md) for constraints and [page-rhyth
 
 Read [design-decisions.md](references/design-decisions.md) for concrete architecture selection, typography, material, image handling, motion, and QA recipes. Use it especially when the user provides no moodboard.
 
+Read [visual-signature.md](references/visual-signature.md) for the Systra visual defaults and exact Hugeicons React integration. Read [motion-patterns.md](references/motion-patterns.md) whenever building an animated hero, scroll narrative or interaction. These defaults apply only where the user's brand and explicit instructions do not prescribe otherwise.
+
 - **Hierarchy before decoration.** One dominant idea per viewport, with deliberate typographic contrast and readable supporting information.
 - **Composition before effects.** Don't try to rescue a generic layout with grain, glass, blur, gradients or bigger fonts.
 - **Variation with continuity.** A page needs rhythm: product scene, evidence, interaction, breathing space, call to action. Don't stack clones of the same section.
@@ -52,6 +54,20 @@ Make these decisions before adding visual effects:
 This skill is deliberately **photo-free as a distributable package**. It must not depend on bundled image moodboards, scraped site screenshots, stock-photo collections or external image URLs. The design rules and examples are sufficient to run offline. You may inspect user-provided or already licensed project assets when available, but never copy a reference site's distinctive visuals or redistribute those assets as part of this skill.
 
 No-photo-bundle does **not** mean no photography in the final website. Authentic, approved imagery can be the right focal point. When a needed asset is unavailable, describe its brief and placeholder accurately rather than pretending it was generated or rebuilding a human or landscape as cheap CSS.
+
+## Systra visual defaults
+
+When the project has no stronger visual conventions or conflicting brief:
+
+- **Copy:** Never introduce em dashes into newly authored marketing or interface text. Use a period, comma or colon instead. Preserve quoted or immutable supplied content.
+- **Corners:** Use subtly rounded corners, commonly 6 to 12 px at regular control/card sizes, with a coherent scale.
+- **Surfaces:** Use no decorative box borders or box shadows. Group content through composition, whitespace and restrained surface contrast instead of framed cards. Keep necessary focus outlines, input boundaries and accessible states.
+- **Icons:** Prefer real **Hugeicons** in new React UI, with consistent stroke/scale and semantic use. Verify actual imports from @hugeicons/react and @hugeicons/core-free-icons. Do not add a dependency or swap an existing icon system without checking project constraints.
+- **Entrance motion:** Build a coordinated, refined hero arrival. Reveal meaningful text and media with restrained masking, small vertical movement or deliberate crop; avoid a large simultaneous fade for everything.
+- **Scroll motion:** Include purposeful, selective scroll reveals or one meaningful scene transition when appropriate. A motion-heavy page must have quiet reading sections. Never hijack scroll or hide content under reduced motion.
+- **Quality:** Check mobile, keyboard focus, motion reduction, performance and actual rendered states. Do not claim that an animation is smooth or an interface is polished without verification.
+
+These are explicit **defaults**, not permission to recolor other brands, remove accessibility cues or add unrequested animation to an established UI.
 
 ## Three failure tests
 

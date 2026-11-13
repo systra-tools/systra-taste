@@ -107,6 +107,8 @@ For ready-made sections, page recipes, styles and source code, see [Systra Tools
 
 **Does it require screenshots?** Real visual verification is preferred. When browser tooling is unavailable, the agent must say so instead of pretending it inspected a rendered page.
 
+**Does the public skill contain the original photo reference boards?** No. The published skills contain original text-based decision rules and examples only. They do not require bundled third-party imagery. Your agent can still use photos and screenshots that you provide or are licensed for your project.
+
 **Does installing the skill guarantee better designs?** No. Good results still depend on the model, the project, the input materials and real review. The [release criteria](skills/systra-taste/references/craft-rules.md) give the agent concrete things to verify.
 
 **Does it require Systra premium?** No. The skills are free. Systra Tools MCP is optional and its components follow the access terms on systra.tools.

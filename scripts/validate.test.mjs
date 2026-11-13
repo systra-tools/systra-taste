@@ -68,3 +68,22 @@ test("repository contains no binary reference boards or secrets", () => {
   };
   walk(root);
 });
+
+test("public skill folders contain no photo boards or image embeddings", () => {
+  const photoExt = /\.(?:png|jpe?g|webp|avif|gif|bmp|tiff?|heic|svg)$/i;
+  const scan = (dir) => {
+    for (const entry of readdirSync(dir)) {
+      const path = join(dir, entry);
+      if (statSync(path).isDirectory()) {
+        scan(path);
+      } else {
+        assert.doesNotMatch(entry, photoExt, "image bundled in skill: " + path);
+        if (entry.endsWith(".md")) {
+          const md = readFileSync(path, "utf8");
+          assert.doesNotMatch(md, /!\\[[^\\]]*\\]\\([^)]*\\)/, "embedded image in " + path);
+        }
+      }
+    }
+  };
+  scan(skillRoot);
+});

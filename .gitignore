@@ -4,3 +4,14 @@ node_modules/
 .env.*
 *.pem
 *.key
+
+# Internal distribution and operational strategy
+docs/distribution.md
+VERTEILUNG.md
+internal/
+private/
+secrets/
+
+# Additional sensitive local files
+*.p12
+*.pfx

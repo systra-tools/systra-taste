@@ -24,6 +24,8 @@ This skill **builds**. For a diagnosis without changes use `systra-taste-review`
 
 Read [craft-rules.md](references/craft-rules.md) for constraints and [page-rhythm.md](references/page-rhythm.md) for section composition when building a whole page.
 
+Read [design-decisions.md](references/design-decisions.md) for concrete architecture selection, typography, material, image handling, motion, and QA recipes. Use it especially when the user provides no moodboard.
+
 - **Hierarchy before decoration.** One dominant idea per viewport, with deliberate typographic contrast and readable supporting information.
 - **Composition before effects.** Don't try to rescue a generic layout with grain, glass, blur, gradients or bigger fonts.
 - **Variation with continuity.** A page needs rhythm: product scene, evidence, interaction, breathing space, call to action. Don't stack clones of the same section.
@@ -32,6 +34,24 @@ Read [craft-rules.md](references/craft-rules.md) for constraints and [page-rhyth
 - **Motion has a job.** Orientation, focus, progress, comparison, feedback or spatial continuity. If it accomplishes none, omit it.
 - **Accessibility is part of taste.** Preserve semantic headings, touch targets, keyboard operation, contrast and reduced-motion behavior.
 - **Avoid aesthetic dogma.** Light backgrounds, glass, saturation, shadows, dark mode and large radii are all conditional on the brief. Reject lazy defaults, not entire styles.
+
+## Practical build sequence
+
+Make these decisions before adding visual effects:
+
+1. **One-sentence brief:** Who is the audience, what should they understand in five seconds, and what is the one primary action?
+2. **Focal proof:** Choose a genuine interface state, a real project result, a human/process subject, or an editorial statement. Decorative geometry is not proof.
+3. **Architecture:** Pick a content-led composition. State why the page starts there rather than defaulting to centered headline + three cards.
+4. **Typographic hierarchy:** Set text from actual content, then verify the longest heading and important controls at narrow mobile widths.
+5. **Asset decision:** Use authorized project imagery, a newly authorized purpose-made asset, or a text/code-first design. Never assume third-party reference images are available.
+6. **Motion decision:** Give each movement one specific job; remove motion that exists only to look lively.
+7. **Rendered QA:** Inspect real browser output when tools exist, including mobile, keyboard, focus and reduced motion. If unavailable, mark visual QA as not tested.
+
+### Public reference and photo policy
+
+This skill is deliberately **photo-free as a distributable package**. It must not depend on bundled image moodboards, scraped site screenshots, stock-photo collections or external image URLs. The design rules and examples are sufficient to run offline. You may inspect user-provided or already licensed project assets when available, but never copy a reference site's distinctive visuals or redistribute those assets as part of this skill.
+
+No-photo-bundle does **not** mean no photography in the final website. Authentic, approved imagery can be the right focal point. When a needed asset is unavailable, describe its brief and placeholder accurately rather than pretending it was generated or rebuilding a human or landscape as cheap CSS.
 
 ## Three failure tests
 

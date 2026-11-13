@@ -1,9 +1,4 @@
----
-name: systra-taste-review
-description: Critique an existing landing page, React component or website for generic AI-looking design, weak hierarchy, confusing content, inaccessible interactions and visual inconsistency. Read-only by default. Use when someone asks for a UI/UX review, design audit, visual quality assessment or why a site looks generic. For implementation use systra-taste; for generating and applying redesign options use systra-taste-repair.
----
-
-# Systra Taste Review
+# Critique workflow
 
 A sharp **read-only** design review. Don't flatter. Don't confuse preference with functional failure. Don't modify code, publish changes or manufacture screenshots.
 
@@ -54,4 +49,4 @@ Treat these as style observations, not objective usability defects. **Do not rec
 - Preserve accessibility and honest product claims when suggesting a more striking design.
 - A prior Systra reference library or a branded component is not required. This review works on any project.
 
-Read [audit-checklist.md](references/audit-checklist.md) before writing a final review. If asked to fix the findings, hand off to `systra-taste-repair` or `systra-taste`.
+Read [audit-checklist.md](audit-checklist.md) before writing a final review. If asked to fix the findings, switch to Refine mode within Systra Taste.

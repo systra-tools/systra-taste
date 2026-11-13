@@ -6,10 +6,10 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const skillRoot = join(root, "skills");
-const skillNames = ["systra-taste", "systra-taste-review", "systra-taste-repair"];
+const skillNames = ["systra-taste"];
 const read = (path) => readFileSync(join(root, path), "utf8");
 
-test("three independently installable skills exist", () => {
+test("one installable Systra Taste skill exists", () => {
   assert.deepEqual(readdirSync(skillRoot).filter((x) => !x.startsWith(".")).sort(), [...skillNames].sort());
   for (const name of skillNames) {
     assert.ok(existsSync(join(skillRoot, name, "SKILL.md")), name);
@@ -42,16 +42,31 @@ test("all relative reference links resolve inside each skill", () => {
   }
 });
 
-test("README documents exact public install commands and optional MCP", () => {
+test("README introduces one skill, one current download, and optional MCP", () => {
   const readme = read("README.md");
-  for (const skill of skillNames) {
-    assert.ok(readme.includes(`--skill ${skill}`), `missing install instruction for ${skill}`);
-  }
   assert.match(readme, /npx skills@latest add systra-tools\/systra-taste/);
+  assert.match(readme, /releases\/download\/v1\.3\.0\/systra-taste\.zip/);
   assert.match(readme, /without any Systra account/i);
   assert.match(readme, /https:\/\/systra\.tools\/mcp/);
+  assert.doesNotMatch(readme, /systra-taste-(?:review|repair)|all three skills|three free.*skills/i);
+  assert.doesNotMatch(readme, /releases\/download\/v1\.[12]\.0/);
 });
 
+test("single entry routes read-only critiques and scoped refinements", () => {
+  const main = read("skills/systra-taste/SKILL.md");
+  const critique = read("skills/systra-taste/references/review-workflow.md");
+  const refine = read("skills/systra-taste/references/repair-workflow.md");
+  const base = join(skillRoot, "systra-taste", "references");
+  for (const file of ["review-workflow.md", "repair-workflow.md", "audit-checklist.md", "repair-playbook.md"]) {
+    assert.ok(existsSync(join(base, file)), file);
+    assert.ok(main.includes("references/" + file), file);
+  }
+  assert.match(main, /read-only by default/i);
+  assert.match(main, /isolated previews/i);
+  assert.match(critique, /read-only/i);
+  assert.match(refine, /Explore/);
+  assert.doesNotMatch(main, /systra-taste-(review|repair)/);
+});
 test("repository contains no binary reference boards or secrets", () => {
   const allowed = new Set([".md", ".json", ".mjs", ".yml", ".gitignore", "LICENSE"]);
   const walk = (dir) => {
@@ -96,8 +111,8 @@ test("image embedding rule detects ordinary markdown images", () => {
 
 test("Systra visual defaults, motion guidance and evaluation prompts remain linked", () => {
   const build = read("skills/systra-taste/SKILL.md");
-  const review = read("skills/systra-taste-review/SKILL.md");
-  const repair = read("skills/systra-taste-repair/SKILL.md");
+  const review = read("skills/systra-taste/references/review-workflow.md");
+  const repair = read("skills/systra-taste/references/repair-workflow.md");
   const visual = read("skills/systra-taste/references/visual-signature.md");
   const motion = read("skills/systra-taste/references/motion-patterns.md");
   const cases = read("examples/evaluation-cases.md");
@@ -126,8 +141,8 @@ test("Lenis and GSAP integration is optional, linked and synchronized", () => {
   const motion = read("skills/systra-taste/references/motion-patterns.md");
   const guide = read("skills/systra-taste/references/lenis-gsap.md");
   const readme = read("README.md");
-  const repair = read("skills/systra-taste-repair/SKILL.md");
-  const review = read("skills/systra-taste-review/SKILL.md");
+  const repair = read("skills/systra-taste/references/repair-workflow.md");
+  const review = read("skills/systra-taste/references/review-workflow.md");
   for (const value of ["GSAP", "ScrollTrigger", "Lenis", "lenis-gsap.md"]) {
     assert.ok(build.includes(value), "build skill: " + value);
   }

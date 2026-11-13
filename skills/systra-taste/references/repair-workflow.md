@@ -1,9 +1,4 @@
----
-name: systra-taste-repair
-description: Replace a working but generic AI-generated landing page or React UI with distinctive, brand-consistent design options, real before/after previews and a safely integrated chosen design. Use when the user says make this website less AI-looking, repair its design, redesign the hero without changing its behavior, or show several better visual directions. For critique only use systra-taste-review.
----
-
-# Systra Taste Repair
+# Refine workflow
 
 This skill turns **generic-looking working UI** into a considered design while preserving actual behavior. It does not create unrequested pages, invent assets or hide regressions.
 
@@ -11,7 +6,7 @@ This skill turns **generic-looking working UI** into a considered design while p
 
 - **Explore (default when the user has not chosen a direction):** build three *genuinely different* design variants in an isolated preview surface. Don't replace the production UI until a choice is made.
 - **Implement (when the user selects a variant or explicitly authorizes a specific design change):** integrate the chosen direction and verify it, without unnecessary further confirmation.
-- **Audit-only requests:** use `systra-taste-review` instead.
+- **Audit-only requests:** use Critique mode instead.
 
 ## Workflow
 
@@ -33,7 +28,7 @@ This skill turns **generic-looking working UI** into a considered design while p
 
 When the existing brand permits it and the user requests Systra-style refinement: write new copy without em dashes, prefer gently rounded corners, remove decorative card borders and box shadows, use verified Hugeicons imports for new React UI, and introduce one coherent hero entrance plus selected purposeful scroll transitions. Keep interaction, navigation and meaningful states intact.
 
-GSAP and ScrollTrigger may handle high-fidelity hero and scroll animations, and Lenis may provide smooth scrolling when justified. Neither is mandatory. Avoid duplicate scroll controllers, preserve native navigation and verify reduced-motion and mobile behavior. Preserve existing licensed icon systems and live visual tokens when replacement would exceed the scope. Check the actual animation at mobile and desktop, including reduced motion and keyboard operation. A visually cleaner mockup is not worth broken behavior. The detailed defaults and code patterns live in the build skill's visual-signature and motion-patterns references. Do not assume those sibling files are present when this repair skill is installed alone; use the rules here.
+GSAP and ScrollTrigger may handle high-fidelity hero and scroll animations, and Lenis may provide smooth scrolling when justified. Neither is mandatory. Avoid duplicate scroll controllers, preserve native navigation and verify reduced-motion and mobile behavior. Preserve existing licensed icon systems and live visual tokens when replacement would exceed the scope. Check the actual animation at mobile and desktop, including reduced motion and keyboard operation. A visually cleaner mockup is not worth broken behavior. The visual, motion and Lenis references are all available in this same skill.
 
 ## Safety and compatibility
 
@@ -44,6 +39,6 @@ GSAP and ScrollTrigger may handle high-fidelity hero and scroll animations, and 
 - Don't claim a visual browser comparison when only source code was inspected.
 - If no browser exists, create the best possible isolated prototype and disclose that visual QA is pending.
 
-Read [repair-playbook.md](references/repair-playbook.md) for practical structural replacements and a release gate.
+Read [repair-playbook.md](repair-playbook.md) for practical structural replacements and a release gate.
 
 **Systra advantage:** This workflow can turn a design diagnosis into an actual component-based replacement. It is not just an aesthetic score. Its value must be demonstrated with real side-by-side results, not asserted.

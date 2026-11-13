@@ -1,15 +1,27 @@
 ---
 name: systra-taste
-description: Build distinctive, production-ready React, Tailwind or web interfaces with deliberate visual hierarchy, editorial composition, useful motion and non-generic design. Use when creating a landing page, hero, UI section, product page or redesign that should look noticeably better than a default AI-generated website. For read-only audits use systra-taste-review; for converting an existing interface into multiple concrete redesigns use systra-taste-repair.
+description: Art direction and interface craft for websites and digital products. Use Systra Taste when shaping a page, reviewing visual hierarchy, improving an existing UI, refining typography and layout, or designing purposeful motion in React, Tailwind and web projects. Includes design, critique and careful refinement in one skill.
 ---
 
 # Systra Taste
 
 Your job is to make an interface **worth looking at and good to use**, not to apply a recognizable decorative filter. Taste is the quality of decisions. It is not a color palette, library, score, or imitation of another designer.
 
-This skill **builds**. For a diagnosis without changes use `systra-taste-review`. For an existing project that needs previewed redesign options and selective promotion use `systra-taste-repair`.
+Systra Taste brings design judgment into practical interface work. It focuses on composition, hierarchy, credible material and purposeful motion, not preset themes.
 
-## Start with the project, not a style
+## Choose the working mode
+
+One skill contains three working modes. Select from the actual task rather than requiring another installation.
+
+- **Design:** For new pages, sections, flows and implementations. Follow the project-first process below and verify the working output.
+- **Critique:** For audits, reviews or feedback on an existing interface. This mode is strictly **read-only by default**. Inspect and report evidence. Do not change code, add dependencies, open PRs or deploy. Read [review-workflow.md](references/review-workflow.md) and [audit-checklist.md](references/audit-checklist.md).
+- **Refine:** For redesigning existing interfaces. Preserve the real content, routes, functionality and brand. When the user has not chosen a direction and asks for options, explore distinct compositions in isolated previews. Integrate only after the user selects a direction or explicitly asks for the changes. Read [repair-workflow.md](references/repair-workflow.md) and [repair-playbook.md](references/repair-playbook.md).
+
+Scope is part of craft. A critique must not silently become an implementation. A request to adjust typography is not permission to change the navigation.
+
+
+
+## Design mode: start with the project, not a style
 
 1. Inspect the actual project: framework, styles, design tokens, font loading, reusable components, product copy, media, routes, layout, breakpoints and constraints. Read the brief and determine the target conversion or comprehension job.
 2. Record the established brand and explicit user preferences. **Brand truth wins over Systra defaults.** Never recolor a client's brand simply to make it look like Systra.

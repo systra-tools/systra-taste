@@ -57,8 +57,9 @@ Keep headings, buttons, forms, figures and meaningful data in semantic code. Nev
 ### Material decisions
 
 - Glass requires actual background depth, a functional purpose and checked contrast; do not place milky blur cards over an empty background.
-- Shadows should communicate elevation or focus. Borders should communicate separation. Avoid applying both mechanically.
+- By default do not use box shadows or decorative frames around cards. Use spacing, surface contrast and clear hierarchy. Preserve functional borders for forms, focus and accessibility.
 - Grain and gradients can reinforce a deliberate image world, not rescue weak information architecture.
+- Prefer modest 6 to 12 px radii; use real Hugeicons and no newly authored em-dash punctuation where the project does not specify otherwise.
 - Squircles, sharp modules and pills are context-driven shapes, not mandatory house style.
 
 ## 5. Motion that explains, rather than decorates

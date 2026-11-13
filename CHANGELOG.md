@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.0 · 2026-11-13
+- Added optional GSAP, ScrollTrigger and Lenis integration guidance with ticker synchronization, teardown and accessibility fallbacks.
+- Added explicit copy, subtle-radius, borderless, shadow-free and Hugeicons defaults for new Systra-style work.
+- Added practical entrance and scroll animation guidance, including reduced-motion and performance checks.
+- Aligned the design, review and repair skills with the new visual defaults without overriding existing brands.
+
 ## 1.1.0 · 2026-11-13
 - Expanded the public build skill with concrete architecture, hierarchy, imagery, motion and QA decision recipes.
 - Explicit photo-free distribution policy: project photography remains supported, bundled reference imagery is not required.

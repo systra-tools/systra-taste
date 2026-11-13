@@ -33,12 +33,12 @@ Choose your agent and installation scope when prompted. You can also install glo
 Prefer to upload a ZIP instead of using the terminal? Each archive includes the
 complete skill folder, `SKILL.md`, and its reference files.
 
-- [Systra Taste: build](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-claude.zip)
-- [Systra Taste Review: audit](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-review-claude.zip)
-- [Systra Taste Repair: redesign](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-repair-claude.zip)
-- [All three skills, one ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.0.0/systra-taste-all-skills.zip)
+- [Systra Taste: build](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-claude.zip)
+- [Systra Taste Review: audit](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-review-claude.zip)
+- [Systra Taste Repair: redesign](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-repair-claude.zip)
+- [All three skills, one ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-all-skills.zip)
 
-[Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.0.0)
+[Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.1.0)
 
 ## The skills
 
@@ -106,6 +106,8 @@ For ready-made sections, page recipes, styles and source code, see [Systra Tools
 **Will it change my code automatically?** The review skill will not. The repair skill keeps experimentation isolated until a direction is selected or its implementation is explicitly requested.
 
 **Does it require screenshots?** Real visual verification is preferred. When browser tooling is unavailable, the agent must say so instead of pretending it inspected a rendered page.
+
+**Does the public skill contain the original photo reference boards?** No. The published skills contain original text-based decision rules and examples only. They do not require bundled third-party imagery. Your agent can still use photos and screenshots that you provide or are licensed for your project.
 
 **Does installing the skill guarantee better designs?** No. Good results still depend on the model, the project, the input materials and real review. The [release criteria](skills/systra-taste/references/craft-rules.md) give the agent concrete things to verify.
 

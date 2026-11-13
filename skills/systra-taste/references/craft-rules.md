@@ -15,7 +15,7 @@ Use this as a **decision checklist**, not a rigid theme. A strong interface has 
 - Check body width on actual content; around 60–80 characters per line is a useful starting point, not a universal target.
 - Prefer an explicit spacing rhythm over arbitrary one-off values. Verify that changing the font and localization doesn't break it.
 - Keep buttons easily targetable on touch, with visible focus states, a clear verb and one primary action per decision point.
-- Avoid visual boundaries unless they group related information. Cards, borders, shadows, pills and squircle radii are tools, not ornaments.
+- Systra defaults: slightly rounded corners, no box shadows and no decorative borders around cards. Use whitespace and subtle surface contrast for grouping. Keep functional focus outlines, form boundaries and accessibility states. The actual brand system can override these defaults.
 
 ## Material and imagery
 - A glass surface needs a real contextual background, deliberate light direction, legible foreground and enough separation. Never apply universal opaque milky cards to unrelated content.

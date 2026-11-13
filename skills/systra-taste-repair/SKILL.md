@@ -29,6 +29,12 @@ This skill turns **generic-looking working UI** into a considered design while p
 8. **Verify after editing.** Inspect mobile, desktop, overflow, long labels, dark mode where supported, reduced motion, core interactions, console and existing test/build scripts. Compare with the original. Be explicit about tests you couldn't run.
 9. **Hand off.** Provide a concise table of changes, validation results and known limitations. Never say it is better by a numeric percentage without user-study evidence.
 
+## Systra signature during repair
+
+When the existing brand permits it and the user requests Systra-style refinement: write new copy without em dashes, prefer gently rounded corners, remove decorative card borders and box shadows, use verified Hugeicons imports for new React UI, and introduce one coherent hero entrance plus selected purposeful scroll transitions. Keep interaction, navigation and meaningful states intact.
+
+GSAP and ScrollTrigger may handle high-fidelity hero and scroll animations, and Lenis may provide smooth scrolling when justified. Neither is mandatory. Avoid duplicate scroll controllers, preserve native navigation and verify reduced-motion and mobile behavior. Preserve existing licensed icon systems and live visual tokens when replacement would exceed the scope. Check the actual animation at mobile and desktop, including reduced motion and keyboard operation. A visually cleaner mockup is not worth broken behavior. The detailed defaults and code patterns live in the build skill's visual-signature and motion-patterns references. Do not assume those sibling files are present when this repair skill is installed alone; use the rules here.
+
 ## Safety and compatibility
 
 - Never change brand identity, content claims, payment/auth flows or routing implicitly.

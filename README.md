@@ -33,12 +33,12 @@ Choose your agent and installation scope when prompted. You can also install glo
 Prefer to upload a ZIP instead of using the terminal? Each archive includes the
 complete skill folder, `SKILL.md`, and its reference files.
 
-- [Systra Taste: build](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-claude.zip)
-- [Systra Taste Review: audit](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-review-claude.zip)
-- [Systra Taste Repair: redesign](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-repair-claude.zip)
-- [All three skills, one ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.1.0/systra-taste-all-skills.zip)
+- [Systra Taste: build](https://github.com/systra-tools/systra-taste/releases/download/v1.2.0/systra-taste-claude.zip)
+- [Systra Taste Review: audit](https://github.com/systra-tools/systra-taste/releases/download/v1.2.0/systra-taste-review-claude.zip)
+- [Systra Taste Repair: redesign](https://github.com/systra-tools/systra-taste/releases/download/v1.2.0/systra-taste-repair-claude.zip)
+- [All three skills, one ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.2.0/systra-taste-all-skills.zip)
 
-[Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.1.0)
+[Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.2.0)
 
 ## The skills
 
@@ -73,7 +73,7 @@ links and forms working. Show three genuinely different layouts
 in an isolated preview before changing the production component.
 ```
 
-The difference between *changing the colors* and *changing the design* matters. See the [illustrative hero repair](examples/hero-repair.md) and [example review](examples/review-report.md).
+The difference between *changing the colors* and *changing the design* matters. See the [illustrative hero repair](examples/hero-repair.md) and [example review](examples/review-report.md). To evaluate the new craft rules on reproducible prompts, use the [skill evaluation cases](examples/evaluation-cases.md), including a deliberate brand-override test.
 
 ## Why this exists
 
@@ -82,6 +82,10 @@ Coding agents are good at producing plausible UI. But plausible isn't distinctiv
 Systra Taste starts earlier: What is the page's job? What is the real focal subject? What should be understood in five seconds? Which parts deserve to move, and which should be quiet? Does the result hold up with real copy on a narrow screen?
 
 Rather than a universal house style, the skills require the agent to respect **your** brand, existing components and project constraints. They prohibit copying entire reference sites or publishing third-party moodboards as original work.
+
+## Systra visual defaults
+
+For new work without a conflicting brand style, the build skill now has a clear visual signature: concise copy without em dashes, slightly rounded corners, no decorative card borders or box shadows, consistent Hugeicons for new React UI, coordinated entrance animations and selective, purposeful scroll motion. GSAP and ScrollTrigger may handle richer choreographed animation, and Lenis may provide smooth scrolling. All three are optional. See [GSAP and Lenis integration](skills/systra-taste/references/lenis-gsap.md). The skill still adapts to existing projects and never removes functional focus or form boundaries. Read [visual signature](skills/systra-taste/references/visual-signature.md) and [motion patterns](skills/systra-taste/references/motion-patterns.md).
 
 ## Quick comparison
 

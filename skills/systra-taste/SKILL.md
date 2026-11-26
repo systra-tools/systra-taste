@@ -3,13 +3,13 @@ name: systra-taste
 description: Reference-led art direction, UI craft, and purposeful motion for websites and React/Tailwind projects. Use to design new sections, critique existing interfaces, or refine scoped UI without losing brand or behavior.
 ---
 
-# Systra Taste 2.2
+# Systra Taste 3.0
 
 Make the subject memorable, the hierarchy clear, and the interaction useful. Do not apply a house template.
 
 ## 1. Route before reading
 
-- **Design:** inspect the actual project and brief, then use [section-router.md](references/section-router.md). Read only the matching recipe for each distinct section job, not the entire reference folder. Prefer adapting an actual component using [component-first.md](references/component-first.md).
+- **Design:** inspect the actual project and brief, then use [section-router.md](references/section-router.md). Read only the matching recipe for each distinct section job, not the entire reference folder. Prefer actual source via [design-engine.md](references/design-engine.md) and [component-first.md](references/component-first.md). For a matching offline job, run the engine plan/build CLI rather than rewriting source.
 - **Critique:** strictly read-only by default. Use [review-workflow.md](references/review-workflow.md) and [audit-checklist.md](references/audit-checklist.md) for evidence; do not edit or deploy.
 - **Refine:** preserve content, routes, behavior and brand. Use [repair-workflow.md](references/repair-workflow.md) and [repair-playbook.md](references/repair-playbook.md) when needed. Explore requested alternatives in isolated previews before integrating a selected direction.
 

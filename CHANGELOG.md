@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0 (candidate)
+- Add a deterministic, dependency-free component planner and source materializer for five offline jobs.
+- Validate inputs, reject ambiguous requests, never overwrite existing project directories, and preserve the actual original components.
+- Suggest authorized MCP queries without claiming remote integration.
+- No new public release; visual quality and live MCP remain separate gates.
+
 ## 2.2.0 (candidate)
 - Component-first routing: existing project, authorized Systra MCP, then original offline React source.
 - Five standalone components with scoped CSS and genuine Hugeicons, including three real transformations and shared icon exchanges.

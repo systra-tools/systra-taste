@@ -47,7 +47,9 @@ For new work without stronger existing brand rules:
 
 A brand's established system always takes precedence over these defaults.
 
-**Component-first (2.2 candidate):** Adapt existing project components or authorized Systra MCP results. Five original offline React components are available in [components](skills/systra-taste/components), with [selection and integration instructions](skills/systra-taste/references/component-first.md).
+**Design Engine (3.0 candidate):** A dependency-free [plan/build CLI](skills/systra-taste/references/design-engine.md) selects matching offline components and assembles actual source from a structured brief. Authorized MCP lookup remains agent-driven.
+
+**Component-first:** Adapt existing project components or authorized Systra MCP results. Five original offline React components are available in [components](skills/systra-taste/components), with [selection and integration instructions](skills/systra-taste/references/component-first.md).
 
 **Modular loading:** Start with the short skill and [section router](skills/systra-taste/references/section-router.md), then load one matching recipe: [hero](skills/systra-taste/references/hero.md), [workflow](skills/systra-taste/references/process.md), [pricing](skills/systra-taste/references/offer.md) or [editorial](skills/systra-taste/references/editorial.md). The broader references are optional, not a mandatory bundle.
 

@@ -1,0 +1,128 @@
+{
+  "hero": {
+    "component": "SceneHero",
+    "file": "scene-hero.jsx",
+    "keywords": [
+      "hero",
+      "landscape",
+      "terrain",
+      "map",
+      "markers",
+      "karte",
+      "landschaft",
+      "bildmarkierungen"
+    ],
+    "required": [
+      "title",
+      "description",
+      "image",
+      "alt",
+      "ratio",
+      "points"
+    ],
+    "optional": [
+      "eyebrow",
+      "caption"
+    ],
+    "query": "editorial image-led hero with interactive markers"
+  },
+  "signal": {
+    "component": "SignalTrace",
+    "file": "signal-trace.jsx",
+    "keywords": [
+      "signal",
+      "normalize",
+      "normalization",
+      "samples",
+      "rescale",
+      "normalisierung",
+      "daten",
+      "signalfluss"
+    ],
+    "required": [
+      "title",
+      "description",
+      "samples"
+    ],
+    "optional": [],
+    "query": "data transformation signal flow input output"
+  },
+  "geometry": {
+    "component": "ContourSmooth",
+    "file": "contour-smooth.jsx",
+    "keywords": [
+      "polygon",
+      "contour",
+      "geometry",
+      "smoothing",
+      "shape",
+      "formveranderung",
+      "kontur",
+      "geometrie",
+      "vektor"
+    ],
+    "required": [
+      "title",
+      "description",
+      "points"
+    ],
+    "optional": [],
+    "query": "interactive vector shape morph contour process"
+  },
+  "comparison": {
+    "component": "ImageCompare",
+    "file": "image-compare.jsx",
+    "keywords": [
+      "comparison",
+      "compare",
+      "before",
+      "after",
+      "scrubber",
+      "grading",
+      "bildvergleich",
+      "vorher",
+      "nachher",
+      "farbkorrektur"
+    ],
+    "required": [
+      "title",
+      "description",
+      "before",
+      "after",
+      "beforeAlt",
+      "afterAlt",
+      "ratio"
+    ],
+    "optional": [
+      "beforeLabel",
+      "afterLabel"
+    ],
+    "query": "draggable before after image comparison"
+  },
+  "pricing": {
+    "component": "StaySelector",
+    "file": "stay-selector.jsx",
+    "keywords": [
+      "pricing",
+      "price",
+      "plans",
+      "booking",
+      "stay",
+      "preise",
+      "tarife",
+      "angebote",
+      "buchung"
+    ],
+    "required": [
+      "title",
+      "description",
+      "image",
+      "alt",
+      "offers"
+    ],
+    "optional": [
+      "eyebrow"
+    ],
+    "query": "pricing selectable offers with editorial image"
+  }
+}

@@ -2,15 +2,15 @@
 
 This is a visual vocabulary derived from inspecting 40 existing Systra library preview images, with 34 selected examples. Observations describe visible static composition, not verified animation, source code, license, current availability or accessibility. See the [reference index](reference-index.md). Do not infer a working interaction from its component name or still image.
 
-## The mandatory design workflow
+## Expanded design workflow (optional lookup)
 
 1. Identify the section's job and the visual subject that can communicate it. Choose a direction below based on content, not a palette.
-2. Inspect **three actual visual references** of different compositions before writing JSX. When the authorized Systra Tools MCP is connected, search for suitable sections, inspect their available previews and source as permitted by access. Otherwise use authorized project images or the user's own screenshots. An offline text index is a fallback, not visual evidence. Do not claim images were seen if only names or descriptions were read.
-3. Extract four observations from each viewed reference: focal subject, relative size/placement, material or typography, and what the interaction would clarify. Never copy a distinctive layout, image or text verbatim from a third-party site.
+2. Inspect **one or two relevant actual visual references** of different compositions before writing JSX. When the authorized Systra Tools MCP is connected, search for suitable sections, inspect their available previews and source as permitted by access. Otherwise use authorized project images or the user's own screenshots. An offline text index is a fallback, not visual evidence. Do not claim images were seen if only names or descriptions were read.
+3. Record the one or two most relevant observations: focal subject, hierarchy, material or interaction. Never copy a distinctive layout, image or text verbatim from a third-party site.
 4. Build a short direction sheet: focal subject, dominant visual area, reading order, palette roles, display/body fonts, one interaction, and asset requirements. Reject generic dashboard/cards unless they are specifically needed.
-5. Produce three truly different composition sketches before choosing (two for a small isolated component). At least one should not be a conventional split or equal-card grid. The reference establishes a quality bar, not a reusable theme.
+5. Compare two truly different composition ideas briefly before choosing. At least one should not be a conventional split or equal-card grid. The reference establishes a quality bar, not a reusable theme.
 6. Use genuine Hugeicons for needed functional icons and actual project assets for imagery. Without required assets, ask or state the limitation; do not fake a premium scene with gradients and random geometry.
-7. Render and inspect the result against actual reference observations. If the draft looks like a stock template, revise architecture and focal subject before changing colors. When tools exist, make at least one screenshot-led revision for substantial new work. Record visual and functional gates separately.
+7. Render and inspect the result against actual reference observations. If the draft looks like a stock template, revise architecture and focal subject before changing colors. When tools exist, make one focused screenshot-led revision for material defects and verify it. Record visual and functional gates separately.
 8. If actual visual references or browser rendering are unavailable, mark the reference or render gate NOT TESTED; do not certify visual quality. A working build is not proof of strong art direction.
 
 ## Six directions

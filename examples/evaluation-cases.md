@@ -104,3 +104,7 @@ Report each pair's visual preference (A, B, tie or neither) and reasons without 
 ## Case G: reference-grounded visual design (2.0 regression)
 
 Repeat Case F with three authorized visual references available to both conditions and identical content, tools, budgets and asset permissions. In the skill-on condition use the 2.0 reference-first workflow and actual screenshot-led correction. Baseline receives the same reference images but no Systra instructions. A second comparison can isolate the visual-reference effect by comparing 1.4 and 2.0 under identical assets. Record reference inspections and revisions; use an independent reviewer blinded to labels. Include an immersive hero with approved imagery, a state-driven transformation, and a pricing selector. Test offline behavior separately: absent references must be marked NOT TESTED rather than falsely certified. Do not publish a visual win based only on repository tests.
+
+## Case H: modular 2.1 benchmark
+
+Run Case G with a fixed numeric sample array, identical assets and the same model settings in separate fresh sessions. For 2.1 provide only SKILL.md, the router and applicable recipe files, logging actual reads. Compare against 2.0 full-context and a no-skill baseline, with equal revision opportunities. Record wall time, token counts when available, design preference, and functional checks separately. Report incomplete runs without extrapolating speed or aesthetics.

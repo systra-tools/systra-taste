@@ -1,113 +1,39 @@
 ---
 name: systra-taste
-description: Art direction and interface craft for websites and digital products. Use Systra Taste when shaping a page, reviewing visual hierarchy, improving an existing UI, refining typography and layout, or designing purposeful motion in React, Tailwind and web projects. Includes design, critique and careful refinement in one skill.
+description: Reference-led art direction, UI craft, and purposeful motion for websites and React/Tailwind projects. Use to design new sections, critique existing interfaces, or refine scoped UI without losing brand or behavior.
 ---
 
-# Systra Taste
+# Systra Taste 2.1
 
-Your job is to make an interface **worth looking at and good to use**, not to apply a recognizable decorative filter. Taste is the quality of decisions. It is not a color palette, library, score, or imitation of another designer.
+Make the subject memorable, the hierarchy clear, and the interaction useful. Do not apply a house template.
 
-Systra Taste brings design judgment into practical interface work. It focuses on composition, hierarchy, credible material and purposeful motion, not preset themes.
+## 1. Route before reading
 
-## Choose the working mode
+- **Design:** inspect the actual project and brief, then use [section-router.md](references/section-router.md). Read only the matching recipe for each distinct section job, not the entire reference folder.
+- **Critique:** strictly read-only by default. Use [review-workflow.md](references/review-workflow.md) and [audit-checklist.md](references/audit-checklist.md) for evidence; do not edit or deploy.
+- **Refine:** preserve content, routes, behavior and brand. Use [repair-workflow.md](references/repair-workflow.md) and [repair-playbook.md](references/repair-playbook.md) when needed. Explore requested alternatives in isolated previews before integrating a selected direction.
 
-One skill contains three working modes. Select from the actual task rather than requiring another installation.
+## 2. Design in a short loop
 
-- **Design:** For new pages, sections, flows and implementations. Follow the project-first process below and verify the working output.
-- **Critique:** For audits, reviews or feedback on an existing interface. This mode is strictly **read-only by default**. Inspect and report evidence. Do not change code, add dependencies, open PRs or deploy. Read [review-workflow.md](references/review-workflow.md) and [audit-checklist.md](references/audit-checklist.md).
-- **Refine:** For redesigning existing interfaces. Preserve the real content, routes, functionality and brand. When the user has not chosen a direction and asks for options, explore distinct compositions in isolated previews. Integrate only after the user selects a direction or explicitly asks for the changes. Read [repair-workflow.md](references/repair-workflow.md) and [repair-playbook.md](references/repair-playbook.md).
+1. Inspect existing brand, fonts, assets, reusable components, content, controls and constraints. Brand and explicit instructions take precedence.
+2. Name the one job and one focal subject. For a substantial new section, inspect 1–2 relevant authorized visual references; reuse already-inspected references across related sections. If none are available, work from the brief and mark reference inspection NOT TESTED. Do not block on searching.
+3. Compare two genuinely different composition ideas briefly. Choose one, then build. Do not produce a long design rationale or read additional references merely to satisfy a checklist.
+4. Let the subject drive the type, crop, scale and color. A chart, real product task or photograph should dominate, not a decorative dashboard, arbitrary blob or repeated grid.
+5. Render and check desktop and narrow mobile, actual interaction and keyboard/reduced-motion behavior. Fix material visual or functional defects in one focused screenshot-led correction pass and verify the fix. Mark unavailable checks NOT TESTED. Never claim a pass from prose alone.
 
-Scope is part of craft. A critique must not silently become an implementation. A request to adjust typography is not permission to change the navigation.
+## 3. Signature (unless the project explicitly overrides it)
 
+- Use no new em dashes in UI copy. Specific, concise language.
+- Prefer coherent, subtly rounded corners (6–12 px), no decorative borders or box shadows. Keep functional input and focus boundaries.
+- MUST use real **Hugeicons** when functional icons are needed in new Systra-style UI. In React use @hugeicons/react and @hugeicons/core-free-icons, verify installed named exports and rendered SVGs. No Unicode arrows/checks or invented icons as substitutes. Keep existing icon systems where required; disclose a blocked dependency. Icon-free layouts are valid.
+- Choose one typographic direction per project, not a mandatory sans plus italic serif formula. Use the actual font inventory. Change scale, weight, width, tracking and rhythm intentionally; italic serif only if the content benefits.
+- Motion clarifies a real state, a transition or spatial continuity. Scroll motion is selective; no forced scrolling. Use CSS for small interactions. GSAP, ScrollTrigger and Lenis are optional; consult [lenis-gsap.md](references/lenis-gsap.md) only when using them together.
+- Use approved project imagery when it matters; do not fake a photographic subject with cheap CSS. Do not copy third-party compositions verbatim or redistribute premium source or images. Systra Tools MCP is optional; search only within authorized access.
 
+## 4. Deliver
 
-## Design mode: start with the project, not a style
+Show the actual implementation or preview, one concrete design decision and any failed/unverified checks. Check that the logo cannot simply be swapped onto a generic template, that the action works, and that the result remains readable at 320px.
 
-**2.0 reference-first workflow:** Read [design-dna.md](references/design-dna.md), [reference-index.md](references/reference-index.md) and [interaction-atlas.md](references/interaction-atlas.md). For substantial new work, inspect three actual authorized visual references BEFORE coding. If Systra Tools MCP is connected, search relevant sections and view previews/source within permitted access. If unavailable, use user-approved visual references, or mark the visual-reference gate NOT TESTED. Do not silently substitute the text index for visual inspection. Choose a visual subject, direction and interaction from the references; translate principles rather than copy layouts or assets. Existing brand and explicit constraints remain authoritative.
+The public package is text and original code recipes; no bundled photos. For detailed policy and troubleshooting use [visual-signature.md](references/visual-signature.md) or [release-gates.md](references/release-gates.md) selectively, not by default. More references are available via the router.
 
-**Mandatory execution gate for new work:** read [art-direction.md](references/art-direction.md), [visual-recipes.md](references/visual-recipes.md), [visual-signature.md](references/visual-signature.md) and [release-gates.md](references/release-gates.md) before writing UI. For motion, also read the motion reference. For scoped refinements, apply the same gates to the changed scope only; critique remains read-only. A project constraint can override a visual default, but record the actual constraint and do not invent one. Never silently substitute another icon family in a greenfield design.
-
-1. Inspect the actual project: framework, styles, design tokens, font loading, reusable components, product copy, media, routes, layout, breakpoints and constraints. Read the brief and determine the target conversion or comprehension job.
-2. Record the established brand and explicit user preferences. **Brand truth wins over Systra defaults.** Never recolor a client's brand simply to make it look like Systra.
-3. State what this view must communicate in five seconds. Identify a credible visual subject (product, work, result, process or meaningful image), not a decorative gradient.
-4. Sketch the hierarchy and page rhythm before changing colors or motion. Name the composition: editorial split, immersive product scene, text-led evidence, staggered narrative, etc.
-5. Explore three genuinely distinct composition thumbnails (written or sketched) with different focal placement, reading order and scale. Select one with a reason tied to the brief. Reject the first generic template, not merely its colors. For a small isolated component, two alternatives suffice. If the request is a narrow change, do not expand scope.
-6. Build with the existing components or library. If the **Systra Tools MCP** is already connected, search for relevant real sections, inspect authorized previews and source and adapt them to the project's actual design system. MCP is optional; this skill works without it.
-7. Implement content as semantic text and controls. Use real HTML/React for headings, CTAs, forms and data. Complex photography, people and materials belong in appropriate image assets, not fake CSS reproductions.
-8. Render, inspect desktop and mobile screenshots, run the release gates, and perform a screenshot-led second design pass for substantial new work, or whenever a visual gate fails. Re-render after correction. If tools are unavailable, report NOT TESTED rather than presenting a polished or passing result. Never let functional QA substitute for visual QA.
-
-## Design decisions
-
-Read [craft-rules.md](references/craft-rules.md) for constraints and [page-rhythm.md](references/page-rhythm.md) for section composition when building a whole page.
-
-Read [design-decisions.md](references/design-decisions.md) for concrete architecture selection, typography, material, image handling, motion, and QA recipes. Use it especially when the user provides no moodboard.
-
-Read [visual-signature.md](references/visual-signature.md) for the Systra visual defaults and exact Hugeicons React integration. Read [motion-patterns.md](references/motion-patterns.md) whenever building an animated hero, scroll narrative or interaction. These defaults apply only where the user's brand and explicit instructions do not prescribe otherwise.
-
-- **Hierarchy before decoration.** One dominant idea per viewport, with deliberate typographic contrast and readable supporting information.
-- **Composition before effects.** Don't try to rescue a generic layout with grain, glass, blur, gradients or bigger fonts.
-- **Variation with continuity.** A page needs rhythm: product scene, evidence, interaction, breathing space, call to action. Don't stack clones of the same section.
-- **Real context.** A product screenshot is for understanding the product, not an unreadable thumbnail floating in a card.
-- **Typography earns its size.** Prefer fewer clear type levels. Match line-height and line-length to the actual copy, not placeholder text.
-- **Motion has a job.** Orientation, focus, progress, comparison, feedback or spatial continuity. If it accomplishes none, omit it.
-- **Accessibility is part of taste.** Preserve semantic headings, touch targets, keyboard operation, contrast and reduced-motion behavior.
-- **Avoid aesthetic dogma.** Light backgrounds, glass, saturation, shadows, dark mode and large radii are all conditional on the brief. Reject lazy defaults, not entire styles.
-
-## Practical build sequence
-
-Make these decisions before adding visual effects:
-
-1. **One-sentence brief:** Who is the audience, what should they understand in five seconds, and what is the one primary action?
-2. **Focal proof:** Choose a genuine interface state, a real project result, a human/process subject, or an editorial statement. Decorative geometry is not proof.
-3. **Architecture:** Pick a content-led composition. State why the page starts there rather than defaulting to centered headline + three cards.
-4. **Typographic hierarchy:** Set text from actual content, then verify the longest heading and important controls at narrow mobile widths.
-5. **Asset decision:** Use authorized project imagery, a newly authorized purpose-made asset, or a text/code-first design. Never assume third-party reference images are available.
-6. **Motion decision:** Give each movement one specific job; remove motion that exists only to look lively.
-7. **Rendered QA:** Inspect real browser output when tools exist, including mobile, keyboard, focus and reduced motion. If unavailable, mark visual QA as not tested.
-
-### Public reference and photo policy
-
-This skill is deliberately **photo-free as a distributable package**. It must not depend on bundled image moodboards, scraped site screenshots, stock-photo collections or external image URLs. The text index and examples support offline use, but are not a substitute for visual reference inspection; mark that gate NOT TESTED when no authorized visuals are available. You may inspect user-provided or already licensed project assets when available, but never copy a reference site's distinctive visuals or redistribute those assets as part of this skill.
-
-No-photo-bundle does **not** mean no photography in the final website. Authentic, approved imagery can be the right focal point. When a needed asset is unavailable, describe its brief and placeholder accurately rather than pretending it was generated or rebuilding a human or landscape as cheap CSS.
-
-## Systra visual defaults
-
-When the project has no stronger visual conventions or conflicting brief:
-
-- **Copy:** Never introduce em dashes into newly authored marketing or interface text. Use a period, comma or colon instead. Preserve quoted or immutable supplied content.
-- **Corners:** Use subtly rounded corners, commonly 6 to 12 px at regular control/card sizes, with a coherent scale.
-- **Surfaces:** Use no decorative box borders or box shadows. Group content through composition, whitespace and restrained surface contrast instead of framed cards. Keep necessary focus outlines, input boundaries and accessible states.
-- **Icons:** MUST use real **Hugeicons** wherever iconography is needed in new Systra-style UI with no conflicting project constraint. In React, verify actual imports from @hugeicons/react and @hugeicons/core-free-icons, compile, and inspect rendered SVG. For other stacks use official Hugeicons assets/integrations allowed by the project. No Unicode arrows/checks, emoji, improvised SVG or Lucide substitutes for functional icons. Do not add unnecessary icons. Preserve an explicitly established icon system or dependency restriction; disclose any blocked integration.
-- **Entrance motion:** Build a coordinated, refined hero arrival. Reveal meaningful text and media with restrained masking, small vertical movement or deliberate crop; avoid a large simultaneous fade for everything.
-- **Scroll motion:** Include purposeful, selective scroll reveals or one meaningful scene transition when appropriate. A motion-heavy page must have quiet reading sections. Never hijack scroll or hide content under reduced motion.
-- **Advanced motion:** Use GSAP, ScrollTrigger and Lenis when their capabilities improve the result. GSAP timelines may choreograph entrances, ScrollTrigger may control narrative scroll scenes, and Lenis may smooth scrolling. They are optional, not required. Read [lenis-gsap.md](references/lenis-gsap.md) before combining them and use a shared ticker, proper cleanup and native-motion fallbacks.
-- **Quality:** Check mobile, keyboard focus, motion reduction, performance and actual rendered states. Do not claim that an animation is smooth or an interface is polished without verification.
-
-These are explicit **defaults**, not permission to recolor other brands, remove accessibility cues or add unrequested animation to an established UI.
-
-## Three failure tests
-
-Before submitting, check:
-
-1. **Swap-the-logo test:** Would the page look like 50 unrelated AI-generated sites if the logo and company name changed? If yes, strengthen composition or the actual product story.
-2. **Screenshot test:** Can someone understand the value proposition and next action from a real viewport? If not, simplify hierarchy.
-3. **Reality test:** Can the design survive long copy, real imagery, a 320px screen and keyboard input? If not, it is a mockup rather than production UI.
-
-Use the objective release checklist in [craft-rules.md](references/craft-rules.md) and the blocking [release gates](references/release-gates.md). A failed icon, composition or visual-inspection gate cannot be offset by other passes. Do not claim a subjective quality score as measured fact.
-
-## How to communicate
-
-For new work: show the implementation and briefly explain **the focal idea**, **the hierarchy** and **what was verified**. For changes to existing code: summarize the files changed and any remaining tests. Offer no fabricated previews, fake metrics or hidden production changes.
-
-Use the user's language and match the site's tone. Avoid generic AI marketing copy. Never copy a reference site's distinctive composition, assets, brand or exact text.
-
-## Optional Systra Tools integration
-
-When available, use Systra Tools only to support the user's goal: find a suitable existing component, inspect what it actually does and integrate it with matching content and brand tokens. Never claim an unverified component exists, leak MCP keys, bypass paid access or replace the whole site's design system.
-
-Library: https://systra.tools/
-MCP setup: https://systra.tools/mcp
-Style Extractor: https://systra.tools/styles
-
-**Success means a coherent, functioning interface with a defensible visual idea, not merely more decoration.**
+https://systra.tools/mcp

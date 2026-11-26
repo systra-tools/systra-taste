@@ -4,7 +4,7 @@ The goal is a distinctive, useful composition, not a house template. Quality sig
 
 ## Three directions, one choice
 
-Before building a substantial section, sketch three directions in 1–2 lines each. Change the actual architecture, not the palette.
+Before building a substantial section, sketch two directions in 1–2 lines each. Change the actual architecture, not the palette.
 
 - **Editorial:** left-anchored statement, asymmetric columns, deliberate negative space, a meaningful small annotation and a single hero visual.
 - **Immersive:** a large product or approved photographic scene; text positioned at a clear edge or in negative space. Use a deliberate crop and a quiet reading area.

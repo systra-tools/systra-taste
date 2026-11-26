@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0 (candidate)
+- Short core with job-based reference routing; load only the relevant recipe, with a bounded initial context.
+- Four original interactive React/Tailwind recipes: scene markers, real signal transformation, selectable offer ledger and editorial gallery.
+- Avoid repetitive serif-accent defaults; keep Hugeicons, accessibility, authorized imagery and honest visual QA.
+- Retain the full optional atlas and private preview policy. Design improvement and runtime remain subject to an independent A/B benchmark.
+
 ## 2.0.0 (candidate)
 - Reference-first design workflow, with six art directions and 34 curated static preview observations.
 - Twenty motion and fifteen control recipes, including original implementation primitives.

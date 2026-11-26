@@ -47,6 +47,8 @@ For new work without stronger existing brand rules:
 
 A brand's established system always takes precedence over these defaults.
 
+**Modular loading (2.1 candidate):** Start with the short skill and [section router](skills/systra-taste/references/section-router.md), then load one matching recipe: [hero](skills/systra-taste/references/hero.md), [workflow](skills/systra-taste/references/process.md), [pricing](skills/systra-taste/references/offer.md) or [editorial](skills/systra-taste/references/editorial.md). The broader references are optional, not a mandatory bundle.
+
 Explore the [Design DNA](skills/systra-taste/references/design-dna.md), [34-reference index](skills/systra-taste/references/reference-index.md), [interaction atlas](skills/systra-taste/references/interaction-atlas.md), [art direction](skills/systra-taste/references/art-direction.md), [visual recipes](skills/systra-taste/references/visual-recipes.md), [release gates](skills/systra-taste/references/release-gates.md) and the [visual signature](skills/systra-taste/references/visual-signature.md), [motion patterns](skills/systra-taste/references/motion-patterns.md) and [Lenis + GSAP reference](skills/systra-taste/references/lenis-gsap.md).
 
 ## Put it to work

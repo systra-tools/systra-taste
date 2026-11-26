@@ -117,7 +117,7 @@ test("Systra visual defaults, motion guidance and evaluation prompts remain link
   const motion = read("skills/systra-taste/references/motion-patterns.md");
   const cases = read("examples/evaluation-cases.md");
   for (const file of ["visual-signature.md", "motion-patterns.md"]) {
-    assert.ok(build.includes("references/" + file));
+    assert.ok(build.includes("references/" + file) || read("skills/systra-taste/references/section-router.md").includes("](" + file + ")"));
     assert.ok(existsSync(join(skillRoot, "systra-taste", "references", file)));
   }
   for (const term of ["em dashes", "Hugeicons", "box shadows", "corners", "Scroll motion"]) {
@@ -160,12 +160,12 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   const base = "skills/systra-taste/";
   const main = read(base + "SKILL.md");
   for (const name of ["art-direction.md", "visual-recipes.md", "release-gates.md"]) {
-    assert.ok(main.includes("references/" + name), name);
+    assert.ok(main.includes("references/" + name) || read(base + "references/section-router.md").includes("](" + name + ")"), name);
     assert.ok(existsSync(join(root, base, "references", name)));
   }
   assert.match(main, /MUST use real \*\*Hugeicons\*\*/);
-  assert.match(main, /three genuinely distinct composition/);
-  assert.match(main, /screenshot-led second design pass/);
+  assert.match(main, /two genuinely different composition/);
+  assert.match(main, /screenshot-led correction pass/);
   const gates = read(base + "references/release-gates.md");
   for (const term of ["installed dependencies", "rendered SVG", "Unicode", "FAIL", "NOT TESTED", "correction pass", "controlled A/B"]) assert.ok(gates.includes(term), term);
   const recipes = read(base + "references/visual-recipes.md");
@@ -174,7 +174,7 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
   assert.match(cases, /separate fresh sessions/);
   assert.match(cases, /Randomize labels/);
-  assert.equal(JSON.parse(read("package.json")).version, "2.0.0");
+  assert.equal(JSON.parse(read("package.json")).version, "2.1.0");
 });
 
 
@@ -185,7 +185,7 @@ test("2.0 reference-first workflow and interaction atlas are complete", () => {
   const idx = read(base + "references/reference-index.md");
   const atlas = read(base + "references/interaction-atlas.md");
   const gates = read(base + "references/release-gates.md");
-  for (const name of ["design-dna.md", "reference-index.md", "interaction-atlas.md"]) assert.ok(main.includes("references/" + name), name);
+  for (const name of ["design-dna.md", "reference-index.md", "interaction-atlas.md"]) assert.ok(read(base + "references/section-router.md").includes("](" + name + ")"), name);
   for (const direction of ["Editorial", "Minimal", "Experimental", "Luxury", "Technical", "Immersive"]) assert.ok(dna.includes("| " + direction + " |"), direction);
   assert.equal(idx.split("\n").filter(l => /^\| [A-Z][A-Za-z]+ \| (Editorial|Minimal|Experimental|Luxury|Technical|Immersive) \|/.test(l)).length, 34);
   const [motion, controls] = atlas.split("## 15 control recipes");
@@ -195,4 +195,23 @@ test("2.0 reference-first workflow and interaction atlas are complete", () => {
   assert.match(gates, /A filename or text description alone does not count/);
   assert.match(dna, /premium source stay in their authorized environment/);
   assert.match(dna, /NOT TESTED/);
+});
+
+test("2.1 loads a bounded core and routes to four original recipes", () => {
+  const base = "skills/systra-taste/";
+  const core = read(base + "SKILL.md");
+  const router = read(base + "references/section-router.md");
+  assert.ok(Buffer.byteLength(core) < 5000);
+  assert.match(core, /Read only the matching recipe/);
+  assert.match(core, /1–2 relevant authorized visual references/);
+  assert.match(router, /at most three modules initially/);
+  assert.match(router, /Do not concatenate every reference/);
+  for (const [file, component] of [["hero.md","SceneMarkers"],["process.md","SignalTransform"],["offer.md","OfferLedger"],["editorial.md","EditorialGallery"]]) {
+    assert.ok(router.includes("](" + file + ")"), file);
+    const recipe = read(base + "references/" + file);
+    assert.ok(recipe.includes("export function " + component), component);
+    assert.ok(recipe.includes("@hugeicons/react") && recipe.includes("@hugeicons/core-free-icons"));
+    assert.ok(Buffer.byteLength(core + router + recipe) < 13000, file);
+  }
+  for (const [,file] of router.matchAll(/\]\(([^)#]+\.md)\)/g)) assert.ok(existsSync(join(root,base,"references",file)),file);
 });

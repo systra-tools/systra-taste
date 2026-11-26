@@ -18,7 +18,7 @@ npx skills@latest add systra-tools/systra-taste
 
 Choose the agent and installation scope when prompted. Global installation is also supported with `-g`. Systra Taste works **without any Systra account**.
 
-**For Claude:** [Download Systra Taste ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.3.0/systra-taste.zip). The archive contains one `systra-taste/` folder with its instructions and references.
+**For Claude (latest published stable ZIP):** [Download Systra Taste ZIP](https://github.com/systra-tools/systra-taste/releases/download/v1.3.0/systra-taste.zip). The archive contains one `systra-taste/` folder with its instructions and references.
 
 [Release notes](https://github.com/systra-tools/systra-taste/releases/tag/v1.3.0)
 
@@ -40,13 +40,14 @@ For new work without stronger existing brand rules:
 - Clear typography and content-led composition.
 - Slightly rounded corners, generally 6 to 12 px.
 - No decorative borders around boxes and no box shadows. Functional focus and form boundaries remain visible.
-- Consistent Hugeicons where iconography genuinely helps.
-- Refined entrance animation and selective scroll-driven transitions.
+- Genuine Hugeicons required for icon-bearing new Systra-style UI, with explicit exceptions for existing brand systems.
+- Refined entrance animation, selective scroll-driven transitions and precise microinteractions.
+- Distinct composition exploration, concrete visual recipes and blocking screenshot-led quality checks.
 - Optional GSAP, ScrollTrigger and Lenis for more demanding motion.
 
 A brand's established system always takes precedence over these defaults.
 
-Explore the [visual signature](skills/systra-taste/references/visual-signature.md), [motion patterns](skills/systra-taste/references/motion-patterns.md) and [Lenis + GSAP reference](skills/systra-taste/references/lenis-gsap.md).
+Explore the [art direction](skills/systra-taste/references/art-direction.md), [visual recipes](skills/systra-taste/references/visual-recipes.md), [release gates](skills/systra-taste/references/release-gates.md) and the [visual signature](skills/systra-taste/references/visual-signature.md), [motion patterns](skills/systra-taste/references/motion-patterns.md) and [Lenis + GSAP reference](skills/systra-taste/references/lenis-gsap.md).
 
 ## Put it to work
 

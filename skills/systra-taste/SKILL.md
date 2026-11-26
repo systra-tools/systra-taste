@@ -23,14 +23,16 @@ Scope is part of craft. A critique must not silently become an implementation. A
 
 ## Design mode: start with the project, not a style
 
+**Mandatory execution gate for new work:** read [art-direction.md](references/art-direction.md), [visual-recipes.md](references/visual-recipes.md), [visual-signature.md](references/visual-signature.md) and [release-gates.md](references/release-gates.md) before writing UI. For motion, also read the motion reference. For scoped refinements, apply the same gates to the changed scope only; critique remains read-only. A project constraint can override a visual default, but record the actual constraint and do not invent one. Never silently substitute another icon family in a greenfield design.
+
 1. Inspect the actual project: framework, styles, design tokens, font loading, reusable components, product copy, media, routes, layout, breakpoints and constraints. Read the brief and determine the target conversion or comprehension job.
 2. Record the established brand and explicit user preferences. **Brand truth wins over Systra defaults.** Never recolor a client's brand simply to make it look like Systra.
 3. State what this view must communicate in five seconds. Identify a credible visual subject (product, work, result, process or meaningful image), not a decorative gradient.
 4. Sketch the hierarchy and page rhythm before changing colors or motion. Name the composition: editorial split, immersive product scene, text-led evidence, staggered narrative, etc.
-5. Pick a distinct direction. If the first direction is "centered headline + three equal cards + gradient blob", start again unless that structure is genuinely justified by the content.
+5. Explore three genuinely distinct composition thumbnails (written or sketched) with different focal placement, reading order and scale. Select one with a reason tied to the brief. Reject the first generic template, not merely its colors. For a small isolated component, two alternatives suffice. If the request is a narrow change, do not expand scope.
 6. Build with the existing components or library. If the **Systra Tools MCP** is already connected, search for relevant real sections, inspect their source and adapt them to the project's actual design system. MCP is optional; this skill works without it.
 7. Implement content as semantic text and controls. Use real HTML/React for headings, CTAs, forms and data. Complex photography, people and materials belong in appropriate image assets, not fake CSS reproductions.
-8. Verify the rendered result at narrow mobile, desktop, keyboard focus and reduced motion. Inspect screenshots when a browser is available. If you cannot render, explicitly identify what remains unverified.
+8. Render, inspect desktop and mobile screenshots, run the release gates, and perform a second design pass if a visual gate fails. Re-render after correction. If tools are unavailable, report NOT TESTED rather than presenting a polished or passing result. Never let functional QA substitute for visual QA.
 
 ## Design decisions
 
@@ -74,7 +76,7 @@ When the project has no stronger visual conventions or conflicting brief:
 - **Copy:** Never introduce em dashes into newly authored marketing or interface text. Use a period, comma or colon instead. Preserve quoted or immutable supplied content.
 - **Corners:** Use subtly rounded corners, commonly 6 to 12 px at regular control/card sizes, with a coherent scale.
 - **Surfaces:** Use no decorative box borders or box shadows. Group content through composition, whitespace and restrained surface contrast instead of framed cards. Keep necessary focus outlines, input boundaries and accessible states.
-- **Icons:** Prefer real **Hugeicons** in new React UI, with consistent stroke/scale and semantic use. Verify actual imports from @hugeicons/react and @hugeicons/core-free-icons. Do not add a dependency or swap an existing icon system without checking project constraints.
+- **Icons:** MUST use real **Hugeicons** wherever iconography is needed in new Systra-style UI with no conflicting project constraint. In React, verify actual imports from @hugeicons/react and @hugeicons/core-free-icons, compile, and inspect rendered SVG. For other stacks use official Hugeicons assets/integrations allowed by the project. No Unicode arrows/checks, emoji, improvised SVG or Lucide substitutes for functional icons. Do not add unnecessary icons. Preserve an explicitly established icon system or dependency restriction; disclose any blocked integration.
 - **Entrance motion:** Build a coordinated, refined hero arrival. Reveal meaningful text and media with restrained masking, small vertical movement or deliberate crop; avoid a large simultaneous fade for everything.
 - **Scroll motion:** Include purposeful, selective scroll reveals or one meaningful scene transition when appropriate. A motion-heavy page must have quiet reading sections. Never hijack scroll or hide content under reduced motion.
 - **Advanced motion:** Use GSAP, ScrollTrigger and Lenis when their capabilities improve the result. GSAP timelines may choreograph entrances, ScrollTrigger may control narrative scroll scenes, and Lenis may smooth scrolling. They are optional, not required. Read [lenis-gsap.md](references/lenis-gsap.md) before combining them and use a shared ticker, proper cleanup and native-motion fallbacks.
@@ -90,7 +92,7 @@ Before submitting, check:
 2. **Screenshot test:** Can someone understand the value proposition and next action from a real viewport? If not, simplify hierarchy.
 3. **Reality test:** Can the design survive long copy, real imagery, a 320px screen and keyboard input? If not, it is a mockup rather than production UI.
 
-Use the objective release checklist in [craft-rules.md](references/craft-rules.md). Do not claim a subjective quality score as measured fact.
+Use the objective release checklist in [craft-rules.md](references/craft-rules.md) and the blocking [release gates](references/release-gates.md). A failed icon, composition or visual-inspection gate cannot be offset by other passes. Do not claim a subjective quality score as measured fact.
 
 ## How to communicate
 

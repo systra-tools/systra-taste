@@ -30,13 +30,13 @@ Examples:
 
 ## Icon direction
 
-- Default to **Hugeicons**, with one consistent stroke-based style. Use icons only when they clarify meaning, navigation, state or action.
+- **MUST use genuine Hugeicons** for icon-bearing new Systra-style UI, unless an existing brand, stack or explicit dependency constraint overrides this. Icons are semantic, not mandatory decoration. An icon-free editorial layout is valid when it needs no icons. Do not replace arrow, check, menu or status icons with Unicode glyphs, emoji, Lucide or hand-drawn substitutes.
 - For React, use the maintained packages **@hugeicons/react** and **@hugeicons/core-free-icons**. Do not use the legacy deprecated **hugeicons-react** package in new code.
 - Import specific exported icons. Check that an export exists, never invent component names. Use the project's licensed Hugeicons Pro package only when its availability and license are confirmed.
 - Use around **20 to 24 px** for most action icons and **16 to 20 px** for dense controls, depending on their context. A stroke width around **1.5** is a useful default, not a mandate.
 - Icons should generally inherit current text color. Align their optical baseline with the label. Avoid mixing icon families or using oversized decorative icons as a substitute for meaningful imagery.
 - An icon-only button needs an accessible name and a visible keyboard focus state. Decorative icons should not be read as independent information by assistive technology.
-- If the existing project already uses another icon system and replacing it would break consistency or exceed the requested change, preserve it. For new Systra-designed React sections, prefer Hugeicons.
+- If the existing project already uses another icon system and replacing it would break consistency or exceed the requested change, preserve it. For new Systra-designed React sections with iconography, genuine Hugeicons are required. If installation is blocked, report the gate as BLOCKED, not PASS.
 
 Example verified against the official free-package documentation:
 
@@ -67,7 +67,7 @@ Official React documentation: https://hugeicons.com/docs/integrations/react/quic
 Evaluate **newly authored text** for unwanted em dashes and vague claims. Inspect actual rendered surfaces, not just CSS declarations:
 1. No decorative shadows or box borders.
 2. Subtle, consistent corner rounding.
-3. Icons are purposeful, consistent, genuine Hugeicons imports where applicable.
+3. Icons are purposeful and consistent. Inspect genuine Hugeicons imports, installed exports, build output and actual rendered SVG. Missing required icons or a substitute family is FAIL.
 4. Focus, inputs and selected states remain distinguishable.
 5. The layout still works without animation or imagery.
 6. The site's true brand and the user's explicit directions win over these defaults.

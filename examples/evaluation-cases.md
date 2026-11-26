@@ -86,3 +86,16 @@ For each case, record pass / fail / unverified for:
 10. Real browser verification, honest limitations and preserved functionality.
 
 Keep screenshots, exact prompts, environment and failing code samples from **authorized** test projects outside this public text-only skill repository. Do not invent preference scores, conversion uplifts or wins over other skills.
+
+
+## Case F: greenfield Hero, Workflow and Pricing (1.4 regression)
+
+Use identical prompts and the same model, framework, fonts, assets, token/time budget and environment. Run skill-off and skill-on in separate fresh sessions; record exact skill revision. Do not give the skill-off run the skill-on output or cherry-pick retries. If the skill-on instructions demand correction, record the iteration count and optionally compare a matched second-pass baseline. Capture desktop (1440px) and mobile (390px, 320px) at stable states. Randomize labels before human visual review.
+
+- Hero prompt: "Build a landing hero for a fictional video review SaaS. Demonstrate a working review task with clearly illustrative sample content, a primary action and mobile layout. Use React and Tailwind."
+- Workflow prompt: "Build a section for a fictional text normalization tool. Let users change an example, visibly show the input-to-output transformation, and make the interaction accessible. Use React and Tailwind."
+- Pricing prompt: "Build pricing for a fictional tool, with free and paid offers, explicit billing units and identical supplied feature lists and destinations. Use React and Tailwind." Supply the same complete plan fixture to both runs before generating.
+
+Expected skill-on: distinct compositions, specific visual idea, purposeful typography, genuine Hugeicons wherever functional icons are used, meaningful motion where helpful, screenshot-led correction, no decorative shadows or frames, preserved functionality. A Unicode arrow/check or another family in place of a required Hugeicon is an automatic gate FAIL. A conventional layout is not automatically a failure, but merely removing shadows or recoloring is not sufficient evidence of a visual win.
+
+Report each pair's visual preference (A, B, tie or neither) and reasons without knowing which used the skill. Report functional gates separately. No aggregate win claim if any required icon/build/render gate fails or the evaluation has not been independently run. Save source, screenshots and exact environment outside the public package.

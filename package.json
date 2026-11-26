@@ -1,7 +1,7 @@
 {
   "name": "@systra-tools/taste-skill",
   "private": true,
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Original Systra Taste design skill for coding agents",
   "scripts": {
     "test": "node --test scripts/validate.test.mjs"

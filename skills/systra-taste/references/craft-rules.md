@@ -1,6 +1,6 @@
 # The Systra Craft Bar
 
-Use this as a **decision checklist**, not a rigid theme. A strong interface has a specific point of view and remains usable.
+Use this as a **decision checklist**, not a rigid theme. Apply the blocking checks in release-gates.md as well. A strong interface has a specific point of view and remains usable.
 
 ## Composition
 - Begin with the purpose: what must the audience understand or do next?
@@ -11,7 +11,7 @@ Use this as a **decision checklist**, not a rigid theme. A strong interface has 
 - Use image crops that support content and text-safe regions. Product UI should be legible, not a decorative thumbnail.
 
 ## Type, spacing and controls
-- Use an existing project type scale when present. Otherwise choose 1 functional sans family and only add an editorial display family when it does real work.
+- Use an existing project type scale when present. Otherwise choose a deliberate type direction using art-direction.md. Compare a sans-led direction and an editorial contrast direction before deciding. A second family must have a clear purpose.
 - Check body width on actual content; around 60–80 characters per line is a useful starting point, not a universal target.
 - Prefer an explicit spacing rhythm over arbitrary one-off values. Verify that changing the font and localization doesn't break it.
 - Keep buttons easily targetable on touch, with visible focus states, a clear verb and one primary action per decision point.
@@ -44,5 +44,7 @@ Mark **pass / fail / unverified**, not invented percentages.
 8. Reduced motion and keyboard focus preserved.
 9. No fabricated product claims or fake logos.
 10. Render/build/tests actually verified, or explicitly marked unverified.
+11. Genuine Hugeicons imports and rendered icons verified wherever required; no silent substitutes.
+12. At least one screenshot-led correction pass when composition or craft fails.
 
 If a release gate fails, fix it or disclose it. No decorative polish can offset broken navigation or fake evidence.

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.4.0 (candidate)
+- Require genuine Hugeicons for new icon-bearing Systra UI and verify exports, build and render.
+- Add composition alternatives, practical art direction and original code-based visual recipes.
+- Add blocking visual release gates, screenshot-led correction and controlled A/B regression cases.
+- Preserve scoped brand overrides, accessibility and the photo-free public package.
+- Candidate changes are not evidence of visual A/B success; publish only after independent evaluation.
+
 ## 1.3.0 · 2026-11-13
 - Consolidated design, critique and refinement into a single installable skill.
 - Preserved the full review and repair workflows as internal references.

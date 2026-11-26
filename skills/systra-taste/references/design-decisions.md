@@ -35,7 +35,7 @@ These are starting points, not mandatory templates. A familiar grid is allowed w
 
 - Identify three reading levels: focal statement or subject, essential explanation, and supporting metadata. More levels require a clear reason.
 - Set the longest real heading before choosing its size. Check line breaks at narrow mobile, laptop and wide desktop.
-- Start with existing typography tokens. If absent, use one functional sans family; add display contrast only when it clarifies the editorial hierarchy.
+- Start with existing typography tokens. If absent, choose one deliberate typographic direction from art-direction.md; compare a distinctive sans-led option and an editorial contrast option. Verify font availability, weight, line breaks and optical spacing. Do not settle for an unexamined default sans.
 - Use a repeatable spacing progression. Avoid random margins inserted to patch one viewport.
 - Make one primary action obvious, then scale down secondary actions. Don't turn every label into a pill.
 - Put proof close to the claim it supports. A customer's actual outcome is stronger than a row of unverifiable logos.
@@ -59,7 +59,7 @@ Keep headings, buttons, forms, figures and meaningful data in semantic code. Nev
 - Glass requires actual background depth, a functional purpose and checked contrast; do not place milky blur cards over an empty background.
 - By default do not use box shadows or decorative frames around cards. Use spacing, surface contrast and clear hierarchy. Preserve functional borders for forms, focus and accessibility.
 - Grain and gradients can reinforce a deliberate image world, not rescue weak information architecture.
-- Prefer modest 6 to 12 px radii; use real Hugeicons and no newly authored em-dash punctuation where the project does not specify otherwise.
+- Prefer modest 6 to 12 px radii; genuine Hugeicons are required for icon-bearing greenfield Systra UI, and newly authored UI copy must avoid em-dash punctuation unless the project explicitly overrides these rules.
 - Squircles, sharp modules and pills are context-driven shapes, not mandatory house style.
 
 ## 5. Motion that explains, rather than decorates

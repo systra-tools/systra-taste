@@ -154,3 +154,25 @@ test("Lenis and GSAP integration is optional, linked and synchronized", () => {
   assert.ok(repair.includes("Lenis") && review.includes("ScrollTrigger"));
   assert.ok(read("examples/evaluation-cases.md").includes("Case E: GSAP and Lenis"));
 });
+
+
+test("1.4 candidate has mandatory art direction, real icons and screenshot gates", () => {
+  const base = "skills/systra-taste/";
+  const main = read(base + "SKILL.md");
+  for (const name of ["art-direction.md", "visual-recipes.md", "release-gates.md"]) {
+    assert.ok(main.includes("references/" + name), name);
+    assert.ok(existsSync(join(root, base, "references", name)));
+  }
+  assert.match(main, /MUST use real \*\*Hugeicons\*\*/);
+  assert.match(main, /three genuinely distinct composition/);
+  assert.match(main, /second design pass if a visual gate fails/);
+  const gates = read(base + "references/release-gates.md");
+  for (const term of ["installed dependencies", "rendered SVG", "Unicode", "FAIL", "NOT TESTED", "correction pass", "controlled A/B"]) assert.ok(gates.includes(term), term);
+  const recipes = read(base + "references/visual-recipes.md");
+  for (const term of ["EditorialHero", "TextTransform", "PricingOffer", "@hugeicons/react", "@hugeicons/core-free-icons", "motion-reduce", "aria-live"]) assert.ok(recipes.includes(term), term);
+  const cases = read("examples/evaluation-cases.md");
+  assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
+  assert.match(cases, /separate fresh sessions/);
+  assert.match(cases, /Randomize labels/);
+  assert.equal(JSON.parse(read("package.json")).version, "1.4.0");
+});

@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0 (candidate)
+- AST-based migration of supported Lucide imports to genuine Hugeicons.
+- Ordered page composition with shared theme tokens.
+- Local-only automated desktop and mobile preview and render checks.
+- Live RefillTierPricing rendered and tariff selection tested; placeholder CTA and subjective visual review remain open.
+
 ## 3.1.0 (candidate)
 - Add optional live Systra MCP search and selected-source retrieval.
 - Free-only default, server-enforced Premium entitlement, no automatic execution or dependency installation.

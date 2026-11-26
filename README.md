@@ -47,7 +47,9 @@ For new work without stronger existing brand rules:
 
 A brand's established system always takes precedence over these defaults.
 
-**Live MCP (3.1 candidate):** The optional [remote adapter](skills/systra-taste/references/live-mcp.md) searches the official library and retrieves one selected authorized component, with its integration notes.
+**Integration (3.2 candidate):** [Icon migration, page composition and local browser previews](skills/systra-taste/references/integration-pipeline.md). Unsupported icons block; source-specific hardcoded styles and visual quality still require review.
+
+**Live MCP:** The optional [remote adapter](skills/systra-taste/references/live-mcp.md) searches the official library and retrieves one selected authorized component, with its integration notes.
 
 **Design Engine:** A dependency-free [plan/build CLI](skills/systra-taste/references/design-engine.md) selects matching offline components and assembles actual source from a structured brief. The offline engine remains available without an account.
 

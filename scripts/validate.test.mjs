@@ -174,7 +174,7 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
   assert.match(cases, /separate fresh sessions/);
   assert.match(cases, /Randomize labels/);
-  assert.equal(JSON.parse(read("package.json")).version, "3.1.0");
+  assert.equal(JSON.parse(read("package.json")).version, "3.2.0");
 });
 
 

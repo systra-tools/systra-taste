@@ -1,0 +1,11 @@
+# Integration pipeline 3.2 (candidate)
+
+After authorized MCP retrieval, inspect the source, notes and dependencies. Never auto-execute unknown remote source. Use an isolated approved project.
+
+1. Icons: `node engine/icons.mjs INPUT.tsx NEW_DIRECTORY TARGET_PROJECT`. The project must have TypeScript's compiler API (tested with 5.9.3) and genuine Hugeicons installed. Named Lucide imports from the supported mapping become Hugeicons adapters; aliases and JSX references remain. Unknown mappings block instead of substituting a random icon. Verify prop compatibility, focus, semantics and rendered output. The original is unchanged.
+2. Composition: `node engine/compose.mjs PAGE.json NEW_DIRECTORY APPROVED_PROJECT`. Provide explicit section order, file paths relative to the approved project, and named exports. Example: `{"sections":[{"role":"hero","file":"Hero.tsx","export":"Hero"},{"role":"pricing","file":"Pricing.tsx","export":"Pricing"}],"theme":{"background":"#ffffff","foreground":"#202020","display":"Albert Sans, sans-serif","body":"Figtree, sans-serif","radius":10}}`. It creates a React page wrapper and shared CSS tokens. Existing hard-coded colors and radii require explicit adaptation; the wrapper does not claim to overwrite them. Warnings identify repeated or out-of-order roles; content/brand coherence needs review.
+3. Preview: build the approved project locally, then `CHROME_PATH=/path/to/chrome node engine/preview.mjs PROJECT BUILT_DIRECTORY NEW_OUTPUT`. Requires Playwright Core and Chromium. Local-only rendering blocks external requests and captures 1440/390/320 px screenshots and a report of overflow, missing assets, browser errors, placeholder links. Check active states separately. The tool does not certify aesthetic quality.
+4. Compare actual screenshots on focal subject, hierarchy, typography, layout, and brand/content fit. Reject technically broken candidates. Choose based on visual evidence, not just server rank. This review is agent-led; no autonomous image-level scorer is implemented.
+5. Use only verified actual CTA routes, content and approved assets. Never publish the imported source with this public skill.
+
+All commands generate new directories and preserve the original files. No automatic package installation or deployment.

@@ -165,7 +165,7 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   }
   assert.match(main, /MUST use real \*\*Hugeicons\*\*/);
   assert.match(main, /three genuinely distinct composition/);
-  assert.match(main, /second design pass if a visual gate fails/);
+  assert.match(main, /screenshot-led second design pass/);
   const gates = read(base + "references/release-gates.md");
   for (const term of ["installed dependencies", "rendered SVG", "Unicode", "FAIL", "NOT TESTED", "correction pass", "controlled A/B"]) assert.ok(gates.includes(term), term);
   const recipes = read(base + "references/visual-recipes.md");
@@ -174,5 +174,25 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
   assert.match(cases, /separate fresh sessions/);
   assert.match(cases, /Randomize labels/);
-  assert.equal(JSON.parse(read("package.json")).version, "1.4.0");
+  assert.equal(JSON.parse(read("package.json")).version, "2.0.0");
+});
+
+
+test("2.0 reference-first workflow and interaction atlas are complete", () => {
+  const base = "skills/systra-taste/";
+  const main = read(base + "SKILL.md");
+  const dna = read(base + "references/design-dna.md");
+  const idx = read(base + "references/reference-index.md");
+  const atlas = read(base + "references/interaction-atlas.md");
+  const gates = read(base + "references/release-gates.md");
+  for (const name of ["design-dna.md", "reference-index.md", "interaction-atlas.md"]) assert.ok(main.includes("references/" + name), name);
+  for (const direction of ["Editorial", "Minimal", "Experimental", "Luxury", "Technical", "Immersive"]) assert.ok(dna.includes("| " + direction + " |"), direction);
+  assert.equal(idx.split("\n").filter(l => /^\| [A-Z][A-Za-z]+ \| (Editorial|Minimal|Experimental|Luxury|Technical|Immersive) \|/.test(l)).length, 34);
+  const [motion, controls] = atlas.split("## 15 control recipes");
+  assert.equal((motion.match(/^\| \d+ \|/gm)||[]).length, 20);
+  assert.equal((controls.match(/^\| \d+ \|/gm)||[]).length, 15);
+  assert.match(gates, /Gate 0: visual reference evidence/);
+  assert.match(gates, /A filename or text description alone does not count/);
+  assert.match(dna, /premium source stay in their authorized environment/);
+  assert.match(dna, /NOT TESTED/);
 });

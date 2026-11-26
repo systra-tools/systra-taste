@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.0 (candidate)
+- Reference-first design workflow, with six art directions and 34 curated static preview observations.
+- Twenty motion and fifteen control recipes, including original implementation primitives.
+- Mandatory visual-reference evidence and screenshot-led revision for substantial design work.
+- Public text-only index; private visual atlas remains local, and premium source remains protected.
+- Visual A/B improvement remains unverified; no stable release has been published.
+
 ## 1.4.0 (candidate)
 - Require genuine Hugeicons for new icon-bearing Systra UI and verify exports, build and render.
 - Add composition alternatives, practical art direction and original code-based visual recipes.

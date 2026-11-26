@@ -24,7 +24,7 @@ Choose the agent and installation scope when prompted. Global installation is al
 
 ## What it does
 
-**Art direction.** Give a page one clear idea. Establish a hierarchy and a rhythm that suit the content, rather than dressing a generic layout in gradients.
+**Art direction.** Start with actual authorized visual references, choose a distinctive direction and give a page one clear idea. Establish a hierarchy and a rhythm that suit the content, rather than dressing a generic layout in gradients.
 
 **Design critique.** Look closely at what is already there. Identify weak composition, confusing typography, inconsistent interaction or unnecessary visual noise. A critique stays read-only unless changes are requested.
 
@@ -47,7 +47,7 @@ For new work without stronger existing brand rules:
 
 A brand's established system always takes precedence over these defaults.
 
-Explore the [art direction](skills/systra-taste/references/art-direction.md), [visual recipes](skills/systra-taste/references/visual-recipes.md), [release gates](skills/systra-taste/references/release-gates.md) and the [visual signature](skills/systra-taste/references/visual-signature.md), [motion patterns](skills/systra-taste/references/motion-patterns.md) and [Lenis + GSAP reference](skills/systra-taste/references/lenis-gsap.md).
+Explore the [Design DNA](skills/systra-taste/references/design-dna.md), [34-reference index](skills/systra-taste/references/reference-index.md), [interaction atlas](skills/systra-taste/references/interaction-atlas.md), [art direction](skills/systra-taste/references/art-direction.md), [visual recipes](skills/systra-taste/references/visual-recipes.md), [release gates](skills/systra-taste/references/release-gates.md) and the [visual signature](skills/systra-taste/references/visual-signature.md), [motion patterns](skills/systra-taste/references/motion-patterns.md) and [Lenis + GSAP reference](skills/systra-taste/references/lenis-gsap.md).
 
 ## Put it to work
 

@@ -99,3 +99,8 @@ Use identical prompts and the same model, framework, fonts, assets, token/time b
 Expected skill-on: distinct compositions, specific visual idea, purposeful typography, genuine Hugeicons wherever functional icons are used, meaningful motion where helpful, screenshot-led correction, no decorative shadows or frames, preserved functionality. A Unicode arrow/check or another family in place of a required Hugeicon is an automatic gate FAIL. A conventional layout is not automatically a failure, but merely removing shadows or recoloring is not sufficient evidence of a visual win.
 
 Report each pair's visual preference (A, B, tie or neither) and reasons without knowing which used the skill. Report functional gates separately. No aggregate win claim if any required icon/build/render gate fails or the evaluation has not been independently run. Save source, screenshots and exact environment outside the public package.
+
+
+## Case G: reference-grounded visual design (2.0 regression)
+
+Repeat Case F with three authorized visual references available to both conditions and identical content, tools, budgets and asset permissions. In the skill-on condition use the 2.0 reference-first workflow and actual screenshot-led correction. Baseline receives the same reference images but no Systra instructions. A second comparison can isolate the visual-reference effect by comparing 1.4 and 2.0 under identical assets. Record reference inspections and revisions; use an independent reviewer blinded to labels. Include an immersive hero with approved imagery, a state-driven transformation, and a pricing selector. Test offline behavior separately: absent references must be marked NOT TESTED rather than falsely certified. Do not publish a visual win based only on repository tests.

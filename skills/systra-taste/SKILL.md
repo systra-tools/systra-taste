@@ -23,6 +23,8 @@ Scope is part of craft. A critique must not silently become an implementation. A
 
 ## Design mode: start with the project, not a style
 
+**2.0 reference-first workflow:** Read [design-dna.md](references/design-dna.md), [reference-index.md](references/reference-index.md) and [interaction-atlas.md](references/interaction-atlas.md). For substantial new work, inspect three actual authorized visual references BEFORE coding. If Systra Tools MCP is connected, search relevant sections and view previews/source within permitted access. If unavailable, use user-approved visual references, or mark the visual-reference gate NOT TESTED. Do not silently substitute the text index for visual inspection. Choose a visual subject, direction and interaction from the references; translate principles rather than copy layouts or assets. Existing brand and explicit constraints remain authoritative.
+
 **Mandatory execution gate for new work:** read [art-direction.md](references/art-direction.md), [visual-recipes.md](references/visual-recipes.md), [visual-signature.md](references/visual-signature.md) and [release-gates.md](references/release-gates.md) before writing UI. For motion, also read the motion reference. For scoped refinements, apply the same gates to the changed scope only; critique remains read-only. A project constraint can override a visual default, but record the actual constraint and do not invent one. Never silently substitute another icon family in a greenfield design.
 
 1. Inspect the actual project: framework, styles, design tokens, font loading, reusable components, product copy, media, routes, layout, breakpoints and constraints. Read the brief and determine the target conversion or comprehension job.
@@ -30,9 +32,9 @@ Scope is part of craft. A critique must not silently become an implementation. A
 3. State what this view must communicate in five seconds. Identify a credible visual subject (product, work, result, process or meaningful image), not a decorative gradient.
 4. Sketch the hierarchy and page rhythm before changing colors or motion. Name the composition: editorial split, immersive product scene, text-led evidence, staggered narrative, etc.
 5. Explore three genuinely distinct composition thumbnails (written or sketched) with different focal placement, reading order and scale. Select one with a reason tied to the brief. Reject the first generic template, not merely its colors. For a small isolated component, two alternatives suffice. If the request is a narrow change, do not expand scope.
-6. Build with the existing components or library. If the **Systra Tools MCP** is already connected, search for relevant real sections, inspect their source and adapt them to the project's actual design system. MCP is optional; this skill works without it.
+6. Build with the existing components or library. If the **Systra Tools MCP** is already connected, search for relevant real sections, inspect authorized previews and source and adapt them to the project's actual design system. MCP is optional; this skill works without it.
 7. Implement content as semantic text and controls. Use real HTML/React for headings, CTAs, forms and data. Complex photography, people and materials belong in appropriate image assets, not fake CSS reproductions.
-8. Render, inspect desktop and mobile screenshots, run the release gates, and perform a second design pass if a visual gate fails. Re-render after correction. If tools are unavailable, report NOT TESTED rather than presenting a polished or passing result. Never let functional QA substitute for visual QA.
+8. Render, inspect desktop and mobile screenshots, run the release gates, and perform a screenshot-led second design pass for substantial new work, or whenever a visual gate fails. Re-render after correction. If tools are unavailable, report NOT TESTED rather than presenting a polished or passing result. Never let functional QA substitute for visual QA.
 
 ## Design decisions
 
@@ -65,7 +67,7 @@ Make these decisions before adding visual effects:
 
 ### Public reference and photo policy
 
-This skill is deliberately **photo-free as a distributable package**. It must not depend on bundled image moodboards, scraped site screenshots, stock-photo collections or external image URLs. The design rules and examples are sufficient to run offline. You may inspect user-provided or already licensed project assets when available, but never copy a reference site's distinctive visuals or redistribute those assets as part of this skill.
+This skill is deliberately **photo-free as a distributable package**. It must not depend on bundled image moodboards, scraped site screenshots, stock-photo collections or external image URLs. The text index and examples support offline use, but are not a substitute for visual reference inspection; mark that gate NOT TESTED when no authorized visuals are available. You may inspect user-provided or already licensed project assets when available, but never copy a reference site's distinctive visuals or redistribute those assets as part of this skill.
 
 No-photo-bundle does **not** mean no photography in the final website. Authentic, approved imagery can be the right focal point. When a needed asset is unavailable, describe its brief and placeholder accurately rather than pretending it was generated or rebuilding a human or landscape as cheap CSS.
 

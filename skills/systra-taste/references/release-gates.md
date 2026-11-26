@@ -2,6 +2,10 @@
 
 Use this after every new section or meaningful visual refinement. Keep critique read-only. These are agent instructions and evidence requirements, not a claim that a package can automatically judge aesthetics.
 
+## Gate 0: visual reference evidence
+
+For substantial new work, record three actual authorized reference images or rendered previews inspected, and one specific observed visual principle from each. Identify the chosen focal subject and at least two rejected architecture alternatives for substantial new work. A filename or text description alone does not count as viewing a reference. If visual reference tooling is unavailable, mark NOT TESTED and do not claim that the visual design bar is verified. Preserve privacy and licensing; no premium source or screenshots are redistributed.
+
 ## Gate 1: genuine icons (objective)
 
 For new Systra-style React UI with functional icons:
@@ -29,7 +33,7 @@ Check the rendered result for decorative shadows/frames, intended 6–12 px radi
 
 ## Gate 4: correction loop
 
-If any gate fails, revise the affected scope and capture another screenshot. If composition fails, try another architecture rather than adding gradients or effects. If icon integration fails, fix the imports and build before declaring completion. Re-run the gates. At least one correction pass is required for a failed visual gate, and the result must be reported honestly even if still unsuccessful.
+If any gate fails, revise the affected scope and capture another screenshot. If composition fails, try another architecture rather than adding gradients or effects. If icon integration fails, fix the imports and build before declaring completion. Re-run the gates. At least one correction pass is required for substantial new work with rendering available and for a failed visual gate, and the result must be reported honestly even if still unsuccessful.
 
 ## Gate 5: delivery evidence
 

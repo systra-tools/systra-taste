@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.0 (candidate)
+- Add optional live Systra MCP search and selected-source retrieval.
+- Free-only default, server-enforced Premium entitlement, no automatic execution or dependency installation.
+- Preserve integration notes and flag imported non-Hugeicons icon systems.
+- Remote ranking is not a visual quality assessment.
+
 ## 3.0.0 (candidate)
 - Add a deterministic, dependency-free component planner and source materializer for five offline jobs.
 - Validate inputs, reject ambiguous requests, never overwrite existing project directories, and preserve the actual original components.

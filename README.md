@@ -47,7 +47,9 @@ For new work without stronger existing brand rules:
 
 A brand's established system always takes precedence over these defaults.
 
-**Design Engine (3.0 candidate):** A dependency-free [plan/build CLI](skills/systra-taste/references/design-engine.md) selects matching offline components and assembles actual source from a structured brief. Authorized MCP lookup remains agent-driven.
+**Live MCP (3.1 candidate):** The optional [remote adapter](skills/systra-taste/references/live-mcp.md) searches the official library and retrieves one selected authorized component, with its integration notes.
+
+**Design Engine:** A dependency-free [plan/build CLI](skills/systra-taste/references/design-engine.md) selects matching offline components and assembles actual source from a structured brief. The offline engine remains available without an account.
 
 **Component-first:** Adapt existing project components or authorized Systra MCP results. Five original offline React components are available in [components](skills/systra-taste/components), with [selection and integration instructions](skills/systra-taste/references/component-first.md).
 

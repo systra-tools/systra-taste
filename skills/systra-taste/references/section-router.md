@@ -1,6 +1,6 @@
 # Section router: load less, build sooner
 
-Default budget: SKILL.md + this router + ONE matching section recipe per distinct job. For a whole page, choose at most three modules initially, reuse decisions across sections, and load another only for a concrete unresolved problem. Do not concatenate every reference. Long guides are optional lookup material. Aesthetic review is part of building, not a second long planning phase.
+Default budget: SKILL.md + this router + [component-first.md](component-first.md) when sourcing components + ONE matching section recipe or original source per distinct job. For a whole page, choose at most three modules initially, reuse decisions across sections, and load another only for a concrete unresolved problem. Do not concatenate every reference. Long guides are optional lookup material. Aesthetic review is part of building, not a second long planning phase.
 
 | Job | Read first | Visual discovery hints (search authorized library only) |
 | --- | --- | --- |
@@ -9,6 +9,8 @@ Default budget: SKILL.md + this router + ONE matching section recipe per distinc
 | Pricing / comparison / decision | [offer.md](offer.md) | RefillTierPricing, MeasuredGapComparison, DeepWaterPricing |
 | Quote / editorial / proof / gallery / footer | [editorial.md](editorial.md) | SignedMissionStatement, MagazineEditorialGrid, InlineMediaSentence, EditorialWordFooter |
 | Dense UI / existing dashboard / forms | [visual-signature.md](visual-signature.md) | ModelKnowledgeCore, TracedLineProcess |
+
+For direct fallback source, see [component-first.md](component-first.md). Prefer a compatible component over generic generated markup. The original JSX and scoped CSS can be copied into React/Tailwind projects without a Systra account.
 
 Names are observed preview filenames, not verified MCP IDs. Select one or two visuals based on the actual brief; avoid importing source or images unless authorized. If user supplies appropriate references, use those instead.
 

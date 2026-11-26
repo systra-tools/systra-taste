@@ -1,0 +1,8 @@
+import {useId,useState} from "react";
+import {HugeiconsIcon} from "@hugeicons/react";
+import {ArrowLeft01Icon,ArrowRight01Icon} from "@hugeicons/core-free-icons";
+import {Action} from "./shared.jsx";
+export function ImageCompare({before,after,beforeAlt,afterAlt,title="See the difference.",description="Compare two versions of the same view.",beforeLabel="Before",afterLabel="After",ratio="16 / 9"}){
+ const id=useId(),[pos,setPos]=useState(50);
+ return <section className="st st-compare" aria-labelledby={id}><div className="st-wrap"><div className="st-kicker">COMPARISON / 03 <span>Use the slider</span></div><div className="st-head"><h2 id={id}>{title}</h2><p>{description}</p></div><div className="st-compare-stage" style={{aspectRatio:ratio,"--split":pos+"%"}}><img src={after} alt={afterAlt}/><img className="st-before" src={before} alt={beforeAlt}/><span className="st-compare-tag st-left">{beforeLabel}</span><span className="st-compare-tag st-right">{afterLabel}</span><div className="st-divider" aria-hidden="true"><div><HugeiconsIcon icon={ArrowLeft01Icon} size={16} strokeWidth={1.5}/><HugeiconsIcon icon={ArrowRight01Icon} size={16} strokeWidth={1.5}/></div></div></div><div className="st-controls"><label className="st-range">Comparison position<span>{pos}%</span><input type="range" aria-label="Comparison position" min="0" max="100" value={pos} onChange={e=>setPos(+e.target.value)}/></label><div className="st-actions"><Action quiet onClick={()=>setPos(100)}>{beforeLabel}</Action><Action quiet onClick={()=>setPos(0)}>{afterLabel}</Action><Action reset onClick={()=>setPos(50)}>Reset</Action></div></div></div></section>
+}

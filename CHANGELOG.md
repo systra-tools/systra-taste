@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.2.0 (candidate)
+- Component-first routing: existing project, authorized Systra MCP, then original offline React source.
+- Five standalone components with scoped CSS and genuine Hugeicons, including three real transformations and shared icon exchanges.
+- Preserve modular context, no-photo policy and premium access boundaries.
+- Visual and latency advantage in independent generation remains unverified.
+
 ## 2.1.0 (candidate)
 - Short core with job-based reference routing; load only the relevant recipe, with a bounded initial context.
 - Four original interactive React/Tailwind recipes: scene markers, real signal transformation, selectable offer ledger and editorial gallery.

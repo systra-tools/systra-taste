@@ -108,3 +108,7 @@ Repeat Case F with three authorized visual references available to both conditio
 ## Case H: modular 2.1 benchmark
 
 Run Case G with a fixed numeric sample array, identical assets and the same model settings in separate fresh sessions. For 2.1 provide only SKILL.md, the router and applicable recipe files, logging actual reads. Compare against 2.0 full-context and a no-skill baseline, with equal revision opportunities. Record wall time, token counts when available, design preference, and functional checks separately. Report incomplete runs without extrapolating speed or aesthetics.
+
+## Case I: component adaptation (2.2)
+
+Repeat the fixed-fixture benchmark with identical assets and both arms allowed to inspect source. Compare freeform generation, reference-only 2.1 and adaptation of the actual 2.2 components. Record which source was used, exact input, code changes, build and screenshot evidence, active-state correctness and visual preference. Test authorized MCP separately; offline component tests do not establish that MCP works. Do not count local recipe verification as an independent model A/B win.

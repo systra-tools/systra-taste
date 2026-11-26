@@ -76,7 +76,7 @@ test("repository contains no binary reference boards or secrets", () => {
       if (statSync(path).isDirectory()) walk(path);
       else {
         const extension = name === "LICENSE" ? name : name === ".gitignore" ? name : name.slice(name.lastIndexOf("."));
-        assert.ok(allowed.has(extension), `unexpected file: ${path}`);
+        assert.ok(allowed.has(extension) || (relative(root,path).startsWith("skills/systra-taste/components/") && [".jsx",".css"].includes(extension)), `unexpected file: ${path}`);
         assert.doesNotMatch(readFileSync(path, "utf8"), /-----BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY-----/);
       }
     }
@@ -174,7 +174,7 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
   assert.match(cases, /separate fresh sessions/);
   assert.match(cases, /Randomize labels/);
-  assert.equal(JSON.parse(read("package.json")).version, "2.1.0");
+  assert.equal(JSON.parse(read("package.json")).version, "2.2.0");
 });
 
 
@@ -214,4 +214,25 @@ test("2.1 loads a bounded core and routes to four original recipes", () => {
     assert.ok(Buffer.byteLength(core + router + recipe) < 13000, file);
   }
   for (const [,file] of router.matchAll(/\]\(([^)#]+\.md)\)/g)) assert.ok(existsSync(join(root,base,"references",file)),file);
+});
+
+test("2.2 ships only original component source with scoped styles and verified routing", () => {
+ const base="skills/systra-taste/";
+ const core=read(base+"SKILL.md"),guide=read(base+"references/component-first.md");
+ assert.ok(core.includes("references/component-first.md"));
+ for(const tool of ["search_components","get_component","list_recipes","get_recipe","get_component_styled"])assert.ok(guide.includes(tool));
+ assert.match(guide,/never bypass access restrictions/);
+ for(const [file,name] of [["scene-hero","SceneHero"],["signal-trace","SignalTrace"],["contour-smooth","ContourSmooth"],["image-compare","ImageCompare"],["stay-selector","StaySelector"]]){
+  const source=read(base+"components/"+file+".jsx");
+  assert.ok(source.includes("export function "+name));
+  assert.ok(source.includes("./shared.jsx"));
+  assert.ok(guide.includes("../components/"+file+".jsx"));
+  assert.doesNotMatch(source,/https?:\/\//);
+ }
+ const shared=read(base+"components/shared.jsx"),css=read(base+"components/taste.css");
+ assert.match(shared,/@hugeicons\/react/);
+ assert.match(shared,/@hugeicons\/core-free-icons/);
+ assert.match(css,/prefers-reduced-motion/);
+ assert.match(css,/focus-visible/);
+ assert.match(read(base+"components/signal-trace.jsx"),/clamp\(\(v-lo\)\/\(hi-lo\|\|1\)\)/);
 });

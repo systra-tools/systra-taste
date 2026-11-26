@@ -3,13 +3,13 @@ name: systra-taste
 description: Reference-led art direction, UI craft, and purposeful motion for websites and React/Tailwind projects. Use to design new sections, critique existing interfaces, or refine scoped UI without losing brand or behavior.
 ---
 
-# Systra Taste 2.1
+# Systra Taste 2.2
 
 Make the subject memorable, the hierarchy clear, and the interaction useful. Do not apply a house template.
 
 ## 1. Route before reading
 
-- **Design:** inspect the actual project and brief, then use [section-router.md](references/section-router.md). Read only the matching recipe for each distinct section job, not the entire reference folder.
+- **Design:** inspect the actual project and brief, then use [section-router.md](references/section-router.md). Read only the matching recipe for each distinct section job, not the entire reference folder. Prefer adapting an actual component using [component-first.md](references/component-first.md).
 - **Critique:** strictly read-only by default. Use [review-workflow.md](references/review-workflow.md) and [audit-checklist.md](references/audit-checklist.md) for evidence; do not edit or deploy.
 - **Refine:** preserve content, routes, behavior and brand. Use [repair-workflow.md](references/repair-workflow.md) and [repair-playbook.md](references/repair-playbook.md) when needed. Explore requested alternatives in isolated previews before integrating a selected direction.
 
@@ -17,7 +17,7 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Do 
 
 1. Inspect existing brand, fonts, assets, reusable components, content, controls and constraints. Brand and explicit instructions take precedence.
 2. Name the one job and one focal subject. For a substantial new section, inspect 1–2 relevant authorized visual references; reuse already-inspected references across related sections. If none are available, work from the brief and mark reference inspection NOT TESTED. Do not block on searching.
-3. Compare two genuinely different composition ideas briefly. Choose one, then build. Do not produce a long design rationale or read additional references merely to satisfy a checklist.
+3. Compare two genuinely different composition ideas briefly. Choose one matching existing project, authorized MCP or bundled component and adapt its real source; write from scratch only when none fits. Do not produce a long design rationale or read additional references merely to satisfy a checklist.
 4. Let the subject drive the type, crop, scale and color. A chart, real product task or photograph should dominate, not a decorative dashboard, arbitrary blob or repeated grid.
 5. Render and check desktop and narrow mobile, actual interaction and keyboard/reduced-motion behavior. Fix material visual or functional defects in one focused screenshot-led correction pass and verify the fix. Mark unavailable checks NOT TESTED. Never claim a pass from prose alone.
 
@@ -34,6 +34,6 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Do 
 
 Show the actual implementation or preview, one concrete design decision and any failed/unverified checks. Check that the logo cannot simply be swapped onto a generic template, that the action works, and that the result remains readable at 320px.
 
-The public package is text and original code recipes; no bundled photos. For detailed policy and troubleshooting use [visual-signature.md](references/visual-signature.md) or [release-gates.md](references/release-gates.md) selectively, not by default. More references are available via the router.
+The public package includes original standalone React components and text references; no bundled photos or premium source. For detailed policy and troubleshooting use [visual-signature.md](references/visual-signature.md) or [release-gates.md](references/release-gates.md) selectively, not by default. More references are available via the router.
 
 https://systra.tools/mcp

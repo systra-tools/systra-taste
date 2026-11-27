@@ -54,19 +54,19 @@ Each entry identifies the state, implementation and constraint. Combine at most 
 | 1 | Clipped line arrival | Wrap each intentional line in motion-clip; animate child translateY(14px) and opacity over 480ms, stagger 60ms | Keep text visible without JS; no forced rewrap |
 | 2 | Scene crop reveal | Animate image clip-path from inset(10% 12%) to inset(0) over 600ms | Static full image under reduced motion |
 | 3 | Image-to-background handoff | Interpolate a single image container's scale 0.82 to 1 using scroll progress; use transform-origin at subject | Never pin mobile reading |
-| 4 | Before/after scrubber | Bind range input 0–100 to --split; clip top image with inset(0 calc(100% - var(--split)) 0 0) | Label range and offer keyboard operation |
+| 4 | Before/after scrubber | Bind range input 0 to 100 to --split; clip top image with inset(0 calc(100% - var(--split)) 0 0) | Label range and offer keyboard operation |
 | 5 | Trace-line progress | Set SVG pathLength=1 and stroke-dasharray=1; stroke-dashoffset=1-progress | SVG diagram only, not substitute icons |
 | 6 | Signal nodes | Bind dot sizes and active fill to real stage index; use transform:scale and 180ms easing | No fabricated numerical scale |
 | 7 | Morphing specimen | Interpolate same-topology SVG path points or border-radius between selected states | No random morph; static meaningful shape |
 | 8 | Input-to-output handoff | Keep both panes mounted; animate output opacity and a single signal translation on completion | Announce actual result in aria-live |
 | 9 | Folder intake | Animate selected file translateY into clipped folder region then update count | State must persist; no phantom success |
 | 10 | Step-linked image | On active accordion state, crossfade two approved images over 300ms | Text is not hidden with image |
-| 11 | Stacked card handoff | Use 2–3 known layers, translate and scale active layer on selection | Keep tab order and active panel clear |
+| 11 | Stacked card handoff | Use 2 to 3 known layers, translate and scale active layer on selection | Keep tab order and active panel clear |
 | 12 | Thumbnail spotlight | Use stable aspect-ratio stage; crossfade selected crop over 280ms | Buttons have accessible names |
 | 13 | Editorial word emphasis | Apply state-based color class to meaningful words with 160ms transition | No scroll-dependent legibility |
 | 14 | Numerical progression | Update real numeric state; animate optional visual counter while accessible value is final | Never animate invented metrics |
 | 15 | Comparison bar | Transform scaleX from 0 to value / max with origin-left; show exact units | Same denominator and visible text |
-| 16 | Panel parting | Translate decorative side panels outward 8–12% when activated | CTA remains stable and clickable |
+| 16 | Panel parting | Translate decorative side panels outward 8 to 12% when activated | CTA remains stable and clickable |
 | 17 | Inline media expansion | Use transform:scale on inline crop within reserved width, or CSS grid slot expansion | Avoid shifting words on hover |
 | 18 | Tab indicator | Measure selected button position; translate indicator and width, 250ms | aria-selected and keyboard tab behavior |
 | 19 | Quote exchange | Crossfade outgoing/incoming quote in stable min-height region, 220ms | No autoplay; screen reader can access active quote |

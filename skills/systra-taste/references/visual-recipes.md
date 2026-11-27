@@ -4,7 +4,7 @@ Use these as practical ingredients, not a layout library. Adapt to the brief and
 
 ## 1. Hero: an editorial statement next to a readable product specimen
 
-Instead of a 50/50 headline/dashboard pair, create a 12-column hierarchy: statement across columns 1–8, a short note on 10–12, then a full-width working specimen offset by a grid unit. Allow the headline to set the visual rhythm. A product specimen must answer one task, not be a decorative fake dashboard. If the product is photography-led, substitute an approved large image with a text-safe crop and a quiet area.
+Instead of a 50/50 headline/dashboard pair, create a 12-column hierarchy: statement across columns 1 to 8, a short note on 10 to 12, then a full-width working specimen offset by a grid unit. Allow the headline to set the visual rhythm. A product specimen must answer one task, not be a decorative fake dashboard. If the product is photography-led, substitute an approved large image with a text-safe crop and a quiet area.
 
 ~~~jsx
 import { HugeiconsIcon } from "@hugeicons/react";
@@ -81,7 +81,7 @@ export function TextTransform() {
 }
 ~~~
 
-For more visual process scenes: a line with variable-size nodes can indicate stages, density, or progress; it must correspond to actual state, not random decoration. Keep text and controls outside decorative layers. Animate only the handoff, with 240–480 ms transitions and a static reduced-motion state. Avoid endless particles or forced scroll.
+For more visual process scenes: a line with variable-size nodes can indicate stages, density, or progress; it must correspond to actual state, not random decoration. Keep text and controls outside decorative layers. Animate only the handoff, with 240 to 480 ms transitions and a static reduced-motion state. Avoid endless particles or forced scroll.
 
 ## 3. Pricing: decision-led architecture
 
@@ -137,8 +137,8 @@ Pass actual plan names, full price/billing unit, descriptions, features, and wor
 - **Layered composition:** align overlapping decorative media with the grid; use z-index and isolation rather than shadows. Keep the accessible reading order natural.
 - **Grain:** optional low-opacity procedural texture over a large decorative surface, pointer-events none. Check contrast and avoid adding noisy texture to text or dense UI.
 - **Color:** an accent gradient can be a deliberate image or specimen material; keep solid readable actions and neutral breathing room. Never add glow as a generic polish step.
-- **Clipped entrance:** a short transform from 12–20px within a clipped decorative wrapper with opacity; use a shared easing such as cubic-bezier(.22,1,.36,1). Do not clip focus rings. Render content immediately with JS disabled or reduced motion.
-- **Button icon exchange:** use two genuine instances of the same icon inside a 20px clipped window; move one out and the other in over 250–350ms. Keep the label stable; use an aria-hidden wrapper and disable transitions under reduced motion. A simple 4px translation is often enough.
+- **Clipped entrance:** a short transform from 12 to 20px within a clipped decorative wrapper with opacity; use a shared easing such as cubic-bezier(.22,1,.36,1). Do not clip focus rings. Render content immediately with JS disabled or reduced motion.
+- **Button icon exchange:** use two genuine instances of the same icon inside a 20px clipped window; move one out and the other in over 250 to 350ms. Keep the label stable; use an aria-hidden wrapper and disable transitions under reduced motion. A simple 4px translation is often enough.
 - **Scroll:** use a single meaningful state progression or scene transition. Read motion-patterns.md and lenis-gsap.md when appropriate. Do not pin on mobile if it compromises reading; never animate every paragraph.
 
 These examples are recipes, not certified designs. Compile and render the actual adaptation. Do not present them as screenshots or verified production sections without testing.

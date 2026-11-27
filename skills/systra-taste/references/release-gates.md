@@ -29,7 +29,7 @@ Fail if the only meaningful changes are bigger text, fewer borders, recoloring, 
 
 ## Gate 3: signature and mechanics
 
-Check the rendered result for decorative shadows/frames, intended 6–12 px radius, correct text punctuation, useful Hugeicons and functional boundaries. Verify typography actually loaded; check measured color contrast where possible. Keep brand constraints and semantic copy. Hover/focus/touch states, reduced motion and links work. Motion has a concrete job and does not delay reading. Run the actual build/test command where available.
+Check the rendered result for decorative shadows/frames, intended 6 to 12 px radius, correct text punctuation, useful Hugeicons and functional boundaries. Verify typography actually loaded; check measured color contrast where possible. Keep brand constraints and semantic copy. Hover/focus/touch states, reduced motion and links work. Motion has a concrete job and does not delay reading. Run the actual build/test command where available.
 
 ## Gate 4: correction loop
 

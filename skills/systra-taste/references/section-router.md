@@ -4,7 +4,7 @@ Budget: SKILL.md + [taste-bar.md](taste-bar.md) + this router + ONE matching rec
 
 ## Source real sections first
 
-When the Systra Tools MCP is connected, call search_components with job plus industry plus mood, in English: "hero for a painting company", "testimonials for a car workshop", "contact form for a clinic". The library has industry-specific sections; an abstract query ("editorial image-led hero") throws that away. Shortlist 2–3, inspect source and any preview, adapt one. Use list_styles and get_component_styled when a brand style exists. For a whole page, call list_recipes with the industry first; a matching recipe gives a proven section order. Then apply the taste bar.
+When the Systra Tools MCP is connected, call search_components with job plus industry plus mood, in English: "hero for a painting company", "testimonials for a car workshop", "contact form for a clinic". The library has industry-specific sections; an abstract query ("editorial image-led hero") throws that away. Shortlist 2 or 3, read their source, adapt one. Use list_styles and get_component_styled when a brand style exists. For a whole page, call list_recipes with the industry first; a matching recipe gives a proven section order. Then apply the taste bar.
 
 Images: always pass filters to search_images (use, tone, people, text_space) so the result stays short, take candidates from the first ten, and look at the chosen image before building around it. The library is AI-generated, so people in it are placeholders until the client sends real photos.
 

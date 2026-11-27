@@ -4,7 +4,7 @@ The goal is a distinctive, useful composition, not a house template. Quality sig
 
 ## Three directions, one choice
 
-Before building a substantial section, sketch two directions in 1–2 lines each. Change the actual architecture, not the palette.
+Before building a substantial section, sketch two directions in 1 to 2 lines each. Change the actual architecture, not the palette.
 
 - **Editorial:** left-anchored statement, asymmetric columns, deliberate negative space, a meaningful small annotation and a single hero visual.
 - **Immersive:** a large product or approved photographic scene; text positioned at a clear edge or in negative space. Use a deliberate crop and a quiet reading area.
@@ -17,11 +17,11 @@ These are starting points, not three templates to reuse everywhere. Decide based
 Check the actual installed or authorized fonts. Do not silently download third-party fonts or substitute a visually different font without noting it.
 
 For greenfield work, compare:
-- Systra default: Albert Sans alone, carried by scale, weight and spacing. Alternatives: Hanken Grotesk or Figtree; display 56–88 px on a wide desktop, body 16–18 px, compact heading line-height 0.98–1.10, neutral body line-height 1.5–1.65.
+- Systra default: Albert Sans alone, carried by scale, weight and spacing. Alternatives: Hanken Grotesk or Figtree; display 56 to 88 px on a wide desktop, body 16 to 18 px, compact heading line-height 0.98 to 1.10, neutral body line-height 1.5 to 1.65.
 - Editorial contrast: only when the brand or content asks for it. Then one serif for the whole display level, never a single italic word inside a sans headline.
 - Technical: a confident sans headline and IBM Plex Mono for genuinely technical metadata, never every small label.
 
-Use existing brand typography first. Numbers are starting ranges, not a rule for a narrow section. Use responsive clamp, avoid widow words, inspect the optical edge of type, and tune tracking to the font (often -0.035em to -0.055em for large sans headlines, near normal for body). Do not put a badge above every heading. Avoid a global centered text treatment. Prefer an intentional 2–3 line headline over a tiny single line or a wall of large text. Use consistent casing, real punctuation, and precise CTA verbs.
+Use existing brand typography first. Numbers are starting ranges, not a rule for a narrow section. Use responsive clamp, avoid widow words, inspect the optical edge of type, and tune tracking to the font (often -0.035em to -0.055em for large sans headlines, near normal for body). Do not put a badge above every heading. Avoid a global centered text treatment. Prefer an intentional 2 to 3 line headline over a tiny single line or a wall of large text. Use consistent casing, real punctuation, and precise CTA verbs.
 
 ## Color and material
 
@@ -31,9 +31,9 @@ Use depth from crop, layering, scale, intentional overlap, section transitions a
 
 ## Spacing and detail
 
-At desktop use a consistent content grid, commonly 12 columns with a deliberate 64–96 px outer gutter on wide screens, or a project container. Let one focal element cross a grid boundary only when justified. Use coherent 8 px-based spacing, then optically adjust. Mobile is a recomposition, not a shrunk desktop. Use 20–24 px side gutters where space allows. Prefer whitespace over lines; functional separators are allowed.
+At desktop use a consistent content grid, commonly 12 columns with a deliberate 64 to 96 px outer gutter on wide screens, or a project container. Let one focal element cross a grid boundary only when justified. Use coherent 8 px-based spacing, then optically adjust. Mobile is a recomposition, not a shrunk desktop. Use 20 to 24 px side gutters where space allows. Prefer whitespace over lines; functional separators are allowed.
 
-Buttons: readable 40–48 px target height (or adequate touch target), balanced horizontal inset, subtle 6–12 px radius, genuine Hugeicons for any functional arrow. One small hover translation or clipped icon exchange, not a huge color/scale jump. Keep focus visible and disable nonessential movement under reduced motion.
+Buttons: readable 40 to 48 px target height (or adequate touch target), balanced horizontal inset, subtle 6 to 12 px radius, genuine Hugeicons for any functional arrow. One small hover translation or clipped icon exchange, not a huge color/scale jump. Keep focus visible and disable nonessential movement under reduced motion.
 
 ## Design review
 

@@ -203,7 +203,7 @@ test("2.1 loads a bounded core and routes to four original recipes", () => {
   const router = read(base + "references/section-router.md");
   assert.ok(Buffer.byteLength(core) < 5000);
   assert.match(core, /Read only the matching recipe/);
-  assert.match(core, /1–2 relevant authorized visual references/);
+  assert.match(core, /1 or 2 relevant authorized visual references/);
   assert.match(router, /at most three modules initially/);
   assert.match(router, /Do not concatenate every reference/);
   for (const [file, component] of [["hero.md","SceneMarkers"],["process.md","SignalTransform"],["offer.md","OfferLedger"],["editorial.md","EditorialGallery"]]) {

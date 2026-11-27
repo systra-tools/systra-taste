@@ -2,17 +2,17 @@
 
 Parts, not a page. Used all together in this order they rebuild the AI look of the calibration pages. Start from the reference hunt and concept in [concept.md](concept.md), then pick the parts the concept needs and change them.
 
-Use when no component library is connected, or nothing there fits. Proven on three briefs (painter, hair salon, dental practice). Works without a single photo: the gradient panels with white cards carry the visuals. Needs React, Tailwind, `@hugeicons/react`, `@hugeicons/core-free-icons` and the font: `npm i @fontsource/albert-sans`, then import weights 400, 500 and 600.
+Use when no component library is connected, or nothing there fits. Proven on three briefs (painter, hair salon, dental practice). Works without a single photo: the gradient panels with white cards carry the visuals. Needs React, Tailwind, `@hugeicons/react`, `@hugeicons/core-free-icons` and the font: `npm i @fontsource/albert-sans` (or Hanken Grotesk, Manrope), then import weights 300, 400 and 500. Headlines stay at 300 to 400.
 
 Section order that works for most local businesses: hero, services, first visit or process, one statement or proof, contact. Five sections, not twelve.
 
 ## Shared pieces
 
-`Grain` and the color families come from [gradients.md](gradients.md). The white card:
+`Grain` and the `MESH` surfaces come from [gradients.md](gradients.md). The white card:
 
 ~~~jsx
-const card = "rounded-xl bg-white text-[#111214] shadow-[0_18px_40px_-24px_rgba(20,30,60,.35)]";
-const h2 = "text-[clamp(2.6rem,5vw,5rem)] font-medium leading-[.95] tracking-[-.05em]";
+const card = "rounded-[10px] bg-white text-[#111214]"; // no shadow, no border
+const h2 = "text-[clamp(2.4rem,4.5vw,4rem)] font-light leading-[1.02] tracking-[-.035em]";
 ~~~
 
 ## Hero: text left, panel with a real moment right
@@ -24,11 +24,11 @@ The panel shows the first contact as it really happens: a message, a booking not
   <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[1fr_1.05fr] lg:items-center">
     <div>
       <p className="text-[15px] font-medium text-[#5b6069]">{kind} in {place}</p>
-      <h1 className="mt-4 max-w-[11ch] text-[clamp(3rem,6vw,6.2rem)] font-medium leading-[.93] tracking-[-.055em]">{headline}</h1>
+      <h1 className="mt-4 max-w-[11ch] text-[clamp(3rem,6vw,6.2rem)] font-light leading-[1] tracking-[-.04em]">{headline}</h1>
       <p className="mt-6 max-w-md text-[18px] leading-relaxed text-[#5b6069]">{promise}</p>
       {/* primary action dark, second action #f3f4f6 */}
     </div>
-    <Grain mesh={FAMILY.medium} className="min-h-[500px] rounded-2xl lg:min-h-[min(80svh,740px)]">
+    <Grain mesh={MESH.peach} className="min-h-[500px] rounded-2xl lg:min-h-[min(80svh,740px)]">
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-6">
         <div className={card + " w-full max-w-[330px] p-4 lg:-translate-x-[12%]"}>{customerMessage}</div>
         <div className={card + " w-full max-w-[330px] p-4 lg:translate-x-[12%]"}>{reply}</div>
@@ -47,7 +47,7 @@ With a strong photo instead: put it in the right column as a tall rounded image 
 <div className="grid gap-12 lg:grid-cols-[1fr_1.2fr] lg:gap-16">
   <h2 className={h2}>Was wir machen</h2>
   <ul className="grid gap-10">{services.map(s => <li key={s.t}>
-    <p className="text-[clamp(1.5rem,2.2vw,2rem)] font-medium leading-tight tracking-[-.03em]">{s.t}</p>
+    <p className="text-[clamp(1.5rem,2.2vw,2rem)] font-normal leading-tight tracking-[-.02em]">{s.t}</p>
     <p className="mt-2 max-w-xl text-[17px] leading-relaxed text-[#5b6069]">{s.d}</p></li>)}</ul>
 </div>
 ~~~

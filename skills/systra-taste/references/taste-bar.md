@@ -46,6 +46,8 @@ After the score, before showing:
 - Prices, units, phone numbers and dates never break across lines ("ab 52 €" stays together): use whitespace-nowrap.
 - On mobile the heading of a section comes before its media, and the reading order still makes sense.
 - People shown as team or customers are real or clearly marked as placeholders for the client's own photos.
+- Anything placed on a photo in percent (labels, dimension lines, pins) is re-placed for each breakpoint crop; object-cover crops differently on mobile.
+- Grid items with inline inputs or long words get min-w-0 or minmax(0,1fr), or they push the page wider than 320 px.
 - Every button and link goes somewhere, and 320 px stays readable.
 
 ## Alternatives

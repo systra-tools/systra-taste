@@ -33,6 +33,7 @@ Colors sampled from the reference screenshots:
 - White page. One or two colored surfaces, three only on a long page: one band or signature panel in the world that suits the accent color (blue accent: dusty sky; violet: lilac; warm: amber or rose), optionally a closing band in Night. Everything else stays white or off-white.
 - The reference set shows many worlds because it is many pages. One page picks one.
 - Rows of tiles or cards stay off-white #F9FAFB with a white card; never give every tile its own world, never mix photo tiles and gradient tiles in one row.
+- An off-white tile with one small card in the middle looks empty. Services or prices without a real moment to show work better as a typographic list: large light title, one sentence, price on the right, no boxes.
 - Straw next to photos reads khaki; use it only when the brand is green or yellow.
 - One white card per tile (10 px radius, no shadow, no border) with a real moment of the business: a measurement, a drawing status, a booking, a message. Title and text sit below the tile, not inside it.
 - Brand color stays for buttons and icons. The worlds are chosen to sit well next to it.

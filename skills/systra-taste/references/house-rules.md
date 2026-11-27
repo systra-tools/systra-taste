@@ -9,7 +9,7 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 | Type | Light to regular weights (300 to 400, at most 500). Weights may mix inside one headline. | Thin and regular type looks more premium than bold. |
 | Type | Small labels above headings are fine, but not above every section, and in the body face rather than mono. | A label on every block is a template tell. |
 | Form | No borders around cards and pills. | Borders make surfaces look like a page builder. |
-| Form | Few divider lines. Structure comes from spacing and surfaces. | Many lines make a page fussy. |
+| Form | Structure is visible: lists, prices and steps get fine hairlines between entries (#E2E5EA, 1 px), a section that belongs together sits in a light grey container (#F3F4F6, radius 18). No decorative lines, no line around every card. | 27.11.: a page with spacing only felt unstructured; many lines everywhere make it fussy. |
 | Form | No shadows and no glow. | She finds them ugly, even when subtle. |
 | Form | Cards and pills in off-white #F9FAFB. | Her Systra look: a very light, slightly cool grey, almost white. |
 | Form | Cards only where they organise information. | Everything in cards is the SaaS kit look. |

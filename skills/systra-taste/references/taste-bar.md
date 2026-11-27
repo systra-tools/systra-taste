@@ -16,7 +16,8 @@ Rebuild the architecture (not the colors) when any of these is visible:
 - The house skeleton from concept.md's AI tells: text column plus floating-card panel as hero, heading left and content right section after section, all headings one size.
 - Strong saturated gradients across large areas, or several gradients that mix the same hues and look alike. Color louder than the business.
 - Black plus neon as an automatic tech look; blue-purple glow as an automatic AI look.
-- Borders around every card, pill or button; drop shadows; many divider lines; glass on an empty background.
+- Borders around every card, pill or button; drop shadows; decorative lines; glass on an empty background.
+- The opposite too: a page held together by spacing alone, where lists, prices and steps float without hairlines or a container.
 - Text colliding with an image or object, or copy crossing a color transition.
 - Photography, people or 3D faked with CSS shapes and gradients.
 - Small headline, long paragraph. Walls of text on a slide-like section.

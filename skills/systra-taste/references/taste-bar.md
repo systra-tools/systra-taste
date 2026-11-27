@@ -14,7 +14,7 @@ Rebuild the architecture (not the colors) when any of these is visible:
 - An uppercase mono label with a dot or number above every heading ("SIGNAL / 01", "STAY SELECTOR").
 - Beige, olive, khaki or acid-lime palettes chosen because they look "designed", not because of the brand.
 - The house skeleton from concept.md's AI tells: text column plus floating-card panel as hero, heading left and content right section after section, all headings one size.
-- Several hue families on one page, or a row of cards where every card has its own color. Color louder than the business.
+- Strong saturated gradients across large areas, or several gradients that mix the same hues and look alike. Color louder than the business.
 - Black plus neon as an automatic tech look; blue-purple glow as an automatic AI look.
 - Borders around every card, pill or button; drop shadows; many divider lines; glass on an empty background.
 - Text colliding with an image or object, or copy crossing a color transition.
@@ -78,7 +78,7 @@ Never generate AI images and never fake photos, people or 3D in CSS. Code-native
 
 ## Color
 
-Default color move: grain gradients from one brand family, see [gradients.md](gradients.md). The intensity follows the brand read: a painter or a dental practice gets Calm, a festival gets Vivid. A page without any color moment usually reads generic; a page with several hues or with every section in color reads loud. Aim for one to three gradient moments, the rest white, and only one moment above the page's intensity level.
+Default color move: a neutral page with two to four soft grain gradients, each surface its own hue world and light direction, see [gradients.md](gradients.md). A page without any color moment reads generic; strong saturation over large areas reads loud; identical gradients read like a template.
 
 ## Copy
 

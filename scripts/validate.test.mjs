@@ -256,10 +256,13 @@ test("taste lint flags loud gradients, dashes and slogan copy", async () => {
  const loud=join(dir,"loud.jsx");writeFileSync(loud,'const a="radial-gradient(#bfa9ff 0%, #5f9bff 50%, #fff27a 100%)";\nexport const H=()=><h1>Farbe, die bleibt.</h1>;\nconst t="Preis – fair";');
  const r=lint([loud]);
  assert.ok(r.spread>75);
+ assert.ok(r.findings.some(x=>x.msg.includes("too strong")));
  assert.ok(r.findings.some(x=>x.msg.includes("relative clause")));
  assert.ok(r.findings.some(x=>x.level==="error"&&x.msg.includes("dash")));
- const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#ffd0b5 0%, #ffb79a 60%, #ffeadd 100%)";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
- const c=lint([calm]);assert.ok(c.spread<=60);assert.equal(c.findings.length,0);
+ const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), #f7faec";\nconst b="radial-gradient(#d2e4fb 0%, transparent 70%), #f2f6fd";\nconst c="radial-gradient(#fbdcc3 0%, transparent 70%), #fdf6f0";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
+ const c=lint([calm]);assert.equal(c.findings.length,0,JSON.stringify(c.findings));
+ const same=join(dir,"same.jsx");writeFileSync(same,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), radial-gradient(#d2e4fb 0%, transparent 70%), #fff";\nconst b="radial-gradient(#d2e4fb 0%, transparent 70%), radial-gradient(#e3f3a8 0%, transparent 70%), #fff";\nconst c="radial-gradient(#e6f5b0 0%, transparent 70%), radial-gradient(#d6e6fb 0%, transparent 70%), #fff";');
+ assert.ok(lint([same]).findings.some(x=>x.msg.includes("look alike")));
 });
 
 test("skill works without Systra Tools: offline recipe is routed and self-contained", () => {

@@ -15,8 +15,7 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 | Form | Cards only where they organise information. | Everything in cards is the SaaS kit look. |
 | Form | Radius 6 to 12 px. Squircles and large radii only for image frames. | Over-rounded containers look soft and shapeless. |
 | Buttons | Buttons 5 to 10 px or underline links, never pills. | Pill buttons read as generic UI kit. |
-| Color | Gradients only subtle, with a fine crisp grain, only as colorful as the business fits. Never large loud gradients. | Too colorful looked random. |
-| Color | One color family per page, derived from the brand. Calm for trades, practices, law. | Several hue families make a page loud and cheap. |
+| Color | Neutral page, two to four soft gradient surfaces. Every surface its own hue world and its own light direction. Soft stops, fine crisp grain. See gradients.md. | One family looked like too little color and every gradient the same; strong mixed gradients looked extreme and still alike. The accepted version: soft and different. |
 | Color | Grain on the background, never on the element above it as well. | Double grain looks dirty. |
 | Color | No colored blobs on white or dark grounds. | Decoration without a job. |
 | Color | Brown, terracotta and beige rarely, never as a default. | They look dated. |
@@ -25,4 +24,4 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 | Icons | Hugeicons with a thin stroke (strokeWidth 1.25 to 1.5). Avoid Lucide; convert with engine/icons.mjs. | AI-built pages are recognisable by Lucide. |
 | Text | No dashes as punctuation, "Button" never "Knopf", no slogan formulas ("Farbe, die bleibt"), copy as the owner would say it. | AI copy makes a good layout feel generic. |
 
-`node engine/taste-lint.mjs` checks the rules that can be checked in code: AI faces, serif, heavy weights, shadows, borders on rounded elements, pill buttons, Lucide imports, gradient hue spread and the copy patterns.
+`node engine/taste-lint.mjs` checks the rules that can be checked in code: AI faces, serif, heavy weights, shadows, borders on rounded elements, pill buttons, Lucide imports, gradients that are too strong or look alike, and the copy patterns.

@@ -1,6 +1,7 @@
 # Changelog
 
 ## 3.3.0 (candidate)
+- Gradients rebuilt after three rounds on a driving-school page: neutral page, two to four soft grain surfaces, each its own hue world and light direction; calibrated mesh set in gradients.md. Lint now warns about gradient stops that are too strong and about surfaces that mix the same hues, instead of a single-family hue limit.
 - House rules from Amelie's approved list (27.11.): house-rules.md with rule and why; Albert Sans, Hanken Grotesk or Manrope in light to regular weights, no AI faces; off-white #F9FAFB cards without border, shadow or glow; no pill buttons; subtle gradients with fine grain on the background only; Hugeicons thin, no Lucide; images as placeholders (library pool or calm panel with a photo note), never AI images. Lint now flags AI faces, heavy headlines, any shadow, pill buttons and Lucide imports.
 - Against the AI look: reference hunt (Framer Marketplace and others) and a one-sentence concept with one signature moment before any layout; AI-tells list; no two neighbouring sections share a skeleton; one oversized typographic moment; offline parts are explicitly not a page template.
 - Works fully without Systra Tools: new offline recipe service-site.md (hero with a real moment, services, process, statement, contact), router column for the offline route, image order without the library. Tested on a dental practice page without any MCP call or library image.

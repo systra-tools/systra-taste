@@ -31,6 +31,18 @@ function hue(hex) {
   return (hh * 60 + 360) % 360;
 }
 
+// how strong a gradient stop reads: chroma plus darkness below a soft pastel (calibrated on Amelie's rounds, 27.11.2026)
+export function strength(hex) {
+  const h = hex.replace("#", "");
+  const full = h.length === 3 ? h.split("").map((c) => c + c).join("") : h.slice(0, 6);
+  const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16) / 255);
+  const lin = (c) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
+  const L = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+  return Math.max(r, g, b) - Math.min(r, g, b) + (0.8 - L);
+}
+
+const bucket = (h) => Math.round(h / 30) % 12;
+
 // smallest arc of the color wheel that contains every hue
 export function hueSpread(hues) {
   if (hues.length < 2) return 0;
@@ -70,6 +82,7 @@ const COPY_RULES = [
 export function lint(files) {
   const findings = [];
   const gradientHues = [];
+  const surfaces = [];
   for (const f of files) {
     const src = readFileSync(f, "utf8");
     const lines = src.split("\n");
@@ -78,11 +91,31 @@ export function lint(files) {
       for (const [re, level, msg] of TEXT_RULES) if (re.test(line)) findings.push({ f, line: i + 1, level, msg });
       for (const [re, msg] of COPY_RULES) if (re.test(line)) findings.push({ f, line: i + 1, level: "warn", msg });
     });
-    for (const m of src.matchAll(/(?:radial|linear|conic)-gradient\(([^;"`]*)/g))
-      for (const c of m[1].matchAll(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/g)) { const h = hue(c[0]); if (h !== null) gradientHues.push(h); }
+    // every string that holds gradients is one surface
+    for (const lit of src.matchAll(/(["'`])((?:(?!\1).)*?gradient\((?:(?!\1).)*)\1/g)) {
+      const stops = [...lit[2].matchAll(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b/g)].map((c) => c[0]);
+      const hues = new Set();
+      let top = null;
+      for (const c of stops) {
+        const h = hue(c); if (h === null) continue;
+        gradientHues.push(h); hues.add(bucket(h));
+        const st = strength(c); if (!top || st > top.st) top = { st, h, c };
+      }
+      if (top) surfaces.push({ f, hues, dom: bucket(top.h), top });
+    }
+  }
+  for (const x of surfaces) if (x.top.st > 0.3) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient stop ${x.top.c} is too strong for a soft surface; keep stops light pastel (see gradients.md)` });
+  if (surfaces.length >= 3) {
+    let sim = 0, n = 0;
+    for (let i = 0; i < surfaces.length; i++) for (let j = i + 1; j < surfaces.length; j++) {
+      const a = surfaces[i].hues, b = surfaces[j].hues;
+      const inter = [...a].filter((v) => b.has(v)).length, uni = new Set([...a, ...b]).size;
+      sim += uni ? inter / uni : 0; n++;
+    }
+    const doms = new Set(surfaces.map((x) => x.dom)).size;
+    if (sim / n > 0.4 || doms < Math.ceil(surfaces.length / 2)) findings.push({ f: "(page)", line: 0, level: "warn", msg: "gradients look alike; give every surface its own hue world and light direction" });
   }
   const spread = hueSpread(gradientHues);
-  if (spread > 75) findings.push({ f: "(page)", line: 0, level: "warn", msg: `gradient hues span ${spread} degrees; use one family derived from the brand (max about 60)` });
   return { findings, spread };
 }
 

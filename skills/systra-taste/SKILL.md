@@ -24,12 +24,12 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Tas
 ## 3. Signature (unless the brand overrides it)
 
 - Albert Sans (or the brand face) for display and body. No italic serif accent by default; one serif only with a reason from the content.
-- Light, mostly white foundation, near-black ink, one clear accent from the brand. Beige, olive, brown and terracotta are project choices, never defaults.
+- White page, near-black ink. Color comes as crisp mesh gradients with fine grain on panels, with white cards showing a real moment of the business. Recipe: [gradients.md](references/gradients.md). Beige, olive, brown and terracotta are never defaults.
 - Large confident headlines, few words, generous whitespace. Slides into one idea per view.
 - Slightly rounded corners, 6 to 12 px; buttons 6 to 10 px. No borders around cards or pills, no box shadows, few divider lines. Glow and shadow only very subtle, if at all.
 - No uppercase mono kicker or eyebrow above every heading. No invented numbers, stars, logos or quotes.
 - MUST use real **Hugeicons** for functional icons in new Systra-style UI (@hugeicons/react, @hugeicons/core-free-icons); verify exports. No Unicode arrows or emoji as icons. Keep a brand's existing icon system.
-- Copy in the project language, short and concrete, no new em dashes. German: consistent du or Sie per brand, plain words a twelve-year-old understands.
+- Copy must sound like the owner talking, not like a slogan generator. Follow the copy rules in the taste bar; no new em dashes.
 - Motion has one job each: orient, reveal, focus, compare or hand off. Scroll motion is selective, never forced. CSS for small things; GSAP, ScrollTrigger and Lenis only when needed, see [lenis-gsap.md](references/lenis-gsap.md).
 - Photos, people and 3D come from approved assets. If an asset is missing, write an exact image prompt with crop and text-safe area instead of faking it in CSS.
 

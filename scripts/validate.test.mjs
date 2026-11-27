@@ -241,7 +241,8 @@ test("3.3 taste bar is linked and bundled defaults stay neutral", () => {
  const base="skills/systra-taste/";
  const core=read(base+"SKILL.md"),bar=read(base+"references/taste-bar.md"),css=read(base+"components/taste.css");
  assert.ok(core.includes("references/taste-bar.md"));
- for(const term of ["Hard rejections","9 of 10","Section roles","text-safe area"])assert.ok(bar.includes(term),term);
+ for(const term of ["Hard rejections","9 of 10","Section roles","text-safe area","Farbe, die bleibt","gradients.md"])assert.ok(bar.includes(term),term);
+ assert.ok(read(base+"references/gradients.md").includes("feTurbulence"));
  assert.doesNotMatch(css,/Instrument Serif/);
  assert.doesNotMatch(css,/#c8f26d|#587300|#f4f2e9|#edf1ec/i);
  for(const file of ["scene-hero","signal-trace","contour-smooth","image-compare","stay-selector"])assert.doesNotMatch(read(base+"components/"+file+".jsx"),/st-kicker">[A-Z]/);

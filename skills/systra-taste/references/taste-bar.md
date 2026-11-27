@@ -62,6 +62,34 @@ When an image is missing, deliver an English prompt, filename, aspect ratio, des
 
 Images may be bold, surprising and colorful when the brand allows it. Quiet stock with a laptop and a plant is rarely the best subject.
 
+## Color
+
+Default color move: crisp mesh gradients with fine grain, see [gradients.md](gradients.md). A page without any color moment usually reads generic; a page where every section is a gradient reads loud. Aim for one to three gradient moments, the rest white.
+
 ## Copy
+
+AI copy is the fastest way to make a good layout feel generic. Rewrite any line that matches these patterns:
+
+- Slogan built as noun, comma, relative clause: "Farbe, die bleibt." "Design, das wirkt." "Websites, die verkaufen."
+- Section invitations nobody says out loud: "Bereit für frische Wände?" "Erzähl uns von deinem Raum." "Lass uns gemeinsam ..."
+- "Vom X zum Y", "Mehr als nur X", "Nicht nur X, sondern Y", "Das Problem ist nicht X. Es ist Y."
+- Three adjectives or three promises in a row ("sauber, pünktlich, zuverlässig").
+- Abstract nouns instead of things: Qualität, Leidenschaft, Lösungen, Erlebnis, Mehrwert, Präsenz.
+- A headline that would work for any company in the industry.
+
+Write instead like the owner on the phone: concrete things, real actions, short sentences, one idea per line. A small pun is welcome if it is about the actual service and not cringe.
+
+| Instead of | Write |
+| --- | --- |
+| Farbe, die bleibt. | Wände streichen wir. Termine nie. |
+| Erzähl uns von deinem Raum. | Schick uns ein Foto. |
+| Vom Anruf zur fertigen Wand. | So läuft's |
+| Vorher, nachher. | Drei Tage später |
+| Was wir für dich streichen. | Was wir machen |
+
+Test every headline: would a real person in this trade say it to a customer? Could a competitor paste it onto their site unchanged? If yes to the second, rewrite.
+
+### Basics
+
 
 Short, concrete, human. Lead with the customer's benefit. No buzzwords ("innovative", "ganzheitlich", "maßgeschneidert"), no filler, no em dashes. Numbered lists with digits. Button labels say what happens ("Termin anfragen", not "Mehr erfahren").

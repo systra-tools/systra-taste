@@ -8,6 +8,7 @@ What went wrong before, in order:
 2. Lime, mint and sky mixed into every panel: candy colors ("krank"), and the panels still looked alike because they mixed the same hues.
 3. Soft pastels fading to near-white: calmer, but washed out and nothing like the references.
 4. Accepted direction: dusky mid-tone worlds with depth, as measured from the references below.
+5. Too many worlds on one page (tax office test, 27.11.): lilac band, sky and straw tiles, night band, plus photos. Each surface looked fine, the page looked restless. Accepted fix: one world for the page, the closing band in Night, tiles off-white.
 
 ## 1. What the references are made of
 
@@ -29,8 +30,10 @@ Colors sampled from the reference screenshots:
 
 ## 2. On the page
 
-- White page. Two to four colored surfaces: tiles with a real moment, one full-bleed band (closing section, contact, results). Large text sections stay white.
-- Neighbouring surfaces never share a world. A row of three tiles gets three worlds.
+- White page. One or two colored surfaces, three only on a long page: one band or signature panel in the world that suits the accent color (blue accent: dusty sky; violet: lilac; warm: amber or rose), optionally a closing band in Night. Everything else stays white or off-white.
+- The reference set shows many worlds because it is many pages. One page picks one.
+- Rows of tiles or cards stay off-white #F9FAFB with a white card; never give every tile its own world, never mix photo tiles and gradient tiles in one row.
+- Straw next to photos reads khaki; use it only when the brand is green or yellow.
 - One white card per tile (10 px radius, no shadow, no border) with a real moment of the business: a measurement, a drawing status, a booking, a message. Title and text sit below the tile, not inside it.
 - Brand color stays for buttons and icons. The worlds are chosen to sit well next to it.
 
@@ -39,6 +42,7 @@ Colors sampled from the reference screenshots:
 - Neon or candy stops (lime, mint, baby blue at full saturation).
 - Washed-out surfaces whose darkest stop is lighter than about 80 percent.
 - The same two or three hues mixed into every surface.
+- More than two worlds on one page, or a gradient in every section.
 - Gradient text, gradient buttons, gradient borders, blue-purple "AI glow".
 
 `node engine/taste-lint.mjs <files>` warns about neon stops, washed-out surfaces and surfaces that look alike.

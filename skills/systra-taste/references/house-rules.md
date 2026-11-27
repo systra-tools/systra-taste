@@ -15,7 +15,7 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 | Form | Cards only where they organise information. | Everything in cards is the SaaS kit look. |
 | Form | Radius 6 to 12 px. Squircles and large radii only for image frames. | Over-rounded containers look soft and shapeless. |
 | Buttons | Buttons 5 to 10 px or underline links, never pills. | Pill buttons read as generic UI kit. |
-| Color | White page, two to four grain gradient surfaces like the references: dusky mid-tone worlds (amber, lilac, rose, dusty sky, straw, night) with depth from a light to a deep corner, every surface its own world. No candy colors, no washed-out pastels. See gradients.md. | Four rounds on 27.11.: one family was too little, candy colors looked sick, pastels looked washed out and nothing like the references. |
+| Color | White page, one or two grain gradient surfaces like the references: dusky mid-tone worlds (amber, lilac, rose, dusty sky, straw, night) with depth from a light to a deep corner. One world per page that suits the accent, optionally Night for the closing band; tiles stay off-white. No candy colors, no washed-out pastels. See gradients.md. | Five rounds on 27.11.: one family was too little, candy colors looked sick, pastels looked washed out, and four worlds on one page looked restless. |
 | Color | Grain on the background, never on the element above it as well. | Double grain looks dirty. |
 | Color | No colored blobs on white or dark grounds. | Decoration without a job. |
 | Color | Brown, terracotta and beige rarely, never as a default. | They look dated. |

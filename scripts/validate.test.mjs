@@ -260,7 +260,9 @@ test("taste lint flags loud gradients, dashes and slogan copy", async () => {
  assert.ok(r.findings.some(x=>x.msg.includes("relative clause")));
  assert.ok(r.findings.some(x=>x.level==="error"&&x.msg.includes("dash")));
  const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#edc066 0%, transparent 70%), radial-gradient(#d9753a 0%, transparent 72%), #e2985a";\nconst b="radial-gradient(#d6c0cc 0%, transparent 70%), radial-gradient(#8d7ec0 0%, transparent 72%), #b8a6c9";\nconst c="radial-gradient(#6d9fd8 0%, transparent 70%), radial-gradient(#c8dbe9 0%, transparent 72%), #93b5da";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
- const c=lint([calm]);assert.equal(c.findings.length,0,JSON.stringify(c.findings));
+ assert.ok(lint([calm]).findings.some(x=>x.msg.includes("gradient worlds on one page")));
+  const two=join(dir,"two.jsx");writeFileSync(two,'const a="radial-gradient(#6d9fd8 0%, transparent 70%), radial-gradient(#c8dbe9 0%, transparent 72%), #93b5da";\nconst b="radial-gradient(#8c6449 0%, transparent 70%), radial-gradient(#3b2c3c 0%, transparent 70%), #1b1418";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
+  const c=lint([two]);assert.equal(c.findings.length,0,JSON.stringify(c.findings));
  const same=join(dir,"same.jsx");writeFileSync(same,'const a="radial-gradient(#e2985a 0%, transparent 70%), radial-gradient(#93b5da 0%, transparent 70%), #fff";\nconst b="radial-gradient(#93b5da 0%, transparent 70%), radial-gradient(#e2985a 0%, transparent 70%), #fff";\nconst c="radial-gradient(#e19c5c 0%, transparent 70%), radial-gradient(#a9c6e2 0%, transparent 70%), #fff";');
  const pale=join(dir,"pale.jsx");writeFileSync(pale,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), #f7faec";');
  assert.ok(lint([pale]).findings.some(x=>x.msg.includes("washed out")));

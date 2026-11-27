@@ -111,6 +111,8 @@ export function lint(files) {
     if (x.neon) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient stop ${x.neon} reads as candy or neon; use a dusky mid-tone like the references (see gradients.md)` });
     if (x.top.l > 0.8) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient surface is washed out (darkest stop ${x.top.c}); the references are mid-tone with depth (see gradients.md)` });
   }
+  const worlds = new Set(surfaces.map((x) => x.dom)).size;
+  if (worlds > 2) findings.push({ f: "(page)", line: 0, level: "warn", msg: `${worlds} gradient worlds on one page; use one world plus an optional Night band, tiles off-white (see gradients.md)` });
   if (surfaces.length >= 3) {
     let sim = 0, n = 0;
     for (let i = 0; i < surfaces.length; i++) for (let j = i + 1; j < surfaces.length; j++) {

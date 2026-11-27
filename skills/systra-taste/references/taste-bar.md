@@ -80,7 +80,7 @@ Never generate AI images and never fake photos, people or 3D in CSS. Code-native
 
 ## Color
 
-Default color move: a white page with two to four grain gradient surfaces in dusky mid-tone worlds like the references, see [gradients.md](gradients.md). Candy colors read cheap, washed-out pastels read like nothing, identical gradients read like a template.
+Default color move: a white page with one or two grain gradient surfaces in a dusky mid-tone world like the references (one world plus an optional Night band), see [gradients.md](gradients.md). More worlds make the page restless. Candy colors read cheap, washed-out pastels read like nothing, identical gradients read like a template.
 
 ## Copy
 

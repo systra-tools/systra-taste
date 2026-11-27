@@ -26,11 +26,11 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Tas
 Approved rules with their why: [house-rules.md](references/house-rules.md).
 
 - Albert Sans, Hanken Grotesk or Manrope, in light to regular weights (300 to 400, at most 500). No Inter, Geist, Poppins, Space Grotesk, Playfair. Serif only if the brand fits.
-- White page, near-black ink. Color as two to four soft grain gradients, each surface its own hue and light direction (see gradients.md); the rest stays neutral. No blobs, no beige, brown or terracotta by default.
+- White page, near-black ink. Color as two to four grain gradient surfaces like the references: dusky mid-tone worlds with depth, each its own (gradients.md); the rest stays white. No blobs, no beige, brown or terracotta by default.
 - Large headlines, few words, generous whitespace, one oversized typographic moment per page.
 - Cards and pills off-white #F9FAFB, no border, no box shadows, no glow, and only where they organise information. Rounded corners 6 to 12 px, larger only for image frames. Buttons 5 to 10 px or underline links, never pills. Few divider lines.
 - Small labels above headings only now and then, in the body face. No invented numbers, stars, logos or quotes.
-- Icons: MUST use real **Hugeicons** with a thin stroke (strokeWidth 1.25 to 1.5). No Lucide (it marks AI pages), no emoji or Unicode arrows.
+- Icons: MUST use real **Hugeicons**, thin stroke (1.25 to 1.5), on services, steps, cards and contact. No Lucide, emoji or Unicode arrows.
 - Copy must sound like the owner talking, not like a slogan generator. Follow the copy rules in the taste bar; no new em dashes.
 - Motion has one job each: orient, reveal, focus, compare or hand off. Scroll motion is selective, never forced. CSS for small things; GSAP, ScrollTrigger and Lenis only when needed, see [lenis-gsap.md](references/lenis-gsap.md).
 - Images in a draft are placeholders for the client's real photos: from the Systra Tools image library when connected, otherwise a calm grain panel with a note naming the photo. Never generate AI images, never fake photos in CSS.

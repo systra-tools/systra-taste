@@ -31,15 +31,17 @@ function hue(hex) {
   return (hh * 60 + 360) % 360;
 }
 
-// how strong a gradient stop reads: chroma plus darkness below a soft pastel (calibrated on Amelie's rounds, 27.11.2026)
-export function strength(hex) {
+// gradient checks calibrated on Amelie's reference screenshots (Parloa) and her four rounds on 27.11.2026
+export function hsl(hex) {
   const h = hex.replace("#", "");
   const full = h.length === 3 ? h.split("").map((c) => c + c).join("") : h.slice(0, 6);
   const [r, g, b] = [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16) / 255);
-  const lin = (c) => (c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4);
-  const L = 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
-  return Math.max(r, g, b) - Math.min(r, g, b) + (0.8 - L);
+  const max = Math.max(r, g, b), min = Math.min(r, g, b), l = (max + min) / 2, d = max - min;
+  const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
+  return { s, l };
 }
+// candy or neon: very saturated and light at the same time (lime #d3f07a, sky #b7d8ff were rejected as "krank")
+export const isNeon = (hex) => { const { s, l } = hsl(hex); return s > 0.78 && l > 0.68; };
 
 const bucket = (h) => Math.round(h / 30) % 12;
 
@@ -99,12 +101,16 @@ export function lint(files) {
       for (const c of stops) {
         const h = hue(c); if (h === null) continue;
         gradientHues.push(h); hues.add(bucket(h));
-        const st = strength(c); if (!top || st > top.st) top = { st, h, c };
+        const { l } = hsl(c); if (!top || l < top.l) top = { l, h, c };
       }
-      if (top) surfaces.push({ f, hues, dom: bucket(top.h), top });
+      const neon = stops.find((c) => hue(c) !== null && isNeon(c));
+      if (top) surfaces.push({ f, hues, dom: bucket(top.h), top, neon });
     }
   }
-  for (const x of surfaces) if (x.top.st > 0.3) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient stop ${x.top.c} is too strong for a soft surface; keep stops light pastel (see gradients.md)` });
+  for (const x of surfaces) {
+    if (x.neon) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient stop ${x.neon} reads as candy or neon; use a dusky mid-tone like the references (see gradients.md)` });
+    if (x.top.l > 0.8) findings.push({ f: x.f, line: 0, level: "warn", msg: `gradient surface is washed out (darkest stop ${x.top.c}); the references are mid-tone with depth (see gradients.md)` });
+  }
   if (surfaces.length >= 3) {
     let sim = 0, n = 0;
     for (let i = 0; i < surfaces.length; i++) for (let j = i + 1; j < surfaces.length; j++) {

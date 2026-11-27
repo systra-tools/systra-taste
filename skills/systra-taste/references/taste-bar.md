@@ -80,7 +80,7 @@ Never generate AI images and never fake photos, people or 3D in CSS. Code-native
 
 ## Color
 
-Default color move: a neutral page with two to four soft grain gradients, each surface its own hue world and light direction, see [gradients.md](gradients.md). A page without any color moment reads generic; strong saturation over large areas reads loud; identical gradients read like a template.
+Default color move: a white page with two to four grain gradient surfaces in dusky mid-tone worlds like the references, see [gradients.md](gradients.md). Candy colors read cheap, washed-out pastels read like nothing, identical gradients read like a template.
 
 ## Copy
 

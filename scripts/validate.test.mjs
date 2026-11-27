@@ -256,12 +256,14 @@ test("taste lint flags loud gradients, dashes and slogan copy", async () => {
  const loud=join(dir,"loud.jsx");writeFileSync(loud,'const a="radial-gradient(#bfa9ff 0%, #5f9bff 50%, #fff27a 100%)";\nexport const H=()=><h1>Farbe, die bleibt.</h1>;\nconst t="Preis – fair";');
  const r=lint([loud]);
  assert.ok(r.spread>75);
- assert.ok(r.findings.some(x=>x.msg.includes("too strong")));
+ assert.ok(r.findings.some(x=>x.msg.includes("neon")));
  assert.ok(r.findings.some(x=>x.msg.includes("relative clause")));
  assert.ok(r.findings.some(x=>x.level==="error"&&x.msg.includes("dash")));
- const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), #f7faec";\nconst b="radial-gradient(#d2e4fb 0%, transparent 70%), #f2f6fd";\nconst c="radial-gradient(#fbdcc3 0%, transparent 70%), #fdf6f0";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
+ const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#edc066 0%, transparent 70%), radial-gradient(#d9753a 0%, transparent 72%), #e2985a";\nconst b="radial-gradient(#d6c0cc 0%, transparent 70%), radial-gradient(#8d7ec0 0%, transparent 72%), #b8a6c9";\nconst c="radial-gradient(#6d9fd8 0%, transparent 70%), radial-gradient(#c8dbe9 0%, transparent 72%), #93b5da";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
  const c=lint([calm]);assert.equal(c.findings.length,0,JSON.stringify(c.findings));
- const same=join(dir,"same.jsx");writeFileSync(same,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), radial-gradient(#d2e4fb 0%, transparent 70%), #fff";\nconst b="radial-gradient(#d2e4fb 0%, transparent 70%), radial-gradient(#e3f3a8 0%, transparent 70%), #fff";\nconst c="radial-gradient(#e6f5b0 0%, transparent 70%), radial-gradient(#d6e6fb 0%, transparent 70%), #fff";');
+ const same=join(dir,"same.jsx");writeFileSync(same,'const a="radial-gradient(#e2985a 0%, transparent 70%), radial-gradient(#93b5da 0%, transparent 70%), #fff";\nconst b="radial-gradient(#93b5da 0%, transparent 70%), radial-gradient(#e2985a 0%, transparent 70%), #fff";\nconst c="radial-gradient(#e19c5c 0%, transparent 70%), radial-gradient(#a9c6e2 0%, transparent 70%), #fff";');
+ const pale=join(dir,"pale.jsx");writeFileSync(pale,'const a="radial-gradient(#e3f3a8 0%, transparent 70%), #f7faec";');
+ assert.ok(lint([pale]).findings.some(x=>x.msg.includes("washed out")));
  assert.ok(lint([same]).findings.some(x=>x.msg.includes("look alike")));
 });
 

@@ -42,3 +42,13 @@ What went wrong on the first pass and why the skill now prevents it:
 - The headline "Morgen um 10 ist noch frei." was fixed text pretending to be live. Now: finish check on live-looking data. New headline: "Haare schneiden, ohne vorher anzurufen."
 - On mobile "ab 52 €" broke after the number, and the portraits came before the section heading. Now: finish checks for nowrap and mobile reading order.
 - The image search returned a hundred results. Now: filters and a short candidate list.
+
+## The real lesson: three pages, one template
+
+Painter, hair salon and dentist, each built cleanly from the skill, side by side were the same page: text column with a gradient panel as hero, heading left and content right in every section, white floating cards, all headings one size. Each page passed the score on its own; together they looked AI-made. The skill had turned into a template.
+
+The dentist redone with a reference hunt (Framer Marketplace, search "dentist") and a concept:
+- Moves taken: fluted glass over the image (Alder), a sentence with an object placed inside it (Dental Point), one giant element (Dentelle).
+- Concept: fluted glass is the practice's material; fear gets blurry. Signature: the word "Angst" sits behind fluted glass in a giant headline.
+- Every section with its own structure: giant headline in a full-width panel, services as a list of huge words with small spoken lines, the first visit as a rotated paper appointment card, contact as a giant phone number.
+- Still no photo and no library: the page works offline because the idea carries it, not the assets.

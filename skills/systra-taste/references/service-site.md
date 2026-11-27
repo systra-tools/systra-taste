@@ -1,4 +1,6 @@
-# Service business page: offline recipe
+# Service business page: offline parts
+
+Parts, not a page. Used all together in this order they rebuild the AI look of the calibration pages. Start from the reference hunt and concept in [concept.md](concept.md), then pick the parts the concept needs and change them.
 
 Use when no component library is connected, or nothing there fits. Proven on three briefs (painter, hair salon, dental practice). Works without a single photo: the gradient panels with white cards carry the visuals. Needs React, Tailwind, `@hugeicons/react`, `@hugeicons/core-free-icons` and the font: `npm i @fontsource/albert-sans`, then import weights 400, 500 and 600.
 

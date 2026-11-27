@@ -203,7 +203,7 @@ test("2.1 loads a bounded core and routes to four original recipes", () => {
   const router = read(base + "references/section-router.md");
   assert.ok(Buffer.byteLength(core) < 5000);
   assert.match(core, /Read only the matching recipe/);
-  assert.match(core, /1 or 2 relevant authorized visual references/);
+  assert.match(core, /Reference hunt and concept/);
   assert.match(router, /at most three modules initially/);
   assert.match(router, /Do not concatenate every reference/);
   for (const [file, component] of [["hero.md","SceneMarkers"],["process.md","SignalTransform"],["offer.md","OfferLedger"],["editorial.md","EditorialGallery"]]) {
@@ -269,4 +269,12 @@ test("skill works without Systra Tools: offline recipe is routed and self-contai
  assert.ok(router.includes("service-site.md"));
  for(const term of ["@fontsource/albert-sans","Grain","Before showing","taste-lint"])assert.ok(site.includes(term),term);
  assert.doesNotMatch(site,/search_components|search_images/);
+});
+
+test("concept step guards against the AI template look", () => {
+ const base="skills/systra-taste/";
+ const core=read(base+"SKILL.md"),c=read(base+"references/concept.md"),site=read(base+"references/service-site.md");
+ assert.ok(core.includes("references/concept.md"));
+ for(const term of ["framer.com/marketplace/search","three moves","Signature moment","AI tells","only fit this business"])assert.ok(c.includes(term),term);
+ assert.match(site,/Parts, not a page/);
 });

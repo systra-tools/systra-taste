@@ -13,6 +13,7 @@ Rebuild the architecture (not the colors) when any of these is visible:
 - A random italic serif word inside a sans headline.
 - An uppercase mono label with a dot or number above every heading ("SIGNAL / 01", "STAY SELECTOR").
 - Beige, olive, khaki or acid-lime palettes chosen because they look "designed", not because of the brand.
+- The house skeleton from concept.md's AI tells: text column plus floating-card panel as hero, heading left and content right section after section, all headings one size.
 - Several hue families on one page, or a row of cards where every card has its own color. Color louder than the business.
 - Black plus neon as an automatic tech look; blue-purple glow as an automatic AI look.
 - Borders around every card, pill or button; drop shadows; many divider lines; glass on an empty background.
@@ -32,6 +33,8 @@ Score the rendered screenshot, not the code. 0 to 2 points each:
 5. **Finish:** spacing, alignment, contrast, mobile recomposition and states feel resolved.
 
 Need 9 of 10 and no zero. Otherwise discard the skeleton and try the other composition idea. Polishing a generic layout with grain, glass, glow or gradients does not count as a fix.
+
+Then point to the one thing a template would not have (see concept.md). If there is none, the score is not 9.
 
 Final question: would this still feel specifically designed with every gradient, blur, shadow and animation removed? If not, the architecture is the problem.
 

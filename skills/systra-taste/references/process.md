@@ -60,4 +60,4 @@ export function SignalTransform({ samples, title = "From noise to clarity.", des
 }
 ~~~
 
-Assumes a nonempty finite numeric sample array; validate external data first. Equal-valued arrays normalize to zero by explicit convention. For a real before/after visual, use separately labeled axes. If normalized and raw shapes are geometrically identical, say why; do not imply the algorithm removed noise. Add a restrained state transition only when it improves comprehension.
+Assumes a nonempty finite numeric array; validate external data. Equal values normalize to zero. Use separately labeled axes, and never imply the algorithm removed noise.

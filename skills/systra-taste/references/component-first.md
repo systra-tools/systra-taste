@@ -8,10 +8,10 @@ The public Systra UI plugin documents these tools: search_components, get_compon
 
 ## Adapting library source
 
-Library sections often ship with choices the taste bar rejects. Before showing anything, go through this list:
+Library sections often ship with choices the taste bar rejects. The library itself stays as it is (Amelie, 27.11.2026: nothing is changed on Systra Tools); the skill adapts every section it uses. Before showing anything, go through this list:
 
-1. Replace an italic serif accent or a serif display line with the project face (Albert Sans by default). Keep the line breaks.
-2. Delete uppercase kickers and eyebrow labels unless the content needs them.
+1. Replace an italic serif accent or a serif display line with the project face (Hanken Grotesk by default). Keep the line breaks. Set headline weights to 300 to 400: the library caps them at Medium in a global CSS file that does not travel with the component, so copied headlines come out heavier.
+2. Keep at most an occasional small label, in the body face instead of mono. Replace pill buttons with 5 to 10 px radius or an underline link.
 3. Delete invented proof: avatar stacks, star rows, "1,400 homes" style numbers, sample quotes. Put back only what the client really has.
 4. Swap lucide-react for Hugeicons with `node engine/icons.mjs` (see integration-pipeline.md) or by hand with verified exports.
 5. Re-theme colors to the brand family and intensity from the brand read. Remove dark overlays that only exist for the sample photo.

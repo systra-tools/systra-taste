@@ -247,3 +247,17 @@ test("3.3 taste bar is linked and bundled defaults stay neutral", () => {
  assert.doesNotMatch(css,/#c8f26d|#587300|#f4f2e9|#edf1ec/i);
  for(const file of ["scene-hero","signal-trace","contour-smooth","image-compare","stay-selector"])assert.doesNotMatch(read(base+"components/"+file+".jsx"),/st-kicker">[A-Z]/);
 });
+
+test("taste lint flags loud gradients, dashes and slogan copy", async () => {
+ const {lint,hueSpread}=await import("../skills/systra-taste/engine/taste-lint.mjs");
+ const {mkdtempSync,writeFileSync}=await import("node:fs");const {tmpdir}=await import("node:os");const {join}=await import("node:path");
+ assert.equal(hueSpread([10,30,350]),40);
+ const dir=mkdtempSync(join(tmpdir(),"lint-"));
+ const loud=join(dir,"loud.jsx");writeFileSync(loud,'const a="radial-gradient(#bfa9ff 0%, #5f9bff 50%, #fff27a 100%)";\nexport const H=()=><h1>Farbe, die bleibt.</h1>;\nconst t="Preis – fair";');
+ const r=lint([loud]);
+ assert.ok(r.spread>75);
+ assert.ok(r.findings.some(x=>x.msg.includes("relative clause")));
+ assert.ok(r.findings.some(x=>x.level==="error"&&x.msg.includes("dash")));
+ const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#ffd0b5 0%, #ffb79a 60%, #ffeadd 100%)";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
+ const c=lint([calm]);assert.ok(c.spread<=60);assert.equal(c.findings.length,0);
+});

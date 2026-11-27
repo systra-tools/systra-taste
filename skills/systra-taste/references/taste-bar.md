@@ -1,6 +1,6 @@
 # Taste bar: what passes and what gets rebuilt
 
-Read this before every design task. It is the quality bar, not a style guide. A result can pass every functional gate and still fail here.
+Read this before every design task. It is the quality bar, not a style guide. A result can pass every functional gate and still fail here. For a worked example of rejected and accepted rounds, see [calibration.md](calibration.md).
 
 ## Hard rejections
 
@@ -13,6 +13,7 @@ Rebuild the architecture (not the colors) when any of these is visible:
 - A random italic serif word inside a sans headline.
 - An uppercase mono label with a dot or number above every heading ("SIGNAL / 01", "STAY SELECTOR").
 - Beige, olive, khaki or acid-lime palettes chosen because they look "designed", not because of the brand.
+- Several hue families on one page, or a row of cards where every card has its own color. Color louder than the business.
 - Black plus neon as an automatic tech look; blue-purple glow as an automatic AI look.
 - Borders around every card, pill or button; drop shadows; many divider lines; glass on an empty background.
 - Text colliding with an image or object, or copy crossing a color transition.
@@ -64,7 +65,7 @@ Images may be bold, surprising and colorful when the brand allows it. Quiet stoc
 
 ## Color
 
-Default color move: crisp mesh gradients with fine grain, see [gradients.md](gradients.md). A page without any color moment usually reads generic; a page where every section is a gradient reads loud. Aim for one to three gradient moments, the rest white.
+Default color move: grain gradients from one brand family, see [gradients.md](gradients.md). The intensity follows the brand read: a painter or a dental practice gets Calm, a festival gets Vivid. A page without any color moment usually reads generic; a page with several hues or with every section in color reads loud. Aim for one to three gradient moments, the rest white, and only one moment above the page's intensity level.
 
 ## Copy
 

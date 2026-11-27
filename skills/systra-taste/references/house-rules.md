@@ -4,7 +4,7 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 
 | Area | Rule | Why |
 | --- | --- | --- |
-| Type | Albert Sans, Hanken Grotesk or Manrope. Never Inter, Geist, Poppins, Space Grotesk or Playfair Display. | Those faces are what AI-built pages default to. |
+| Type | Hanken Grotesk by default (since 27.11.2026, replaces Albert Sans as the house face); Manrope or Albert Sans when it fits better. Never Inter, Geist, Poppins, Space Grotesk or Playfair Display. | Those faces are what AI-built pages default to. |
 | Type | Serif only when it fits the brand; otherwise leave it out. | The italic serif accent was the library default and made every page look the same. |
 | Type | Light to regular weights (300 to 400, at most 500). Weights may mix inside one headline. | Thin and regular type looks more premium than bold. |
 | Type | Small labels above headings are fine, but not above every section, and in the body face rather than mono. | A label on every block is a template tell. |
@@ -19,7 +19,7 @@ Amelie's approved design rules (27.11.2026). Each one comes from her own correct
 | Color | Grain on the background, never on the element above it as well. | Double grain looks dirty. |
 | Color | No colored blobs on white or dark grounds. | Decoration without a job. |
 | Color | Brown, terracotta and beige rarely, never as a default. | They look dated. |
-| Image | No dark or white overlays without a reason. If text does not hold on a photo, use a soft glass blur behind the text. | Overlays kill the photo. |
+| Image | No shadows, dark overlays or glass blur behind text. Pick a photo with a calm area that carries the text, or change the text color. | She finds all three ugly (27.11.2026, replaces the glass-blur rule from 09.11.). |
 | Image | Images in a draft are placeholders; the real photos come from the client. With the Systra Tools MCP, use fitting placeholders from its image library. Without it, a calm grain panel with a note naming the photo that belongs there. Never generate AI images. | Images decide a lot at the end, and invented ones are not the client's. |
 | Icons | Hugeicons with a thin stroke (strokeWidth 1.25 to 1.5). Avoid Lucide; convert with engine/icons.mjs. | AI-built pages are recognisable by Lucide. |
 | Text | No dashes as punctuation, "Button" never "Knopf", no slogan formulas ("Farbe, die bleibt"), copy as the owner would say it. | AI copy makes a good layout feel generic. |

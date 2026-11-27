@@ -25,7 +25,7 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Tas
 
 Approved rules with their why: [house-rules.md](references/house-rules.md).
 
-- Albert Sans, Hanken Grotesk or Manrope, in light to regular weights (300 to 400, at most 500). No Inter, Geist, Poppins, Space Grotesk, Playfair. Serif only if the brand fits.
+- Hanken Grotesk (or Manrope, Albert Sans), in light to regular weights (300 to 400, at most 500). No Inter, Geist, Poppins, Space Grotesk, Playfair. Serif only if the brand fits.
 - White page, near-black ink. Color as two to four grain gradient surfaces like the references: dusky mid-tone worlds with depth, each its own (gradients.md); the rest stays white. No blobs, no beige, brown or terracotta by default.
 - Large headlines, few words, generous whitespace, one oversized typographic moment per page.
 - Cards and pills off-white #F9FAFB, no border, no box shadows, no glow, and only where they organise information. Rounded corners 6 to 12 px, larger only for image frames. Buttons 5 to 10 px or underline links, never pills. Few divider lines.

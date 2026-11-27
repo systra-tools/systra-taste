@@ -5,7 +5,7 @@ Choose one of three visual structures, according to content:
 - Editorial canvas: oversized unboxed text, one decisive crop and quiet action; different image and type proportions, not a default 50/50 split.
 - Working specimen: a real product task in a large readable region; headline along the edge, no fake dashboard or decorative device.
 
-Typography: for a technical scene try Hanken Grotesk with short IBM Plex Mono labels. For a sensory brand use Instrument Serif as the full display face if available, with restrained sans body; for a contemporary product use Albert Sans or Figtree alone with deliberate weight and width. Do not automatically put the last word in italic serif. Test actual wraps and contrast.
+Typography: default to Albert Sans alone with deliberate scale and weight. Use a serif display face only when the brand already has one or the content is clearly sensory or editorial. Never put the last word in italic serif. Mono labels only for genuinely technical data. Test actual wraps and contrast.
 
 ## Original primitive: scene with real toggle and marker placement
 
@@ -20,13 +20,13 @@ export function SceneMarkers({ image, alt, ratio = "16 / 9", points, title, desc
   const [open, setOpen] = useState(false);
   const sceneId = useId();
   return (
-    <section className="bg-[#f1f0eb] text-[#20221d] px-5 py-12 md:px-16 md:py-20">
+    <section className="bg-[#ffffff] text-[#111214] px-5 py-12 md:px-16 md:py-20">
       <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] md:items-end">
           <h1 className="max-w-[14ch] text-[clamp(2.8rem,6vw,6.5rem)] leading-[.98] tracking-[-.055em]">{title}</h1>
           <div className="max-w-sm"><p className="mb-5 leading-relaxed">{description}</p>
             <button type="button" aria-pressed={open} aria-controls={sceneId} onClick={() => setOpen(!open)}
-              className="group inline-flex min-h-12 items-center gap-3 rounded-lg bg-[#20221d] px-4 text-white focus-visible:outline focus-visible:outline-offset-4">
+              className="group inline-flex min-h-12 items-center gap-3 rounded-lg bg-[#111214] px-4 text-white focus-visible:outline focus-visible:outline-offset-4">
               {open ? "Hide markers" : "Explore the map"}
               <HugeiconsIcon icon={ArrowRight01Icon} size={20} strokeWidth={1.5} aria-hidden="true" className="motion-safe:transition-transform motion-safe:group-hover:translate-x-1"/>
             </button>

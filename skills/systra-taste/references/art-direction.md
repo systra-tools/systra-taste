@@ -17,15 +17,15 @@ These are starting points, not three templates to reuse everywhere. Decide based
 Check the actual installed or authorized fonts. Do not silently download third-party fonts or substitute a visually different font without noting it.
 
 For greenfield work, compare:
-- Precision sans: Hanken Grotesk or Albert Sans if available; display 56–88 px on a wide desktop, body 16–18 px, compact heading line-height 0.98–1.10, neutral body line-height 1.5–1.65.
-- Editorial contrast: Instrument Serif (including its italic where meaningful) for one key phrase or display line, paired with Figtree or Albert Sans for body; avoid mixing several unrelated display treatments.
+- Systra default: Albert Sans alone, carried by scale, weight and spacing. Alternatives: Hanken Grotesk or Figtree; display 56–88 px on a wide desktop, body 16–18 px, compact heading line-height 0.98–1.10, neutral body line-height 1.5–1.65.
+- Editorial contrast: only when the brand or content asks for it. Then one serif for the whole display level, never a single italic word inside a sans headline.
 - Technical: a confident sans headline and IBM Plex Mono for genuinely technical metadata, never every small label.
 
 Use existing brand typography first. Numbers are starting ranges, not a rule for a narrow section. Use responsive clamp, avoid widow words, inspect the optical edge of type, and tune tracking to the font (often -0.035em to -0.055em for large sans headlines, near normal for body). Do not put a badge above every heading. Avoid a global centered text treatment. Prefer an intentional 2–3 line headline over a tiny single line or a wall of large text. Use consistent casing, real punctuation, and precise CTA verbs.
 
 ## Color and material
 
-Select one palette with a reason: warm paper + ink + a single vermilion accent; cool mineral whites + graphite + cobalt; rich dark neutral + one luminous accent; or a client palette. Establish readable roles for text, muted text, surface and primary action. Use one accent hierarchy instead of random colored badges. A gradient must reinforce the focal subject, not fill unused space. For an approved image, sample the palette from the image and preserve legibility. A flat, monochrome design is valid only if typography, structure and content carry it.
+Select one palette with a reason. Systra default: clean white, near-black ink and one clear accent taken from the brand. Other options when the brand supports them: cool mineral whites + graphite + cobalt; rich dark neutral + one luminous accent; or the client palette. Warm paper, beige, olive and terracotta tones only when the brand clearly calls for them. Establish readable roles for text, muted text, surface and primary action. Use one accent hierarchy instead of random colored badges. A gradient must reinforce the focal subject, not fill unused space. For an approved image, sample the palette from the image and preserve legibility. A flat, monochrome design is valid only if typography, structure and content carry it.
 
 Use depth from crop, layering, scale, intentional overlap, section transitions and contrast rather than default drop shadows or decorative frames. No ornamental dashboard mockups, floating pills, or repeated boxed features just to occupy space. Avoid endless bento and evenly weighted columns unless the content requires direct comparison.
 

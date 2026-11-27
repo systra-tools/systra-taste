@@ -1,27 +1,32 @@
 # Section router: load less, build sooner
 
-Default budget: SKILL.md + this router + [component-first.md](component-first.md) when sourcing components + ONE matching section recipe or original source per distinct job. For a whole page, choose at most three modules initially, reuse decisions across sections, and load another only for a concrete unresolved problem. Do not concatenate every reference. Long guides are optional lookup material. Aesthetic review is part of building, not a second long planning phase.
+Budget: SKILL.md + [taste-bar.md](taste-bar.md) + this router + ONE matching recipe per distinct job. For a whole page, start with at most three modules initially and reuse decisions. Do not concatenate every reference.
 
-| Job | Read first | Visual discovery hints (search authorized library only) |
+## Source real sections first
+
+When the Systra Tools MCP is connected, call search_components with job plus industry plus mood, in English: "hero for a painting company", "testimonials for a car workshop", "contact form for a clinic". The library has industry-specific sections; an abstract query ("editorial image-led hero") throws that away. Shortlist 2–3, inspect source and any preview, adapt one. Use list_styles and get_component_styled when a brand style exists. Then apply the taste bar.
+
+| Job | MCP query starts with | Local recipe |
 | --- | --- | --- |
-| Hero / brand story / CTA / immersive image | [hero.md](hero.md) | ResortPoolHero, InlineImageHero, DramaticEditorialHero, WildlandPromptHero |
-| Workflow / transformation / product demo / feature explanation | [process.md](process.md) | ShapeMorphProcess, SceneDetectionScrubber, TracedLineProcess, FolderDropShowcase |
-| Pricing / comparison / decision | [offer.md](offer.md) | RefillTierPricing, MeasuredGapComparison, DeepWaterPricing |
-| Quote / editorial / proof / gallery / footer | [editorial.md](editorial.md) | SignedMissionStatement, MagazineEditorialGrid, InlineMediaSentence, EditorialWordFooter |
-| Dense UI / existing dashboard / forms | [visual-signature.md](visual-signature.md) | ModelKnowledgeCore, TracedLineProcess |
+| Hero / brand story | "hero for a [industry]" | [hero.md](hero.md) |
+| Services / features | "services for a [industry]" | [editorial.md](editorial.md) |
+| Proof / reviews / projects | "testimonials", "before after", "project gallery" | [editorial.md](editorial.md) |
+| About / team | "about section for a [industry]" | [editorial.md](editorial.md) |
+| Process / workflow | "process steps for a [industry]" | [process.md](process.md) |
+| Pricing / packages | "pricing for a [industry]" | [offer.md](offer.md) |
+| Contact / CTA / footer | "contact form for a [industry]", "cta" | [hero.md](hero.md) |
+| Dense UI / forms | the actual component type | [visual-signature.md](visual-signature.md) |
 
-For direct fallback source, see [component-first.md](component-first.md). Prefer a compatible component over generic generated markup. The original JSX and scoped CSS can be copied into React/Tailwind projects without a Systra account.
+The local recipes and the five components in ../components are fallbacks for offline use. They are not the Systra look; re-theme them to the brand.
 
-Names are observed preview filenames, not verified MCP IDs. Select one or two visuals based on the actual brief; avoid importing source or images unless authorized. If user supplies appropriate references, use those instead.
+## Optional, only for a concrete open problem
 
-Optional, only when a specific problem remains:
-- [design-dna.md](design-dna.md), [reference-index.md](reference-index.md): broader visual directions and discovery hints.
-- [art-direction.md](art-direction.md), [design-decisions.md](design-decisions.md), [craft-rules.md](craft-rules.md): deeper composition/type guidance.
+- [design-dna.md](design-dna.md), [reference-index.md](reference-index.md): directions and discovery hints.
+- [art-direction.md](art-direction.md), [design-decisions.md](design-decisions.md), [craft-rules.md](craft-rules.md): composition and type depth.
 - [page-rhythm.md](page-rhythm.md): full-page sequencing.
-- [visual-recipes.md](visual-recipes.md): older generic React examples; prefer the job-specific recipes.
-- [interaction-atlas.md](interaction-atlas.md): 20 motion and 15 control patterns; use one relevant pattern.
-- [motion-patterns.md](motion-patterns.md): detailed CSS/scroll guidance.
-- [lenis-gsap.md](lenis-gsap.md): synchronized advanced motion implementation.
+- [visual-recipes.md](visual-recipes.md): older generic examples.
+- [interaction-atlas.md](interaction-atlas.md): one motion or control pattern.
+- [motion-patterns.md](motion-patterns.md), [lenis-gsap.md](lenis-gsap.md): motion implementation.
 - [release-gates.md](release-gates.md): expanded QA for complex or failing work.
 
-When old guides suggest reading the full corpus or more references by default, the short loop in SKILL.md takes precedence. Do not use a recipe if a project's existing solution serves the same purpose better.
+The taste bar outranks every older guide. If an older file suggests a serif accent, a mono kicker or a muted earthy palette as a default, ignore it unless the brand asks for it.

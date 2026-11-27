@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.3.0 (candidate)
+- Taste first: new always-read taste bar with hard rejections, a 9-of-10 screenshot score, alternative rules, service-business section roles, image prompt structure and copy rules.
+- Systra signature made concrete: Albert Sans alone by default, white foundation with one brand accent, no serif accent, no mono kickers, no beige or olive house palette.
+- MCP first: search the connected Systra Tools MCP with job plus industry; local recipes and components become re-themable fallbacks.
+- Bundled components and recipes re-themed to neutral white, near-black and one accent token; eyebrow labels are optional.
+
 ## 3.2.0 (candidate)
 - AST-based migration of supported Lucide imports to genuine Hugeicons.
 - Ordered page composition with shared theme tokens.

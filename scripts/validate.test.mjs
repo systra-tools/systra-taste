@@ -174,7 +174,7 @@ test("1.4 candidate has mandatory art direction, real icons and screenshot gates
   assert.match(cases, /Case F: greenfield Hero, Workflow and Pricing/);
   assert.match(cases, /separate fresh sessions/);
   assert.match(cases, /Randomize labels/);
-  assert.equal(JSON.parse(read("package.json")).version, "3.2.0");
+  assert.equal(JSON.parse(read("package.json")).version, "3.3.0");
 });
 
 
@@ -235,4 +235,14 @@ test("2.2 ships only original component source with scoped styles and verified r
  assert.match(css,/prefers-reduced-motion/);
  assert.match(css,/focus-visible/);
  assert.match(read(base+"components/signal-trace.jsx"),/clamp\(\(v-lo\)\/\(hi-lo\|\|1\)\)/);
+});
+
+test("3.3 taste bar is linked and bundled defaults stay neutral", () => {
+ const base="skills/systra-taste/";
+ const core=read(base+"SKILL.md"),bar=read(base+"references/taste-bar.md"),css=read(base+"components/taste.css");
+ assert.ok(core.includes("references/taste-bar.md"));
+ for(const term of ["Hard rejections","9 of 10","Section roles","text-safe area"])assert.ok(bar.includes(term),term);
+ assert.doesNotMatch(css,/Instrument Serif/);
+ assert.doesNotMatch(css,/#c8f26d|#587300|#f4f2e9|#edf1ec/i);
+ for(const file of ["scene-hero","signal-trace","contour-smooth","image-compare","stay-selector"])assert.doesNotMatch(read(base+"components/"+file+".jsx"),/st-kicker">[A-Z]/);
 });

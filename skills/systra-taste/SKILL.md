@@ -17,7 +17,7 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Tas
 
 1. Inspect brand, fonts, assets, components, content and constraints. Brand and explicit instructions win. Write a three-line brand read: who visits, what mood, and a color intensity (Calm, Medium or Vivid, see [gradients.md](references/gradients.md)). It decides color, type scale and motion.
 2. For every section, name its job, its role from the taste bar's section roles and one focal subject: a real photo, a product state, a person, a tactile object or a strong statement. Never a blob, ring, glow or floating card stack.
-3. Look at 1 or 2 relevant authorized visual references: the images you picked, project screenshots, references from the user, or a quick render of the library section. The MCP returns source, not previews. If nothing can be seen, say so and lean harder on the taste bar.
+3. Look at 1 or 2 relevant authorized visual references: chosen images, project screenshots, user references or a quick render of a library section (the MCP returns source, not previews). If nothing can be seen, say so and lean on the taste bar.
 4. Sketch two genuinely different composition ideas in one line each. Pick one and adapt real source.
 5. Build. Then render desktop and 390/320 px mobile, look at the screenshot as a stranger would, run `node engine/taste-lint.mjs` on the changed files, score it with the taste bar, and do a screenshot-led correction pass. Below 9 of 10 or any rejection hit: change the architecture, not the colors. Then the finish checks in the taste bar. Mark unavailable checks NOT TESTED.
 

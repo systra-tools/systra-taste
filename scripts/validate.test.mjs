@@ -261,3 +261,12 @@ test("taste lint flags loud gradients, dashes and slogan copy", async () => {
  const calm=join(dir,"calm.jsx");writeFileSync(calm,'const a="radial-gradient(#ffd0b5 0%, #ffb79a 60%, #ffeadd 100%)";\nexport const H=()=><h1>Schick uns ein Foto.</h1>;');
  const c=lint([calm]);assert.ok(c.spread<=60);assert.equal(c.findings.length,0);
 });
+
+test("skill works without Systra Tools: offline recipe is routed and self-contained", () => {
+ const base="skills/systra-taste/";
+ const router=read(base+"references/section-router.md"),site=read(base+"references/service-site.md");
+ assert.match(router,/works fully without Systra Tools/);
+ assert.ok(router.includes("service-site.md"));
+ for(const term of ["@fontsource/albert-sans","Grain","Before showing","taste-lint"])assert.ok(site.includes(term),term);
+ assert.doesNotMatch(site,/search_components|search_images/);
+});

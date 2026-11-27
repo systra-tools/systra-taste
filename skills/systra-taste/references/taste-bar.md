@@ -65,7 +65,7 @@ Alternate dense and calm, photographic and typographic, full-bleed and contained
 
 ## Images
 
-Order of preference: approved project photo, approved asset from the Systra Tools image library, a generated asset when the user allows it, a code-native visual only for real UI, charts and diagrams.
+Order of preference: approved project photo, approved asset from the Systra Tools image library when it is connected, a generated asset when the user allows it, then a grain-gradient panel with white cards showing a real moment of the business (works without any photo). Code-native drawings only for real UI, charts and diagrams.
 
 When an image is missing, deliver an English prompt, filename, aspect ratio, desktop and mobile crop, text-safe area and alt-text direction, and reference it cleanly in code. Prompt shape:
 

@@ -1,6 +1,7 @@
 # Changelog
 
 ## 3.3.0 (candidate)
+- Works fully without Systra Tools: new offline recipe service-site.md (hero with a real moment, services, process, statement, contact), router column for the offline route, image order without the library. Tested on a dental practice page without any MCP call or library image.
 - Brand read in step 1 sets one gradient family and an intensity (Calm, Medium, Vivid); taste-lint reports hue spread, dashes, serif faces, kickers, borders, heavy shadows and AI copy patterns.
 - Adapting checklist for library source, image search with filters, recipes for whole pages.
 - Finish checks: truthful live data, nowrap for prices and numbers, mobile reading order, placeholder people.

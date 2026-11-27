@@ -60,6 +60,7 @@ const COPY_RULES = [
   [/\b(ganzheitlich\w*|maßgeschneidert\w*|Mehrwert|innovativ\w*|Leidenschaft|authentisch\w*|nachhaltig\w*|Lösungen, die)\b/i, "copy: buzzword"],
   [/Erzähl(t)? uns von/, "copy: 'Erzähl uns von ...' invitation"],
   [/\b(Unlock|Elevate|Seamless|Empower|Transform your)\b/, "copy: English buzzword"],
+  [/„[^“"]{1,200}"/, "copy: German quote opened with „ must close with “"],
 ];
 
 export function lint(files) {

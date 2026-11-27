@@ -31,3 +31,14 @@ Why it was not enough: clean but anonymous. The structure could belong to any tr
 1. The white cards with a real moment are what made it specific. Keep them.
 2. Copy changes the perceived quality as much as the layout.
 3. Color intensity is a brand decision, not a style default. Decide it in the brand read before building.
+
+## Second brief: hair salon, built straight from the skill
+
+Brief: homepage for a fictional salon "Schnittstelle" in Münster. Brand read: visitors 20 to 45 who want to book online, modern and warm, Medium, sky family taken from the hero photo.
+
+What went wrong on the first pass and why the skill now prevents it:
+- The library hero came with an italic serif last line, a kicker and lucide icons. Now: the adapting checklist in component-first.md.
+- The team became three equal cards although the taste bar says a strong portrait beats a team grid. Now: step 2 names each section's role before building. Fixed layout: one large portrait, a short statement, two smaller portraits.
+- The headline "Morgen um 10 ist noch frei." was fixed text pretending to be live. Now: finish check on live-looking data. New headline: "Haare schneiden, ohne vorher anzurufen."
+- On mobile "ab 52 €" broke after the number, and the portraits came before the section heading. Now: finish checks for nowrap and mobile reading order.
+- The image search returned a hundred results. Now: filters and a short candidate list.

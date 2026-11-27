@@ -35,6 +35,16 @@ Need 9 of 10 and no zero. Otherwise discard the skeleton and try the other compo
 
 Final question: would this still feel specifically designed with every gradient, blur, shadow and animation removed? If not, the architecture is the problem.
 
+## Finish checks
+
+After the score, before showing:
+
+- Live-looking data (next free slot, stock, opening status, prices) is either wired to a real source or written so it stays true without one. "Morgen um 10 ist noch frei" as fixed text is a lie on the next day.
+- Prices, units, phone numbers and dates never break across lines ("ab 52 €" stays together): use whitespace-nowrap.
+- On mobile the heading of a section comes before its media, and the reading order still makes sense.
+- People shown as team or customers are real or clearly marked as placeholders for the client's own photos.
+- Every button and link goes somewhere, and 320 px stays readable.
+
 ## Alternatives
 
 When asked for options, vary all five: architecture, focal subject, copy placement, proof mechanism, background behavior. A palette swap or reordered cards is the same design.

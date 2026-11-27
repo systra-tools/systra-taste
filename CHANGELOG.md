@@ -1,6 +1,10 @@
 # Changelog
 
 ## 3.3.0 (candidate)
+- Brand read in step 1 sets one gradient family and an intensity (Calm, Medium, Vivid); taste-lint reports hue spread, dashes, serif faces, kickers, borders, heavy shadows and AI copy patterns.
+- Adapting checklist for library source, image search with filters, recipes for whole pages.
+- Finish checks: truthful live data, nowrap for prices and numbers, mobile reading order, placeholder people.
+- Calibration file with two worked briefs (painter, hair salon).
 - Taste first: new always-read taste bar with hard rejections, a 9-of-10 screenshot score, alternative rules, service-business section roles, image prompt structure and copy rules.
 - Systra signature made concrete: Albert Sans alone by default, white foundation with one brand accent, no serif accent, no mono kickers, no beige or olive house palette.
 - MCP first: search the connected Systra Tools MCP with job plus industry; local recipes and components become re-themable fallbacks.

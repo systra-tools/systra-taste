@@ -278,3 +278,16 @@ test("concept step guards against the AI template look", () => {
  for(const term of ["framer.com/marketplace/search","three moves","Signature moment","AI tells","only fit this business"])assert.ok(c.includes(term),term);
  assert.match(site,/Parts, not a page/);
 });
+
+test("house rules are linked and the lint enforces them", async () => {
+ const base="skills/systra-taste/";
+ assert.ok(read(base+"SKILL.md").includes("references/house-rules.md"));
+ const rules=read(base+"references/house-rules.md");
+ for(const term of ["#F9FAFB","Hugeicons","never pills","placeholders","Never generate AI images"])assert.ok(rules.includes(term),term);
+ const {lint}=await import("../skills/systra-taste/engine/taste-lint.mjs");
+ const {mkdtempSync,writeFileSync}=await import("node:fs");const {tmpdir}=await import("node:os");const {join}=await import("node:path");
+ const f=join(mkdtempSync(join(tmpdir(),"hr-")),"p.jsx");
+ writeFileSync(f,'import { Check } from "lucide-react";\nconst s={fontFamily:"Inter, sans-serif"};\nexport const P=()=><><h1 className="text-5xl font-bold">Hi</h1><a className="rounded-full px-5 py-3" href="#">Go</a><div className="shadow-sm"/></>;');
+ const msgs=lint([f]).findings.map(x=>x.msg).join("\n");
+ for(const m of ["AI-typical typeface","pill button","heavy headline","Lucide","shadow or glow"])assert.ok(msgs.includes(m),m);
+});

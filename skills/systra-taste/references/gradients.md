@@ -23,9 +23,10 @@ Default to Calm for service businesses. Use at most ONE moment one level above t
 ## 3. The look
 
 - Each field is a large radial area (55 to 75 percent of the panel) fading into the next. No hard edges, no visible circles or rings.
-- Fine monochrome grain over everything: visible at 100 percent zoom, calm from a distance.
-- Panels rounded 16 px. One full-bleed band is allowed for the closing section.
-- On top: one to three white cards (12 px radius, very soft shadow) showing a real moment of the business: a message, a price, a status, a choice. Never a fake dashboard with invented metrics.
+- Fine, crisp monochrome grain on the panel background: visible at 100 percent zoom, calm from a distance. Never on the cards above it as well.
+- Keep it subtle. A gradient should read as light on a surface, not as a color statement.
+- Panels rounded 12 px. One full-bleed band is allowed for the closing section.
+- On top: one to three white cards (10 px radius, no shadow, no border) showing a real moment of the business: a message, a price, a status, a choice. Never a fake dashboard with invented metrics.
 
 ## Avoid
 

@@ -42,10 +42,14 @@ export function hueSpread(hues) {
 
 const TEXT_RULES = [
   [/[–—]/, "error", "Gedankenstrich (en or em dash) in text"],
-  [/\b(Instrument Serif|Playfair|Cormorant|DM Serif|Fraunces)\b/, "warn", "serif display face; Systra default is Albert Sans alone"],
-  [/font-mono[^"'`]*uppercase|uppercase[^"'`]*font-mono/, "warn", "uppercase mono kicker"],
+  [/\b(Inter|Geist|Poppins|Space Grotesk|Playfair Display)\b["',]/, "error", "AI-typical typeface; use Albert Sans, Hanken Grotesk or Manrope"],
+  [/\b(Instrument Serif|Playfair|Cormorant|DM Serif|Fraunces)\b|\bfont-serif\b/, "warn", "serif face; only when it fits the brand"],
+  [/font-mono[^"'`]*uppercase|uppercase[^"'`]*font-mono/, "warn", "uppercase mono label; use the body face and not above every section"],
   [/className=["'`][^"'`]*\brounded[^"'`]*\bborder\b(?!-0)|className=["'`][^"'`]*\bborder\b(?!-0)[^"'`]*\brounded/, "warn", "border on a rounded card or pill"],
-  [/\bshadow-(lg|xl|2xl)\b/, "warn", "heavy shadow; keep shadows very soft"],
+  [/\b(?:drop-)?shadow-(?!none\b)[a-z0-9[]/, "warn", "shadow or glow; the house rule is none at all"],
+  [/<(?:button|a|motion\.button|motion\.a)\b[^>]*\brounded-full\b/, "warn", "pill button; use 5 to 10 px or an underline link"],
+  [/<h[1-3]\b[^>]*\bfont-(semibold|bold|extrabold|black)\b|\btext-([5-9]xl|\[[4-9]\dpx\])[^"'`]*\bfont-(semibold|bold|extrabold|black)\b/, "warn", "heavy headline weight; keep 300 to 400, at most 500"],
+  [/from ["']lucide-react["']/, "warn", "Lucide icons mark AI pages; use Hugeicons (engine/icons.mjs converts)"],
   [/bg-clip-text[^"'`]*(gradient|from-)|(gradient|from-)[^"'`]*bg-clip-text/, "warn", "gradient text"],
   [/lorem ipsum/i, "error", "placeholder text"],
 ];

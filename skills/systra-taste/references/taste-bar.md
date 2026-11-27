@@ -68,13 +68,13 @@ Alternate dense and calm, photographic and typographic, full-bleed and contained
 
 ## Images
 
-Order of preference: approved project photo, approved asset from the Systra Tools image library when it is connected, a generated asset when the user allows it, then a grain-gradient panel with white cards showing a real moment of the business (works without any photo). Code-native drawings only for real UI, charts and diagrams.
+In a draft every image is a placeholder; the real photos come from the client at the end. Order:
 
-When an image is missing, deliver an English prompt, filename, aspect ratio, desktop and mobile crop, text-safe area and alt-text direction, and reference it cleanly in code. Prompt shape:
+1. Photos the client already supplied or that are approved in the project.
+2. With the Systra Tools MCP connected: fitting placeholders from its image library (search_images with industry and subject).
+3. Without it: a calm grain panel in the page's color family with a small note naming the photo that belongs there ("Foto: Lena im Fahrschulauto, Blick nach vorn"). It must still look intentional.
 
-`[subject and action], [environment], [material], [lighting], [camera and lens], [composition and crop], [palette], clean text-safe area on [side], believable scale and contact, no typography, no logos, no UI, no watermark, no generic AI gloss`
-
-Images may be bold, surprising and colorful when the brand allows it. Quiet stock with a laptop and a plant is rarely the best subject.
+Never generate AI images and never fake photos, people or 3D in CSS. Code-native drawings only for real UI, charts and diagrams. When handing over, list each placeholder with filename, aspect ratio, crop, text-safe area and alt text so the client knows which photos to shoot.
 
 ## Color
 

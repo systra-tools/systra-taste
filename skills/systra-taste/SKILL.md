@@ -23,15 +23,17 @@ Make the subject memorable, the hierarchy clear, and the interaction useful. Tas
 
 ## 3. Signature (unless the brand overrides it)
 
-- Albert Sans (or the brand face) for display and body. No italic serif accent by default; one serif only with a reason from the content.
-- White page, near-black ink. Color comes as grain gradients from ONE family built on the brand color, at the intensity the business fits; most sections stay white. White cards on a panel showing a real moment are one possible device, at most once per page. Beige, olive, brown and terracotta are never defaults.
-- Large confident headlines, few words, generous whitespace, and one oversized typographic moment per page.
-- Slightly rounded corners, 6 to 12 px; buttons 6 to 10 px. No borders around cards or pills, no box shadows, few divider lines. Glow and shadow only very subtle, if at all.
-- No uppercase mono kicker or eyebrow above every heading. No invented numbers, stars, logos or quotes.
-- MUST use real **Hugeicons** for functional icons in new Systra-style UI (@hugeicons/react, @hugeicons/core-free-icons); verify exports. No Unicode arrows or emoji as icons. Keep a brand's existing icon system.
+Approved rules with their why: [house-rules.md](references/house-rules.md).
+
+- Albert Sans, Hanken Grotesk or Manrope, in light to regular weights (300 to 400, at most 500). No Inter, Geist, Poppins, Space Grotesk, Playfair. Serif only if the brand fits.
+- White page, near-black ink. Color as subtle gradients with a fine crisp grain from ONE family of the brand color; grain on the background only; most sections stay white. No blobs, no beige, brown or terracotta by default.
+- Large headlines, few words, generous whitespace, one oversized typographic moment per page.
+- Cards and pills off-white #F9FAFB, no border, no box shadows, no glow, and only where they organise information. Rounded corners 6 to 12 px, larger only for image frames. Buttons 5 to 10 px or underline links, never pills. Few divider lines.
+- Small labels above headings only now and then, in the body face. No invented numbers, stars, logos or quotes.
+- Icons: MUST use real **Hugeicons** with a thin stroke (strokeWidth 1.25 to 1.5). No Lucide (it marks AI pages), no emoji or Unicode arrows.
 - Copy must sound like the owner talking, not like a slogan generator. Follow the copy rules in the taste bar; no new em dashes.
 - Motion has one job each: orient, reveal, focus, compare or hand off. Scroll motion is selective, never forced. CSS for small things; GSAP, ScrollTrigger and Lenis only when needed, see [lenis-gsap.md](references/lenis-gsap.md).
-- Photos, people and 3D come from approved assets. If an asset is missing, write an exact image prompt with crop and text-safe area instead of faking it in CSS.
+- Images in a draft are placeholders for the client's real photos: from the Systra Tools image library when connected, otherwise a calm grain panel with a note naming the photo. Never generate AI images, never fake photos in CSS.
 
 ## 4. Deliver
 
